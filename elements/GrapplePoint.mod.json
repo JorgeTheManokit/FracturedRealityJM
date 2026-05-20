@@ -1,0 +1,53 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 4,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:VoidBlob"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:VoidDrop"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "CUSTOM:VoidDrop"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "CUSTOM:VoidDrop"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "CUSTOM:VoidDrop"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:GrapplingPoint"
+    },
+    "name": "grappling_point",
+    "namespace": "mod"
+  }
+}

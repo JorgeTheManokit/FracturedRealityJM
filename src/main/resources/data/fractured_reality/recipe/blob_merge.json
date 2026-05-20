@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "fractured_reality:void_drop"
+    }
+  },
+  "result": {
+    "id": "fractured_reality:void_blob",
+    "count": 1
+  }
+}

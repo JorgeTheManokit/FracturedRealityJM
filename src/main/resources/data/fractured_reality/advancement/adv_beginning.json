@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "fractured_reality:textures/screens/advancement_bacground.png",
+    "icon": {
+      "id": "fractured_reality:adv_icon_1"
+    },
+    "title": {
+      "translate": "advancements.adv_beginning.title"
+    },
+    "description": {
+      "translate": "advancements.adv_beginning.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_beginning_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

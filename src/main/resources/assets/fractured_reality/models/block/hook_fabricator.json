@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "fractured_reality:block/hook_fabricator",
+    "particle": "minecraft:block/black_concrete"
+  },
+  "render_type": "cutout"
+}

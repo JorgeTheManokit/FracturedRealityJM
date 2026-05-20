@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#fractured_reality:moonbreaker_spawns",
+  "spawners": {
+    "type": "fractured_reality:moon_breaker",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

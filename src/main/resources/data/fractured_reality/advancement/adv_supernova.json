@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "fractured_reality:adv_icon_4"
+    },
+    "title": {
+      "translate": "advancements.adv_supernova.title"
+    },
+    "description": {
+      "translate": "advancements.adv_supernova.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_supernova_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "fractured_reality:adv_the_sky"
+}

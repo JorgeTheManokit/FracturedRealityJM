@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "fractured_reality:adv_icon_2"
+    },
+    "title": {
+      "translate": "advancements.adv_live_a_lie.title"
+    },
+    "description": {
+      "translate": "advancements.adv_live_a_lie.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_live_a_lie_1": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "fractured_reality:false_sight": {
+            "amplifier": {
+              "min": 0
+            },
+            "duration": {
+              "min": 20
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 60
+  },
+  "parent": "fractured_reality:adv_beginning"
+}

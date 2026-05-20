@@ -1,0 +1,27 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:DiskVoid"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 5.0,
+    "cookingTime": 500,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:DiskVoid"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:BlankDisk"
+    },
+    "name": "blank_disc",
+    "namespace": "mod"
+  }
+}

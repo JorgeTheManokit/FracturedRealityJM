@@ -1,0 +1,391 @@
+{
+  "gravflux_start": {
+    "subtitle": "subtitles.gravflux_start",
+    "sounds": [
+      {
+        "name": "fractured_reality:gravflux_start",
+        "stream": false
+      }
+    ]
+  },
+  "gravflux_end": {
+    "subtitle": "subtitles.gravflux_end",
+    "sounds": [
+      {
+        "name": "fractured_reality:gravflux_end",
+        "stream": false
+      }
+    ]
+  },
+  "hallucination_voices": {
+    "subtitle": "subtitles.hallucination_voices",
+    "sounds": [
+      {
+        "name": "fractured_reality:hallucination_voice_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:hallucination_voice_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:hallucination_voice_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:hallucination_voice_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:hallucination_voice_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:hallucination_voice_6",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:hallucination_voice_7",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:hallucination_voice_8",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:hallucination_voice_9",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:hallucination_voice_10",
+        "stream": false
+      }
+    ]
+  },
+  "fr.starseer.start_monologue_1p": {
+    "subtitle": "subtitles.fr.starseer.start_monologue_1p",
+    "sounds": [
+      {
+        "name": "fractured_reality:start_monologue_1p",
+        "stream": false
+      }
+    ]
+  },
+  "fr.starseer.start_monologue_mp": {
+    "subtitle": "subtitles.fr.starseer.start_monologue_mp",
+    "sounds": [
+      {
+        "name": "fractured_reality:start_monologue_mp",
+        "stream": false
+      }
+    ]
+  },
+  "fr.starseer.taunt": {
+    "subtitle": "subtitles.fr.starseer.taunt",
+    "sounds": [
+      {
+        "name": "fractured_reality:taunt_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:taunt_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:taunt_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:taunt_4",
+        "stream": false
+      }
+    ]
+  },
+  "fr.starseer.kills_player": {
+    "subtitle": "subtitles.fr.starseer.kills_player",
+    "sounds": [
+      {
+        "name": "fractured_reality:player_killed_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:player_killed_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:player_killed_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:player_killed_4",
+        "stream": false
+      }
+    ]
+  },
+  "fr.presenter.hurt": {
+    "subtitle": "subtitles.fr.presenter.hurt",
+    "sounds": [
+      {
+        "name": "fractured_reality:presenter_pain_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_pain_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_pain_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_pain_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_pain_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_pain_6",
+        "stream": false
+      }
+    ]
+  },
+  "fr.presenter.speak": {
+    "subtitle": "subtitles.fr.presenter.speak",
+    "sounds": [
+      {
+        "name": "fractured_reality:presenter_speak_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_speak_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_speak_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_speak_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_speak_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_speak_6",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:presenter_speak_7",
+        "stream": false
+      }
+    ]
+  },
+  "fr.moonbreaker.grunt": {
+    "subtitle": "subtitles.fr.moonbreaker.grunt",
+    "sounds": [
+      {
+        "name": "fractured_reality:moonbreaker_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_6",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_7",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_8",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_9",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_10",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_11",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_12",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_13",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_14",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_15",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:moonbreaker_16",
+        "stream": false
+      }
+    ]
+  },
+  "fr.faceless.whisper": {
+    "subtitle": "subtitles.fr.faceless.whisper",
+    "sounds": [
+      {
+        "name": "fractured_reality:faceless_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:faceless_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:faceless_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:faceless_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:faceless_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:faceless_6",
+        "stream": false
+      }
+    ]
+  },
+  "fr.summoner.noise": {
+    "subtitle": "subtitles.fr.summoner.noise",
+    "sounds": [
+      {
+        "name": "fractured_reality:summoner_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:summoner_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:summoner_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:summoner_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:summoner_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:summoner_6",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:summoner_7",
+        "stream": false
+      }
+    ]
+  },
+  "fr.summoner.summon": {
+    "subtitle": "subtitles.fr.summoner.summon",
+    "sounds": [
+      {
+        "name": "fractured_reality:summoner_summon",
+        "stream": false
+      }
+    ]
+  },
+  "fr.lore_discs.void_fluid": {
+    "sounds": [
+      {
+        "name": "fractured_reality:void_fluid",
+        "stream": true
+      }
+    ]
+  },
+  "fr.lore_discs.subject_289": {
+    "sounds": [
+      {
+        "name": "fractured_reality:subject_289",
+        "stream": true
+      }
+    ]
+  },
+  "fr.lore_discs.subject_475": {
+    "sounds": [
+      {
+        "name": "fractured_reality:subject_475",
+        "stream": true
+      }
+    ]
+  },
+  "fr.lore_discs.subject_748": {
+    "sounds": [
+      {
+        "name": "fractured_reality:subject_748",
+        "stream": true
+      }
+    ]
+  },
+  "fr.lore_discs.subject_1052": {
+    "sounds": [
+      {
+        "name": "fractured_reality:subject_1052",
+        "stream": true
+      }
+    ]
+  },
+  "fr.lore_discs.subject_1644": {
+    "sounds": [
+      {
+        "name": "fractured_reality:subject_1644",
+        "stream": true
+      }
+    ]
+  },
+  "fr.lore_discs.subject_2193": {
+    "sounds": [
+      {
+        "name": "fractured_reality:subject_2193",
+        "stream": true
+      }
+    ]
+  },
+  "fr.lore_discs.subject_2374": {
+    "sounds": [
+      {
+        "name": "fractured_reality:subject_2374",
+        "stream": true
+      }
+    ]
+  }
+}

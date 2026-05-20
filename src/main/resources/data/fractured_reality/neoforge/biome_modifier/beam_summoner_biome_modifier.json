@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#fractured_reality:summoner_spawns",
+  "spawners": {
+    "type": "fractured_reality:beam_summoner",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

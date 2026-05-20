@@ -1,0 +1,29 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.IRON_SWORD"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:VoidSteelIngot"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:VoidUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:VoidSteelSword"
+    },
+    "name": "upgrade_void_steel_sword",
+    "namespace": "mod"
+  }
+}

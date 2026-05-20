@@ -1,0 +1,28 @@
+{
+  "_fv": 79,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.LIGHT"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "disableGravity": false,
+    "power": 1.0,
+    "damage": 0.0,
+    "knockback": 10,
+    "entityModel": "ModelLightBeam",
+    "customModelTexture": "lightbeam.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsPlayer": {
+      "name": "LightBeamProjectileHitsLivingEntity"
+    },
+    "onHitsEntity": {
+      "name": "LightBeamProjectileHitsLivingEntity"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_fv": 79,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:GrapplingHook"
+      },
+      {
+        "value": "CUSTOM:GrapplingPoint"
+      }
+    ],
+    "information": [
+      "The grappling hook can pull you closer to grappling points.",
+      "You can obtain a grappling hook at a grappling hook fabricator."
+    ]
+  }
+}

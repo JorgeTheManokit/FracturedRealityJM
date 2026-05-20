@@ -1,0 +1,14 @@
+{
+  "_fv": 79,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:VoidSteelSword"
+      }
+    ],
+    "information": [
+      "When you hit a void being, this tool applies the poison potion effect to it.  The effect lasts for 60 seconds."
+    ]
+  }
+}

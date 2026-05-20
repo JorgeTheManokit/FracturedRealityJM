@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fractured_reality:item/blank_disc"
+  }
+}

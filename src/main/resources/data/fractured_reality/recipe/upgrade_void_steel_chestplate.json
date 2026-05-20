@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "fractured_reality:void_upgrade_template"
+  },
+  "base": {
+    "item": "minecraft:iron_chestplate"
+  },
+  "addition": {
+    "item": "fractured_reality:void_steel_ingot"
+  },
+  "result": {
+    "id": "fractured_reality:void_steel_chestplate"
+  }
+}

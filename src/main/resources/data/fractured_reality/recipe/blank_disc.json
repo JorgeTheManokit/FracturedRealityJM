@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 5,
+  "cookingtime": 500,
+  "ingredient": {
+    "tag": "minecraft:music_discs"
+  },
+  "result": {
+    "id": "fractured_reality:blank_disk"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "fractured_reality:house_of_the_forgotten",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 256,
+    "separation": 4,
+    "salt": 1333118601
+  }
+}

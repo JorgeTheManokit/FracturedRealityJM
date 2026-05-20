@@ -1,0 +1,10 @@
+{
+  "_fv": 79,
+  "_type": "config",
+  "definition": {
+    "file": "FracturedReality_Server",
+    "configType": 1,
+    "config": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"config_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"config_category\"><field name=\"name\">Main</field><statement name=\"write\"><block type=\"config_variable\"><field name=\"name\">prep_time</field><field name=\"comment\">[Default: 10] Preparation time in days. Change this to a higher value to give the player(s) more time to prepare. This is also the number of days before anything unusual starts happening.</field><value name=\"value\"><block type=\"config_number_variable\"><field name=\"name\">Preparation time</field><field name=\"value\">10</field></block></value><next><block type=\"config_variable\"><field name=\"name\">time_scale</field><field name=\"comment\">[Default: 1] Change this to a higher number to have main events happen further apart and take longer.</field><value name=\"value\"><block type=\"config_number_variable\"><field name=\"name\">Time scale</field><field name=\"value\">1</field></block></value><next><block type=\"config_variable\"><field name=\"name\">void_griefing</field><field name=\"comment\">Enables the moonbreaker breaking blocks.</field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">Do Griefing</field><field name=\"value\">true</field></block></value><next><block type=\"config_variable\"><field name=\"name\">vsarmor_rng_based</field><field name=\"comment\">If true, each Void Steel armor piece uses a 20% chance to negate damage dealt by void beings. If false, uses a 20% damage decrease.</field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">Use random chances for Void Steel Armor</field><field name=\"value\">false</field></block></value></block></next></block></next></block></next></block></statement></block></next></block></xml>",
+    "defining": false
+  }
+}

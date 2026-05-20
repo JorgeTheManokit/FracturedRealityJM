@@ -1,0 +1,22 @@
+{
+  "_fv": 79,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Reality Distortion",
+    "splashName": "Splash Potion of Reality Distortion",
+    "lingeringName": "Lingering Potion of Reality Distortion",
+    "arrowName": "Arrow of Reality Distortion",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:FalseSight"
+        },
+        "duration": 72000,
+        "infinite": false,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#fractured_reality:presenter_spawns",
+  "spawners": {
+    "type": "fractured_reality:presenter",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

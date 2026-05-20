@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "id": "fractured_reality:adv_icon_3"
+    },
+    "title": {
+      "translate": "advancements.adv_the_sky.title"
+    },
+    "description": {
+      "translate": "advancements.adv_the_sky.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_the_sky_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "fractured_reality:reality_edge"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 3200
+  },
+  "parent": "fractured_reality:adv_beginning"
+}

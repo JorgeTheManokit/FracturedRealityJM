@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:diamond_sword"
+    },
+    "title": {
+      "translate": "advancements.adv_kill_or_killed.title"
+    },
+    "description": {
+      "translate": "advancements.adv_kill_or_killed.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_kill_or_killed_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 60,
+    "recipes": [
+      "fractured_reality:voidify_iron",
+      "fractured_reality:blob_merge",
+      "fractured_reality:blob_separate",
+      "fractured_reality:voidify_template",
+      "fractured_reality:upgrade_elytra_to_jetpack",
+      "fractured_reality:brew_false_sight",
+      "fractured_reality:upgrade_void_steel_helmet",
+      "fractured_reality:upgrade_void_steel_chestplate",
+      "fractured_reality:upgrade_void_steel_leggings",
+      "fractured_reality:upgrade_void_steel_boots"
+    ]
+  },
+  "parent": "fractured_reality:adv_found_you"
+}

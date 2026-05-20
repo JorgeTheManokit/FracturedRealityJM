@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bbb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "fractured_reality:void_drop"
+    },
+    "b": {
+      "item": "fractured_reality:void_steel_ingot"
+    }
+  },
+  "result": {
+    "id": "fractured_reality:grappling_point",
+    "count": 4
+  }
+}

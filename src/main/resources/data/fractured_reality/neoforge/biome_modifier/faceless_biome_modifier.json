@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#fractured_reality:faceless_spawns",
+  "spawners": {
+    "type": "fractured_reality:faceless",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

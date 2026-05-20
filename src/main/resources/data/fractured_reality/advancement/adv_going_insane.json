@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "fractured_reality:adv_icon_1"
+    },
+    "title": {
+      "translate": "advancements.adv_going_insane.title"
+    },
+    "description": {
+      "translate": "advancements.adv_going_insane.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_going_insane_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 120
+  },
+  "parent": "fractured_reality:adv_beginning"
+}

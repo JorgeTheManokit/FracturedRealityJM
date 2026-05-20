@@ -1,0 +1,34 @@
+{
+  "_fv": 79,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.firework.launch"
+    },
+    "igniteFire": true,
+    "disableGravity": true,
+    "power": 0.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "ModelVoidMissile",
+    "customModelTexture": "void_missile.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "VoidMissileProjectileHits"
+    },
+    "onHitsPlayer": {
+      "name": "VoidMissileProjectileHits"
+    },
+    "onHitsEntity": {
+      "name": "VoidMissileProjectileHits"
+    },
+    "onFlyingTick": {
+      "name": "VoidMissileWhileProjectileFlyingTick"
+    }
+  }
+}

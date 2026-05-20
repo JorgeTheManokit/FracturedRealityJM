@@ -1,0 +1,23 @@
+{
+  "_fv": 79,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:VoidSteel.helmet"
+      },
+      {
+        "value": "CUSTOM:VoidSteel.body"
+      },
+      {
+        "value": "CUSTOM:VoidSteel.legs"
+      },
+      {
+        "value": "CUSTOM:VoidSteel.boots"
+      }
+    ],
+    "information": [
+      "Void steel armor reduces damage taken from void beings."
+    ]
+  }
+}

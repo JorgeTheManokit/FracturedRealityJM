@@ -1,0 +1,9 @@
+{
+  "parent": "fractured_reality:custom/disk_burner",
+  "textures": {
+    "all": "fractured_reality:block/disk_burner",
+    "particle": "fractured_reality:block/disk_burner",
+    "0": "fractured_reality:block/disk_burner"
+  },
+  "render_type": "solid"
+}

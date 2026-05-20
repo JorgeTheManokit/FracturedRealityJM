@@ -1,0 +1,218 @@
+{
+  "_fv": 79,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 240,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 36,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_disk_burner",
+          "text": {
+            "fixedValue": "Disk Burner"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 131,
+          "y": 5,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:BlankDisk"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 149,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 203,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_arrow.png",
+          "use1Xscale": false,
+          "x": 167,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "disc_slot.png",
+          "use1Xscale": false,
+          "x": 150,
+          "y": 100,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_void_fluid",
+          "text": "Void Fluid",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BurnLog1"
+          },
+          "width": 63,
+          "height": 20,
+          "x": 159,
+          "y": 17,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_s289",
+          "text": "S-289",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BurnLog2"
+          },
+          "width": 63,
+          "height": 20,
+          "x": 159,
+          "y": 44,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_s475",
+          "text": "S-475",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BurnLog3"
+          },
+          "width": 63,
+          "height": 20,
+          "x": 159,
+          "y": 71,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_s748",
+          "text": "S-748",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BurnLog4"
+          },
+          "width": 63,
+          "height": 20,
+          "x": 231,
+          "y": 17,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_s1052",
+          "text": "S-1052",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BurnLog5"
+          },
+          "width": 63,
+          "height": 20,
+          "x": 231,
+          "y": 44,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_s1644",
+          "text": "S-1644",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BurnLog6"
+          },
+          "width": 63,
+          "height": 20,
+          "x": 231,
+          "y": 71,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_s2193",
+          "text": "S-2193",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BurnLog7"
+          },
+          "width": 63,
+          "height": 20,
+          "x": 231,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_s2374_vml",
+          "text": "S-2374+VML",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BurnLog8"
+          },
+          "width": 63,
+          "height": 20,
+          "x": 231,
+          "y": 125,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

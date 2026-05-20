@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fractured_reality:void_blob"
+    }
+  ],
+  "result": {
+    "id": "fractured_reality:void_drop",
+    "count": 9
+  }
+}

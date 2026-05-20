@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fractured_reality:void_blob"
+    },
+    {
+      "item": "fractured_reality:void_blob"
+    },
+    {
+      "item": "fractured_reality:void_blob"
+    },
+    {
+      "item": "fractured_reality:void_blob"
+    },
+    {
+      "item": "minecraft:netherite_upgrade_smithing_template"
+    },
+    {
+      "item": "fractured_reality:void_blob"
+    },
+    {
+      "item": "fractured_reality:void_blob"
+    },
+    {
+      "item": "fractured_reality:void_blob"
+    },
+    {
+      "item": "fractured_reality:void_blob"
+    }
+  ],
+  "result": {
+    "id": "fractured_reality:void_upgrade_template",
+    "count": 1
+  }
+}

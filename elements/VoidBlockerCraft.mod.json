@@ -1,0 +1,53 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "Items.EMERALD"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:VoidBlockerTotem"
+    },
+    "name": "void_blocker_totem",
+    "namespace": "mod"
+  }
+}

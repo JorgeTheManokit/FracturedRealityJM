@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb",
+    "bcb"
+  ],
+  "key": {
+    "a": {
+      "item": "fractured_reality:void_blob"
+    },
+    "b": {
+      "item": "fractured_reality:void_steel_ingot"
+    },
+    "c": {
+      "item": "fractured_reality:void_drop"
+    }
+  },
+  "result": {
+    "id": "fractured_reality:launch_pad",
+    "count": 1
+  }
+}

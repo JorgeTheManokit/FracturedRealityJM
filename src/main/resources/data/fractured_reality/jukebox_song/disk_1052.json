@@ -1,0 +1,8 @@
+{
+  "comparator_output": 5,
+  "description": {
+    "translate": "item.fractured_reality.disk_1052.desc"
+  },
+  "length_in_seconds": 22.85,
+  "sound_event": "fractured_reality:fr.lore_discs.subject_1052"
+}

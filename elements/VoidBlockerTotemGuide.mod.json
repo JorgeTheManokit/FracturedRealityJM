@@ -1,0 +1,14 @@
+{
+  "_fv": 79,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:VoidBlockerTotem"
+      }
+    ],
+    "information": [
+      "Place an Emerald Block, Diamond Block or Iron Block on top to activate. Rarer block means higher range"
+    ]
+  }
+}

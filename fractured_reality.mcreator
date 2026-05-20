@@ -1,0 +1,3832 @@
+{
+  "mod_elements": [
+    {
+      "name": "SkyChanger",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_changer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "skyRenderEvent",
+            "type": "skyRenderEvent"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SkyChangerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FogChanger",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fog_changer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "fogRenderEvent",
+            "type": "fogRenderEvent"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/FogChangerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "IncreaseSurvDays",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "increase_surv_days",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/IncreaseSurvDaysProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "NightTimeChecker",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "night_time_checker",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/NightTimeCheckerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FracturedRealityServerConfig",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fractured_reality_server_config",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/configuration/FracturedRealityServerConfigConfiguration.java"
+        ]
+      }
+    },
+    {
+      "name": "EventEnabler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "event_enabler",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/EventEnablerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SpawnBlocker",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_blocker",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SpawnBlockerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Presenter",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "presenter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/presenter_biome_modifier.json",
+          "src/main/resources/assets/fractured_reality/models/item/presenter_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/entity/PresenterEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/PresenterRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "BeamSummoner",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beam_summoner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/beam_summoner_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/BeamSummonerRenderer.java",
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/beam_summoner_biome_modifier.json",
+          "src/main/java/net/starseer/fracturedreality/entity/BeamSummonerEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "SummonedProjectileBeamer",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summoned_projectile_beamer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/SummonedProjectileBeamerRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/SummonedProjectileBeamerEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "SummonedProjectileBeamerAimAndShoot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summoned_projectile_beamer_aim_and_shoot",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SummonedProjectileBeamerAimAndShootProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SummonedProjectileBeamerTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summoned_projectile_beamer_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SummonedProjectileBeamerTickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LightBeam",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_beam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/entity/LightBeamEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/LightBeamRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "BeamSummonerTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beam_summoner_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/BeamSummonerTickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Faceless",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "faceless",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/FacelessRenderer.java",
+          "src/main/resources/assets/fractured_reality/models/item/faceless_spawn_egg.json",
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/faceless_biome_modifier.json",
+          "src/main/java/net/starseer/fracturedreality/entity/FacelessEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "FacelessTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "faceless_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/FacelessTickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LightBeamProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_beam_projectile_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/LightBeamProjectileHitsLivingEntityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LightBeamDamageType",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_beam_damage_type",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/damage_type/light_beam_damage_type.json"
+        ]
+      }
+    },
+    {
+      "name": "SpawnEnablerPresenter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_enabler_presenter",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SpawnEnablerPresenterProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SpawnEnablerBeamSummoner",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_enabler_beam_summoner",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SpawnEnablerBeamSummonerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SpawnEnablerFaceless",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_enabler_faceless",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SpawnEnablerFacelessProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidJetpack",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "void_jetpack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/VoidJetpackItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_jetpack_chestplate.json"
+        ]
+      }
+    },
+    {
+      "name": "VoidJetpackTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_jetpack_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidJetpackTickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidDrop",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_drop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/VoidDropItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_drop.json"
+        ]
+      }
+    },
+    {
+      "name": "VoidBlob",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_blob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/VoidBlobItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_blob.json"
+        ]
+      }
+    },
+    {
+      "name": "VoidSteelIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_ingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_ingot.json",
+          "src/main/java/net/starseer/fracturedreality/item/VoidSteelIngotItem.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidifyIron",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voidify_iron",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/voidify_iron.json"
+        ]
+      }
+    },
+    {
+      "name": "BlobMerge",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blob_merge",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/blob_merge.json"
+        ]
+      }
+    },
+    {
+      "name": "BlobSeparate",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blob_separate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/blob_separate.json"
+        ]
+      }
+    },
+    {
+      "name": "PresenterLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "presenter_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/entities/presenter.json"
+        ]
+      }
+    },
+    {
+      "name": "BeamSummonerLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beam_summoner_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/entities/beam_summoner.json"
+        ]
+      }
+    },
+    {
+      "name": "FacelessLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "faceless_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/entities/faceless.json"
+        ]
+      }
+    },
+    {
+      "name": "VoidUpgradeTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_upgrade_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/void_upgrade_template.json",
+          "src/main/java/net/starseer/fracturedreality/item/VoidUpgradeTemplateItem.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidifyTemplate",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voidify_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/voidify_template.json"
+        ]
+      }
+    },
+    {
+      "name": "UpgradeElytraToJetpack",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_elytra_to_jetpack",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/upgrade_elytra_to_jetpack.json"
+        ]
+      }
+    },
+    {
+      "name": "RandomLightningStrikes",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_lightning_strikes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/RandomLightningStrikesProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "WeatherDisabler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "weather_disabler",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/WeatherDisablerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GravityFluxOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_flux_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/GravityFluxOnEntityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GravityFluxSetFlux",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_flux_set_flux",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/GravityFluxSetFluxProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "RandomHallucinationVoices",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_hallucination_voices",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/RandomHallucinationVoicesProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "MoonBreaker",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_breaker",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/moon_breaker_biome_modifier.json",
+          "src/main/java/net/starseer/fracturedreality/entity/MoonBreakerEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/moon_breaker_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/MoonBreakerRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "MoonBreakerAttackingCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_breaker_attacking_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoonBreakerAttackingCheckProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "MoonbreakerNoFriendlyFire",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moonbreaker_no_friendly_fire",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoonbreakerNoFriendlyFireProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "MoonbreakerLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moonbreaker_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/entities/moon_breaker.json"
+        ]
+      }
+    },
+    {
+      "name": "MoonBreakerOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_breaker_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoonBreakerOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SpawnEnablerMoonbreaker",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_enabler_moonbreaker",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SpawnEnablerMoonbreakerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FalseSight",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "false_sight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/potion/FalseSightMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "RealityDistortion",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reality_distortion",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "BrewFalseSight",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brew_false_sight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/recipe/brewing/BrewFalseSightBrewingRecipe.java"
+        ]
+      }
+    },
+    {
+      "name": "AdvBeginning",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_beginning",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_beginning.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "GrantAdvBeginning",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grant_adv_beginning",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/GrantAdvBeginningProcedure.java"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AdvIcon1",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_icon_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/adv_icon_1.json",
+          "src/main/java/net/starseer/fracturedreality/item/AdvIcon1Item.java"
+        ]
+      },
+      "path": "~/Advancements/Icons"
+    },
+    {
+      "name": "AdvLiveALie",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "adv_live_a_lie",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_live_a_lie.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AdvFoundYou",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_found_you",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_found_you.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "GrantAdvFoundYou",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grant_adv_found_you",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/GrantAdvFoundYouProcedure.java"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AdvKillOrKilled",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_kill_or_killed",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_kill_or_killed.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "PresenterEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "presenter_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/PresenterEntityDiesProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "AdvItShoots",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_it_shoots",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_it_shoots.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AdvToHell",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_to_hell",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_to_hell.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AdvTooBig",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_too_big",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_too_big.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AdvIcon2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_icon_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/AdvIcon2Item.java",
+          "src/main/resources/assets/fractured_reality/models/item/adv_icon_2.json"
+        ]
+      },
+      "path": "~/Advancements/Icons"
+    },
+    {
+      "name": "VoidSteel",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "void_steel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_leggings.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_boots.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_chestplate.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_helmet.json",
+          "src/main/java/net/starseer/fracturedreality/item/VoidSteelItem.java"
+        ]
+      }
+    },
+    {
+      "name": "UpgradeVoidSteelHelmet",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_void_steel_helmet",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/upgrade_void_steel_helmet.json"
+        ]
+      }
+    },
+    {
+      "name": "UpgradeVoidSteelChestplate",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_void_steel_chestplate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/upgrade_void_steel_chestplate.json"
+        ]
+      }
+    },
+    {
+      "name": "UpgradeVoidSteelLeggings",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_void_steel_leggings",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/upgrade_void_steel_leggings.json"
+        ]
+      }
+    },
+    {
+      "name": "UpgradeVoidSteelBoots",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_void_steel_boots",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/upgrade_void_steel_boots.json"
+        ]
+      }
+    },
+    {
+      "name": "AdvGoingInsane",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_going_insane",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_going_insane.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "Hallucination01",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hallucination_01",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/screens/Hallucination01Overlay.java"
+        ]
+      },
+      "path": "~/VisualHallucination"
+    },
+    {
+      "name": "ShowHallu01",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_hallu_01",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/ShowHallu01Procedure.java"
+        ]
+      },
+      "path": "~/VisualHallucination"
+    },
+    {
+      "name": "Hallucination02",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hallucination_02",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/screens/Hallucination02Overlay.java"
+        ]
+      },
+      "path": "~/VisualHallucination"
+    },
+    {
+      "name": "ShowHallu02",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_hallu_02",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/ShowHallu02Procedure.java"
+        ]
+      },
+      "path": "~/VisualHallucination"
+    },
+    {
+      "name": "Hallucination03",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hallucination_03",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/screens/Hallucination03Overlay.java"
+        ]
+      },
+      "path": "~/VisualHallucination"
+    },
+    {
+      "name": "ShowHallu03",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_hallu_03",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/ShowHallu03Procedure.java"
+        ]
+      },
+      "path": "~/VisualHallucination"
+    },
+    {
+      "name": "JoinClearHallucination",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "join_clear_hallucination",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/JoinClearHallucinationProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "HookFabricatorOnBlockRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_fabricator_on_block_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/HookFabricatorOnBlockRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/GrapplingHook"
+    },
+    {
+      "name": "HookFabricatorPlayAnim",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_fabricator_play_anim",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/HookFabricatorPlayAnimProcedure.java"
+        ]
+      },
+      "path": "~/GrapplingHook"
+    },
+    {
+      "name": "HookFabricator",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_fabricator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/HookFabricatorRenderer.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/hook_fabricator.json",
+          "src/main/resources/assets/fractured_reality/blockstates/hook_fabricator.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/HookFabricatorBlockEntity.java",
+          "src/main/java/net/starseer/fracturedreality/block/HookFabricatorBlock.java",
+          "src/main/resources/assets/fractured_reality/models/block/hook_fabricator.json"
+        ]
+      },
+      "path": "~/GrapplingHook"
+    },
+    {
+      "name": "GrapplingHookPropertyValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grappling_hook_property_value_provider",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/GrapplingHookPropertyValueProviderProcedure.java"
+        ]
+      },
+      "path": "~/GrapplingHook"
+    },
+    {
+      "name": "GrapplingHookEveryTickWhileUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grappling_hook_every_tick_while_using_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/GrapplingHookEveryTickWhileUsingItemProcedure.java"
+        ]
+      },
+      "path": "~/GrapplingHook"
+    },
+    {
+      "name": "GrapplingHook",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grappling_hook",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/GrapplingHookItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/grappling_hook.json",
+          "src/main/resources/assets/fractured_reality/models/item/grappling_hook_0.json"
+        ]
+      },
+      "path": "~/GrapplingHook"
+    },
+    {
+      "name": "GrapplingPoint",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grappling_point",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/block/grappling_point.json",
+          "src/main/resources/assets/fractured_reality/models/item/grappling_point.json",
+          "src/main/java/net/starseer/fracturedreality/block/GrapplingPointBlock.java",
+          "src/main/resources/assets/fractured_reality/blockstates/grappling_point.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/GrapplingPointBlockEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/GrapplingPointRenderer.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/grappling_point.json"
+        ]
+      },
+      "path": "~/GrapplingHook"
+    },
+    {
+      "name": "GrapplePoint",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grapple_point",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/grappling_point.json",
+          "src/main/resources/data/fractured_reality/advancement/recipes/grapple_point.json"
+        ]
+      },
+      "path": "~/GrapplingHook"
+    },
+    {
+      "name": "VoidBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/blockstates/void_block.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_block.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_block.json",
+          "src/main/java/net/starseer/fracturedreality/block/VoidBlockBlock.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_block.json"
+        ]
+      }
+    },
+    {
+      "name": "CrackedVoidBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cracked_void_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/blocks/cracked_void_block.json",
+          "src/main/resources/assets/fractured_reality/models/item/cracked_void_block.json",
+          "src/main/resources/assets/fractured_reality/models/block/cracked_void_block.json",
+          "src/main/java/net/starseer/fracturedreality/block/CrackedVoidBlockBlock.java",
+          "src/main/resources/assets/fractured_reality/blockstates/cracked_void_block.json"
+        ]
+      }
+    },
+    {
+      "name": "DoRandomHalluVoice",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_random_hallu_voice",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "Entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/DoRandomHalluVoiceProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "DoRandomHalluVisual",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_random_hallu_visual",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "Entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/DoRandomHalluVisualProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "DevCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dev_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/command/DevCommandCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "RunDevCommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "run_dev_command",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/RunDevCommandProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidBlockerTotem",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_blocker_totem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidBlockerTotemRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/block/entity/VoidBlockerTotemBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_blocker_totem.json",
+          "src/main/java/net/starseer/fracturedreality/block/VoidBlockerTotemBlock.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_blocker_totem.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_blocker_totem.json",
+          "src/main/resources/assets/fractured_reality/blockstates/void_blocker_totem.json"
+        ]
+      }
+    },
+    {
+      "name": "VoidBlockerTotemOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_blocker_totem_on_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidBlockerTotemOnTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidBlockerTotemPlaybackCondition1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_blocker_totem_playback_condition_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidBlockerTotemPlaybackCondition1Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidBlockerTotemPlaybackCondition2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_blocker_totem_playback_condition_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidBlockerTotemPlaybackCondition2Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidBlockerTotemPlaybackCondition3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_blocker_totem_playback_condition_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidBlockerTotemPlaybackCondition3Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidBlockerCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_blocker_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_blocker_totem.json",
+          "src/main/resources/data/fractured_reality/advancement/recipes/void_blocker_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "VoidMissile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_missile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/VoidMissileRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/VoidMissileEntity.java"
+        ]
+      },
+      "path": "~/VoidMissile"
+    },
+    {
+      "name": "VoidMissileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_missile_while_projectile_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidMissileWhileProjectileFlyingTickProcedure.java"
+        ]
+      },
+      "path": "~/VoidMissile"
+    },
+    {
+      "name": "VoidMissileProjectileHits",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_missile_projectile_hits",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidMissileProjectileHitsProcedure.java"
+        ]
+      },
+      "path": "~/VoidMissile"
+    },
+    {
+      "name": "Starseer",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/StarseerRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/StarseerEntity.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarseerOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarseerEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerEntityIsHurtProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarseerSmashCond",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_smash_cond",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerSmashCondProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "CrackedVoidBlockOnBlockRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cracked_void_block_on_block_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/CrackedVoidBlockOnBlockRightclickedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "StarArm",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_arm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/entity/StarArmEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/StarArmRenderer.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarArmOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_arm_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarArmOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarArmOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_arm_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarArmOnInitialEntitySpawnProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarseerSpawner",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_spawner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/blockstates/starseer_spawner.json",
+          "src/main/java/net/starseer/fracturedreality/block/StarseerSpawnerBlock.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/starseer_spawner.json",
+          "src/main/resources/assets/fractured_reality/models/block/starseer_spawner.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/StarseerSpawnerRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/block/entity/StarseerSpawnerBlockEntity.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarseerSpawnerOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_spawner_on_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerSpawnerOnTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "FracturedStructures",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fractured_structures",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/worldgen/biome/fractured_structures.json"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "RealityEdge",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "reality_edge",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/dimension_type/reality_edge.json",
+          "src/main/java/net/starseer/fracturedreality/world/dimension/RealityEdgeDimension.java",
+          "src/main/resources/data/fractured_reality/dimension/reality_edge.json"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "RealityEdgePlayerEntersDimension",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reality_edge_player_enters_dimension",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/RealityEdgePlayerEntersDimensionProcedure.java"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "RealityEdgePlayerLeavesDimension",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reality_edge_player_leaves_dimension",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/RealityEdgePlayerLeavesDimensionProcedure.java"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "LaunchPad",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "launch_pad",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/launch_pad.json",
+          "src/main/resources/assets/fractured_reality/models/block/launch_pad.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/LaunchPadRenderer.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/launch_pad.json",
+          "src/main/java/net/starseer/fracturedreality/block/LaunchPadBlock.java",
+          "src/main/java/net/starseer/fracturedreality/block/entity/LaunchPadBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/blockstates/launch_pad.json"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "LaunchPadEntityWalksOnTheBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "launch_pad_entity_walks_on_the_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/LaunchPadEntityWalksOnTheBlockProcedure.java"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "LaunchPadPlaybackCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "launch_pad_playback_condition",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/LaunchPadPlaybackConditionProcedure.java"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "TeleportToRealityEdge",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_to_reality_edge",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/TeleportToRealityEdgeProcedure.java"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "StarseerEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerEntityDiesProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarseerTimeReset",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_time_reset",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerTimeResetProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "LaunchPadRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "launch_pad_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/launch_pad.json",
+          "src/main/resources/data/fractured_reality/advancement/recipes/launch_pad_recipe.json"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "StarseerNotMonologue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_not_monologue",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerNotMonologueProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarseerMonologue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_monologue",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerMonologueProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarseerOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerOnInitialEntitySpawnProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "StarseerThisEntityKillsAnotherOne",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starseer_this_entity_kills_another_one",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarseerThisEntityKillsAnotherOneProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "AdvIcon3",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_icon_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/adv_icon_3.json",
+          "src/main/java/net/starseer/fracturedreality/item/AdvIcon3Item.java"
+        ]
+      },
+      "path": "~/Advancements/Icons"
+    },
+    {
+      "name": "AdvIcon4",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_icon_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/AdvIcon4Item.java",
+          "src/main/resources/assets/fractured_reality/models/item/adv_icon_4.json"
+        ]
+      },
+      "path": "~/Advancements/Icons"
+    },
+    {
+      "name": "AdvTheSky",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_the_sky",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_the_sky.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AdvSupernova",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adv_supernova",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/adv_supernova.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "Hallucination04",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hallucination_04",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/screens/Hallucination04Overlay.java"
+        ]
+      },
+      "path": "~/VisualHallucination"
+    },
+    {
+      "name": "ShowHallu04",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_hallu_04",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/ShowHallu04Procedure.java"
+        ]
+      },
+      "path": "~/VisualHallucination"
+    },
+    {
+      "name": "PresenterEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "presenter_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/PresenterEntityIsHurtProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PresenterOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "presenter_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/PresenterOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "MoonbreakerSounds",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moonbreaker_sounds",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoonbreakerSoundsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FacelessSounds",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "faceless_sounds",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/FacelessSoundsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SummonerSounds",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summoner_sounds",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SummonerSoundsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "BlankDisk",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blank_disk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/BlankDiskItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/blank_disk.json"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "DiskBurner",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_burner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/block/disk_burner.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/disk_burner.json",
+          "src/main/resources/assets/fractured_reality/models/item/disk_burner.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/DiskBurnerBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/blockstates/disk_burner.json",
+          "src/main/java/net/starseer/fracturedreality/block/DiskBurnerBlock.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "VoidBlockerTotemBlockIsPlacedBy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_blocker_totem_block_is_placed_by",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidBlockerTotemBlockIsPlacedByProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "DiskBurnerGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_burner_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/network/DiskBurnerGUIButtonMessage.java",
+          "src/main/java/net/starseer/fracturedreality/client/gui/DiskBurnerGUIScreen.java",
+          "src/main/java/net/starseer/fracturedreality/world/inventory/DiskBurnerGUIMenu.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "DiskVoid",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_void",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_void.json",
+          "src/main/resources/assets/fractured_reality/models/item/disk_void.json",
+          "src/main/java/net/starseer/fracturedreality/item/DiskVoidItem.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "Disk289",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_289",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/Disk289Item.java",
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_289.json",
+          "src/main/resources/assets/fractured_reality/models/item/disk_289.json"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "Disk475",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_475",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/Disk475Item.java",
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_475.json",
+          "src/main/resources/assets/fractured_reality/models/item/disk_475.json"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "Disk748",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_748",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_748.json",
+          "src/main/resources/assets/fractured_reality/models/item/disk_748.json",
+          "src/main/java/net/starseer/fracturedreality/item/Disk748Item.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "Disk1052",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_1052",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/disk_1052.json",
+          "src/main/java/net/starseer/fracturedreality/item/Disk1052Item.java",
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_1052.json"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "Disk1644",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_1644",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/disk_1644.json",
+          "src/main/java/net/starseer/fracturedreality/item/Disk1644Item.java",
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_1644.json"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "Disk2193",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_2193",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/disk_2193.json",
+          "src/main/java/net/starseer/fracturedreality/item/Disk2193Item.java",
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_2193.json"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "BurnLog1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_log_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/BurnLog1Procedure.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "BurnLog2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_log_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/BurnLog2Procedure.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "BurnLog3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_log_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/BurnLog3Procedure.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "BurnLog4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_log_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/BurnLog4Procedure.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "BurnLog5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_log_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/BurnLog5Procedure.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "BurnLog6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_log_6",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/BurnLog6Procedure.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "BurnLog7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_log_7",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/BurnLog7Procedure.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "BurnLog8",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_log_8",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/BurnLog8Procedure.java"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "VSArmorDamageBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vs_armor_damage_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VSArmorDamageBlockProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "REFixAdventure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "re_fix_adventure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/REFixAdventureProcedure.java"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "Disk2374",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disk_2374",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/Disk2374Item.java",
+          "src/main/resources/assets/fractured_reality/models/item/disk_2374.json",
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_2374.json"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "BlankDiscCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blank_disc_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/recipes/blank_disc_craft.json",
+          "src/main/resources/data/fractured_reality/recipe/blank_disc.json"
+        ]
+      },
+      "path": "~/Disks"
+    },
+    {
+      "name": "LootTableRottenFood",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loot_table_rotten_food",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/chests/rotten_food.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "LootTableCobwebTools",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "loot_table_cobweb_tools",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/loot_table_cobweb_tools.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "Forgotten",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forgotten",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/entity/ForgottenBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/forgotten.json",
+          "src/main/resources/assets/fractured_reality/blockstates/forgotten.json",
+          "src/main/java/net/starseer/fracturedreality/block/ForgottenBlock.java",
+          "src/main/resources/assets/fractured_reality/models/block/forgotten.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/ForgottenRenderer.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/forgotten.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "VoidBlockerTotemGuide",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_blocker_totem_guide",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "HouseOfTheForgotten",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "house_of_the_forgotten",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/worldgen/structure_set/house_of_the_forgotten.json",
+          "src/main/resources/data/fractured_reality/worldgen/template_pool/house_of_the_forgotten.json",
+          "src/main/resources/data/fractured_reality/worldgen/structure/house_of_the_forgotten.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "GrapplingGuide",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grappling_guide",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/GrapplingHook"
+    },
+    {
+      "name": "VoidSteelArmorGuide",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_armor_guide",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "VoidSteelSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_sword.json",
+          "src/main/java/net/starseer/fracturedreality/item/VoidSteelSwordItem.java"
+        ]
+      }
+    },
+    {
+      "name": "VoidSteelSwordDamageBoost",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_sword_damage_boost",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidSteelSwordDamageBoostProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "UpgradeVoidSteelSword",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_void_steel_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/upgrade_void_steel_sword.json"
+        ]
+      }
+    },
+    {
+      "name": "VoidSteelSwordGuide",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_sword_guide",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "VoidDrip",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_drip",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/particle/VoidDripParticle.java",
+          "src/main/resources/assets/fractured_reality/particles/void_drip.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "AllowWeather",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "DaysSurvived",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    },
+    {
+      "name": "DoAudioHallucinations",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "DoGravityFlux",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "DoRandomLightning",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "DoVisualHallucinations",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "FogFluxMinDistance",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "GenerateFractStructure",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "GravityFlux",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "HallucinationHideDelay",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "IntenseGravityFlux",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "NonFRMobSpawnChance",
+      "type": "number",
+      "scope": "map",
+      "value": "100.0"
+    },
+    {
+      "name": "ShowAllseer",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ShowHallucination",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "ShowWatchers",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SkyPhase",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "SpawnFaceless",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SpawnMoonbreakers",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SpawnPresenters",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SpawnSummoners",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "StarseerDefeated",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "DayCountOffset",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "Phase",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "gravflux_start",
+      "files": [
+        "gravflux_start"
+      ],
+      "category": "hostile",
+      "subtitle": "Gravity Fluctuation Begins"
+    },
+    {
+      "name": "gravflux_end",
+      "files": [
+        "gravflux_end"
+      ],
+      "category": "hostile",
+      "subtitle": "Gravity Fluctuation Ends"
+    },
+    {
+      "name": "hallucination_voices",
+      "files": [
+        "hallucination_voice_1",
+        "hallucination_voice_2",
+        "hallucination_voice_3",
+        "hallucination_voice_4",
+        "hallucination_voice_5",
+        "hallucination_voice_6",
+        "hallucination_voice_7",
+        "hallucination_voice_8",
+        "hallucination_voice_9",
+        "hallucination_voice_10"
+      ],
+      "category": "voice",
+      "subtitle": "It Communicates"
+    },
+    {
+      "name": "fr.starseer.start_monologue_1p",
+      "files": [
+        "start_monologue_1p"
+      ],
+      "category": "voice",
+      "subtitle": "Starseer Monologues"
+    },
+    {
+      "name": "fr.starseer.start_monologue_mp",
+      "files": [
+        "start_monologue_mp"
+      ],
+      "category": "voice",
+      "subtitle": "Starseer Monologues"
+    },
+    {
+      "name": "fr.starseer.taunt",
+      "files": [
+        "taunt_1",
+        "taunt_2",
+        "taunt_3",
+        "taunt_4"
+      ],
+      "category": "voice",
+      "subtitle": "Starseer Taunts You"
+    },
+    {
+      "name": "fr.starseer.kills_player",
+      "files": [
+        "player_killed_1",
+        "player_killed_2",
+        "player_killed_3",
+        "player_killed_4"
+      ],
+      "category": "voice",
+      "subtitle": "Starseer Taunts You"
+    },
+    {
+      "name": "fr.presenter.hurt",
+      "files": [
+        "presenter_pain_1",
+        "presenter_pain_2",
+        "presenter_pain_3",
+        "presenter_pain_4",
+        "presenter_pain_5",
+        "presenter_pain_6"
+      ],
+      "category": "hostile",
+      "subtitle": "Presenter Hurts"
+    },
+    {
+      "name": "fr.presenter.speak",
+      "files": [
+        "presenter_speak_1",
+        "presenter_speak_2",
+        "presenter_speak_3",
+        "presenter_speak_4",
+        "presenter_speak_5",
+        "presenter_speak_6",
+        "presenter_speak_7"
+      ],
+      "category": "hostile",
+      "subtitle": "Presenter Speaks"
+    },
+    {
+      "name": "fr.moonbreaker.grunt",
+      "files": [
+        "moonbreaker_1",
+        "moonbreaker_2",
+        "moonbreaker_3",
+        "moonbreaker_4",
+        "moonbreaker_5",
+        "moonbreaker_6",
+        "moonbreaker_7",
+        "moonbreaker_8",
+        "moonbreaker_9",
+        "moonbreaker_10",
+        "moonbreaker_11",
+        "moonbreaker_12",
+        "moonbreaker_13",
+        "moonbreaker_14",
+        "moonbreaker_15",
+        "moonbreaker_16"
+      ],
+      "category": "hostile",
+      "subtitle": "Moonbreaker Grunts"
+    },
+    {
+      "name": "fr.faceless.whisper",
+      "files": [
+        "faceless_1",
+        "faceless_2",
+        "faceless_3",
+        "faceless_4",
+        "faceless_5",
+        "faceless_6"
+      ],
+      "category": "neutral",
+      "subtitle": "Faceless Whispers"
+    },
+    {
+      "name": "fr.summoner.noise",
+      "files": [
+        "summoner_1",
+        "summoner_2",
+        "summoner_3",
+        "summoner_4",
+        "summoner_5",
+        "summoner_6",
+        "summoner_7"
+      ],
+      "category": "hostile",
+      "subtitle": "Summoner Exists"
+    },
+    {
+      "name": "fr.summoner.summon",
+      "files": [
+        "summoner_summon"
+      ],
+      "category": "hostile",
+      "subtitle": "Summoner Summons"
+    },
+    {
+      "name": "fr.lore_discs.void_fluid",
+      "files": [
+        "void_fluid"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.lore_discs.subject_289",
+      "files": [
+        "subject_289"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.lore_discs.subject_475",
+      "files": [
+        "subject_475"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.lore_discs.subject_748",
+      "files": [
+        "subject_748"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.lore_discs.subject_1052",
+      "files": [
+        "subject_1052"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.lore_discs.subject_1644",
+      "files": [
+        "subject_1644"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.lore_discs.subject_2193",
+      "files": [
+        "subject_2193"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.lore_discs.subject_2374",
+      "files": [
+        "subject_2374"
+      ],
+      "category": "record",
+      "subtitle": ""
+    }
+  ],
+  "tag_elements": {
+    "ENTITIES:mod:unspawnblockable": [
+      "CUSTOM:Presenter",
+      "EntityAcaciaBoat",
+      "EntityAcaciaChestBoat",
+      "EntityAreaEffectCloud",
+      "EntityArmorStand",
+      "EntityArrow",
+      "EntityBambooRaft",
+      "EntityBambooChestRaft",
+      "EntityBirchBoat",
+      "EntityBirchChestBoat",
+      "EntityBlockDisplay",
+      "EntityBreezeWindCharge",
+      "EntityCherryBoat",
+      "EntityCherryChestBoat",
+      "EntityDarkOakBoat",
+      "EntityDarkOakChestBoat",
+      "EntityBoat",
+      "EntityChestBoat",
+      "EntityDragon",
+      "EntityDragonFireball",
+      "EntityEgg",
+      "EntityEnderCrystal",
+      "EntityEnderPearl",
+      "EntityEvokerFangs",
+      "EntityExpBottle",
+      "EntityXPOrb",
+      "EntityEnderEye",
+      "EntityFallingBlock",
+      "EntityFireball",
+      "EntityFireworkRocket",
+      "EntityGlowItemFrame",
+      "EntityInteraction",
+      "EntityItem",
+      "EntityItemDisplay",
+      "EntityItemFrame",
+      "EntityJungleBoat",
+      "EntityJungleChestBoat",
+      "EntityLeashKnot",
+      "EntityLightningBolt",
+      "EntityPotionLingering",
+      "EntityMangroveBoat",
+      "EntityMangroveChestBoat",
+      "EntityMarker",
+      "EntityMinecart",
+      "EntityMinecartChest",
+      "EntityMinecartCommandBlock",
+      "EntityMinecartFurnace",
+      "EntityMinecartHopper",
+      "EntityMinecartMobSpawner",
+      "EntityMinecartTNT",
+      "EntityOminousItemSpawner",
+      "EntityPainting",
+      "EntityPaleOakBoat",
+      "EntityPaleOakChestBoat",
+      "EntityShulkerBullet",
+      "EntitySmallFireball",
+      "EntitySnowball",
+      "EntitySpectralArrow",
+      "EntityPotion",
+      "EntitySpruceBoat",
+      "EntitySpruceChestBoat",
+      "EntityTextDisplay",
+      "EntityTNTPrimed",
+      "EntityTrident",
+      "EntityWarden",
+      "EntityWindCharge",
+      "EntityWither",
+      "EntityWitherSkull",
+      "CUSTOM:BeamSummoner",
+      "CUSTOM:SummonedProjectileBeamer",
+      "CUSTOM:LightBeam",
+      "CUSTOM:Faceless",
+      "CUSTOM:MoonBreaker",
+      "CUSTOM:VoidMissile",
+      "CUSTOM:Starseer",
+      "CUSTOM:StarArm"
+    ],
+    "BIOMES:mod:presenter_spawns": [
+      "#minecraft:is_overworld"
+    ],
+    "BIOMES:mod:summoner_spawns": [
+      "#minecraft:is_overworld",
+      "#minecraft:is_end"
+    ],
+    "BIOMES:mod:faceless_spawns": [
+      "#minecraft:is_end",
+      "#minecraft:is_nether"
+    ],
+    "ENTITIES:mod:voidbeings": [
+      "CUSTOM:MoonBreaker",
+      "CUSTOM:Presenter",
+      "CUSTOM:BeamSummoner",
+      "CUSTOM:SummonedProjectileBeamer",
+      "CUSTOM:LightBeam",
+      "CUSTOM:Faceless",
+      "CUSTOM:VoidMissile",
+      "CUSTOM:Starseer",
+      "CUSTOM:StarArm"
+    ],
+    "BIOMES:mod:moonbreaker_spawns": [
+      "#minecraft:is_end",
+      "#minecraft:is_overworld"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:VoidBlockerTotem",
+      "~CUSTOM:GrapplingPoint"
+    ],
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:Disk2374",
+      "~CUSTOM:Disk2193",
+      "~CUSTOM:Disk1644",
+      "~CUSTOM:Disk1052",
+      "~CUSTOM:Disk748",
+      "~CUSTOM:Disk475",
+      "~CUSTOM:Disk289",
+      "~CUSTOM:DiskVoid",
+      "Items.RECORD_13",
+      "Items.RECORD_CAT",
+      "Items.RECORD_BLOCKS",
+      "Items.RECORD_CHIRP",
+      "Items.RECORD_CREATOR",
+      "Items.RECORD_CREATOR_MUSIC_BOX",
+      "Items.RECORD_PRECIPICE",
+      "Items.RECORD_FAR",
+      "Items.RECORD_MALL",
+      "Items.RECORD_MELLOHI",
+      "Items.RECORD_STAL",
+      "Items.RECORD_STRAD",
+      "Items.RECORD_WARD",
+      "Items.RECORD_11",
+      "Items.RECORD_WAIT",
+      "Items.MUSIC_DISC_OTHERSIDE",
+      "Items.MUSIC_DISC_5",
+      "Items.MUSIC_DISC_PIGSTEP",
+      "Items.MUSIC_DISC_RELIC"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:VoidSteelSword"
+    ],
+    "ITEMS:minecraft:enchantable/equippable": [
+      "CUSTOM:VoidSteel.helmet",
+      "CUSTOM:VoidSteel.body",
+      "CUSTOM:VoidSteel.legs",
+      "CUSTOM:VoidSteel.boots"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "fractured_reality.configuration.time_events": "Time Events",
+      "fractured_reality.configuration.time_scale": "time_scale",
+      "fractured_reality.configuration.preparation_time": "PreparationTime",
+      "fractured_reality.configuration.prep_time": "prep_time",
+      "item.fractured_reality.presenter_spawn_egg": "Presenter Spawn Egg",
+      "entity.fractured_reality.presenter": "Presenter",
+      "entity.fractured_reality.beam_summoner": "Summoner",
+      "item.fractured_reality.beam_summoner_spawn_egg": "Summoner Spawn Egg",
+      "entity.fractured_reality.summoned_projectile_beamer": "Light Beam",
+      "item.fractured_reality.faceless_spawn_egg": "Faceless Spawn Egg",
+      "entity.fractured_reality.faceless": "Faceless",
+      "death.attack.light_beam_damage_type.item": "%1$s was incinerated by %2$s using %3$s",
+      "death.attack.light_beam_damage_type": "%1$s was incinerated",
+      "death.attack.light_beam_damage_type.player": "%1$s was incinerated whilst trying to escape %2$s",
+      "fractured_reality.configuration.preparationtime": "Preparation time",
+      "fractured_reality.configuration.timescale": "Time scale",
+      "item.fractured_reality.void_jetpack_chestplate": "Void Jetpack",
+      "item.fractured_reality.void_drop": "Void Drop",
+      "item.fractured_reality.void_blob": "Void Blob",
+      "item.fractured_reality.void_steel_ingot": "Void Steel Ingot",
+      "item.fractured_reality.void_upgrade_template": "Void Upgrade Template",
+      "subtitles.gravflux_start": "Gravity Fluctuation Begins",
+      "subtitles.gravflux_end": "Gravity Fluctuation Ends",
+      "subtitles.hallucination_voices": "It Communicates",
+      "entity.fractured_reality.moon_breaker": "Moonbreaker",
+      "item.fractured_reality.moon_breaker_spawn_egg": "Moonbreaker Spawn Egg",
+      "fractured_reality.configuration.do_griefing": "Do Griefing",
+      "effect.fractured_reality.false_sight": "False Sight",
+      "item.minecraft.potion.effect.reality_distortion": "Potion of Reality Distortion",
+      "item.minecraft.lingering_potion.effect.reality_distortion": "Lingering Potion of Reality Distortion",
+      "item.minecraft.tipped_arrow.effect.reality_distortion": "Arrow of Reality Distortion",
+      "item.minecraft.splash_potion.effect.reality_distortion": "Splash Potion of Reality Distortion",
+      "advancements.adv_beginning.title": "Fractured Reality",
+      "advancements.adv_beginning.descr": "Your world is breaking apart.",
+      "item.fractured_reality.adv_icon_1": "Adv Icon",
+      "advancements.adv_live_a_lie.descr": "Drink a Potion of Reality Distortion.",
+      "advancements.adv_live_a_lie.title": "I\u0027d Rather Live a Lie",
+      "advancements.adv_found_you.descr": "Encounter a Presenter.",
+      "advancements.adv_found_you.title": "Found You!",
+      "advancements.adv_kill_or_killed.descr": "Kill a void entity.",
+      "advancements.adv_kill_or_killed.title": "Kill or be Killed",
+      "advancements.adv_it_shoots.descr": "Encounter a Summoner.",
+      "advancements.adv_it_shoots.title": "They Shoot Now?!",
+      "advancements.adv_to_hell.title": "To Hell With You",
+      "advancements.adv_to_hell.descr": "Encounter a Faceless.",
+      "advancements.adv_too_big.title": "Destroyer of Worlds",
+      "advancements.adv_too_big.descr": "Encounter a Moonbreaker.",
+      "item.fractured_reality.adv_icon_2": "Adv Icon",
+      "fractured_reality.configuration.main": "Main",
+      "item.fractured_reality.void_steel_chestplate": "Void Steel Chestplate",
+      "item.fractured_reality.void_steel_boots": "Void Steel Boots",
+      "item.fractured_reality.void_steel_leggings": "Void Steel Leggings",
+      "item.fractured_reality.void_steel_helmet": "Void Steel Helmet",
+      "advancements.adv_going_insane.title": "I\u0027m Going Insane, Aren\u0027t I?",
+      "advancements.adv_going_insane.descr": "Experience an auditory hallucination",
+      "block.fractured_reality.hook_fabricator": "Hook Fabricator",
+      "item.fractured_reality.grappling_hook": "Grappling Hook",
+      "block.fractured_reality.grappling_point": "Grappling Point",
+      "block.fractured_reality.void_block": "Void Block",
+      "block.fractured_reality.cracked_void_block": "Cracked Void Block",
+      "block.fractured_reality.void_blocker_totem": "Totem of Void Repelling",
+      "entity.fractured_reality.starseer": "Starseer",
+      "entity.fractured_reality.star_arm": "Star Arm",
+      "block.fractured_reality.starseer_spawner": "Starseer Spawner",
+      "biome.fractured_reality.fractured_structures": "Fractured Structures",
+      "block.fractured_reality.launch_pad": "Launch Pad",
+      "subtitles.fr.starseer.start_monologue_1p": "Starseer Monologues",
+      "subtitles.fr.starseer.start_monologue_mp": "Starseer Monologues",
+      "subtitles.fr.starseer.taunt": "Starseer Taunts You",
+      "subtitles.fr.starseer.kills_player": "Starseer Taunts You",
+      "item.fractured_reality.adv_icon_3": "Adv Icon",
+      "item.fractured_reality.adv_icon_4": "Adv Icon",
+      "advancements.adv_the_sky.descr": "Enter Reality\u0027s Edge",
+      "advancements.adv_the_sky.title": "Sitting on Reality\u0027s Shore",
+      "advancements.adv_supernova.title": "Supernova",
+      "advancements.adv_supernova.descr": "Kill the Starseer, the one behind it all.",
+      "subtitles.fr.presenter.hurt": "Presenter Hurts",
+      "subtitles.fr.presenter.speak": "Presenter Speaks",
+      "subtitles.fr.moonbreaker.grunt": "Moonbreaker Grunts",
+      "subtitles.fr.faceless.whisper": "Faceless Whispers",
+      "subtitles.fr.summoner.noise": "Summoner Exists",
+      "subtitles.fr.summoner.summon": "Summoner Summons",
+      "item.fractured_reality.blank_disk": "Blank Disc",
+      "block.fractured_reality.disk_burner": "Disk Burner",
+      "gui.fractured_reality.disk_burner_gui.label_disk_burner": "Disk Burner",
+      "gui.fractured_reality.disk_burner_gui.button_s748": "S-748",
+      "gui.fractured_reality.disk_burner_gui.button_s2193": "S-2193",
+      "gui.fractured_reality.disk_burner_gui.button_s1052": "S-1052",
+      "gui.fractured_reality.disk_burner_gui.button_s475": "S-475",
+      "gui.fractured_reality.disk_burner_gui.button_s289": "S-289",
+      "gui.fractured_reality.disk_burner_gui.button_s2374_vml": "S-2374+VML",
+      "gui.fractured_reality.disk_burner_gui.button_s1644": "S-1644",
+      "gui.fractured_reality.disk_burner_gui.button_void_fluid": "Void Fluid",
+      "subtitles.fr.lore_discs.void_fluid": "",
+      "subtitles.fr.lore_discs.subject_289": "",
+      "subtitles.fr.lore_discs.subject_475": "",
+      "subtitles.fr.lore_discs.subject_748": "",
+      "subtitles.fr.lore_discs.subject_1052": "",
+      "subtitles.fr.lore_discs.subject_1644": "",
+      "subtitles.fr.lore_discs.subject_2193": "",
+      "item.fractured_reality.disk_void.desc": "Ludwig O. L. - Log 1",
+      "item.fractured_reality.disk_void": "Log Disc",
+      "item.fractured_reality.disk_289.desc": "Ludwig O. L. - Log 2",
+      "item.fractured_reality.disk_289": "Log Disc",
+      "item.fractured_reality.disk_475": "Log Disc",
+      "item.fractured_reality.disk_475.desc": "Ludwig O. L. - Log 3",
+      "item.fractured_reality.disk_748.desc": "Ludwig O. L. - Log 4",
+      "item.fractured_reality.disk_748": "Log Disc",
+      "item.fractured_reality.disk_1052": "Log Disc",
+      "item.fractured_reality.disk_1052.desc": "Ludwig O. L. - Log 5",
+      "item.fractured_reality.disk_1644.desc": "Ludwig O. L. - Log 6",
+      "item.fractured_reality.disk_1644": "Log Disc",
+      "item.fractured_reality.disk_2193": "Log Disc",
+      "item.fractured_reality.disk_2193.desc": "Ludwig O. L. - Log 7",
+      "item.fractured_reality.disk_2374": "Log Disc",
+      "item.fractured_reality.disk_2374.desc": "Ludwig O. L. - Log 8",
+      "subtitles.fr.lore_discs.subject_2374": "",
+      "block.fractured_reality.forgotten": "The Forgotten",
+      "fractured_reality.configuration.userandomchancesfor_void_steel_armor": "Use random chances for Void Steel Armor",
+      "jei.fractured_reality.void_blocker_totem_guide": "Place an Emerald Block, Diamond Block or Iron Block on top to activate. Rarer block means higher range",
+      "jei.fractured_reality.grappling_guide": "The grappling hook can pull you closer to grappling points.\nYou can obtain a grappling hook at a grappling hook fabricator.",
+      "jei.fractured_reality.void_steel_armor_guide": "Void steel armor reduces damage taken from void beings.",
+      "item.fractured_reality.void_steel_sword.description_0": "Poisons void beings.",
+      "item.fractured_reality.void_steel_sword": "Void Steel Sword",
+      "jei.fractured_reality.void_steel_sword_guide": "When you hit a void being, this tool applies the poison potion effect to it.  The effect lasts for 60 seconds."
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModConfigs.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
+      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModScreens.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModJeiInformation.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticleTypes.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMobEffects.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModPotions.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModBrewingRecipes.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModBlocks.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModBlockEntities.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModItems.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntityRenderers.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntities.java",
+      "src/main/java/net/starseer/fracturedreality/client/RenderUtils.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModSounds.java",
+      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
+      "src/main/java/net/starseer/fracturedreality/FracturedRealityMod.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModTabs.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/assets/fractured_reality/sounds.json"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Advancements",
+        "children": [
+          {
+            "name": "Icons",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "VisualHallucination",
+        "children": []
+      },
+      {
+        "name": "GrapplingHook",
+        "children": []
+      },
+      {
+        "name": "RealitysEdge",
+        "children": []
+      },
+      {
+        "name": "VoidMissile",
+        "children": []
+      },
+      {
+        "name": "StarseerBossfight",
+        "children": []
+      },
+      {
+        "name": "Disks",
+        "children": []
+      },
+      {
+        "name": "Structures",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "fractured_reality",
+    "modName": "Fractured Reality",
+    "version": "1.1.1",
+    "description": "As reality breaks and the sky cracks apart, mysterious beings are unleashed upon the world. The cycle of day and night breaks, the rain disappears, and the mobs spawn less and less. The players have to shelter from the gravity fluctuations pulling them up into the sky. It is up to the players to solve what happened and fix their world. The players will have to solve puzzles and find a way to go above and beyond. Once the world is repaired, everything will go back to normal, but not for long. ",
+    "author": "Jorge M.",
+    "websiteURL": "https://modrinth.com/project/vZ2PEXzS",
+    "license": "MIT License",
+    "serverSideOnly": false,
+    "modPicture": "logo",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "jei"
+    ],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "Presenter, Moonbreaker \u0026 Faceless voicelines by https://www.youtube.com/@MIAparadisetv",
+    "modElementsPackage": "net.starseer.fracturedreality"
+  },
+  "mcreatorVersion": 202500345720
+}
