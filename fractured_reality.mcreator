@@ -3142,10 +3142,10 @@
       "registry_name": "enforcer",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/EnforcerRenderer.java",
-          "src/main/java/net/starseer/fracturedreality/entity/EnforcerEntity.java",
           "src/main/resources/assets/fractured_reality/models/item/enforcer_spawn_egg.json",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/enforcer_biome_modifier.json"
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/enforcer_biome_modifier.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/EnforcerRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/EnforcerEntity.java"
         ]
       },
       "path": "~/Phase 2"
@@ -3280,10 +3280,10 @@
       "registry_name": "truthseeker",
       "metadata": {
         "files": [
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/truthseeker_biome_modifier.json",
           "src/main/resources/assets/fractured_reality/models/item/truthseeker_spawn_egg.json",
-          "src/main/java/net/starseer/fracturedreality/entity/TruthseekerEntity.java",
-          "src/main/java/net/starseer/fracturedreality/client/renderer/TruthseekerRenderer.java"
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/truthseeker_biome_modifier.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/TruthseekerRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/TruthseekerEntity.java"
         ]
       },
       "path": "~/Phase 2"
@@ -3945,12 +3945,12 @@
   "metadata": {
     "files": [
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModConfigs.java",
-      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
+      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModScreens.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModJeiInformation.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticleTypes.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMobEffects.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModPotions.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModBrewingRecipes.java",
@@ -3960,14 +3960,14 @@
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntityRenderers.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntities.java",
       "src/main/java/net/starseer/fracturedreality/client/RenderUtils.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModSounds.java",
-      "src/main/resources/assets/fractured_reality/sounds.json",
+      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
       "src/main/java/net/starseer/fracturedreality/FracturedRealityMod.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModTabs.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java"
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/assets/fractured_reality/sounds.json"
     ]
   },
   "foldersRoot": {

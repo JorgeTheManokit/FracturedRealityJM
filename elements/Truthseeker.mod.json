@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Truthseeker",
     "mobLabel": "",
-    "mobModelName": "Biped",
+    "mobModelName": "Modeltruthseeker",
     "mobModelTexture": "truthseeker.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -47,8 +47,8 @@
         "amplitude": 1.0
       }
     ],
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelWidth": 1.9000000000000001,
+    "modelHeight": 6.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,

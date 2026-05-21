@@ -60,7 +60,7 @@ public class FracturedRealityModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<EnforcerEntity>> ENFORCER = register("enforcer",
 			EntityType.Builder.<EnforcerEntity>of(EnforcerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.8f, 2.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ShatteredEntity>> SHATTERED = register("shattered",
 			EntityType.Builder.<ShatteredEntity>of(ShatteredEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
@@ -68,7 +68,7 @@ public class FracturedRealityModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<TruthseekerEntity>> TRUTHSEEKER = register("truthseeker",
 			EntityType.Builder.<TruthseekerEntity>of(TruthseekerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.ridingOffset(-0.6f).sized(0.6f, 1.8f));
+					.sized(1.9f, 6f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

@@ -59,7 +59,7 @@ public class EnforcerOnEntityTickUpdateProcedure {
 		}
 		if ((entity instanceof EnforcerEntity _datEntI ? _datEntI.getEntityData().get(EnforcerEntity.DATA_LightningTimer) : 0) >= 80) {
 			if (entity instanceof EnforcerEntity _datEntSetI)
-				_datEntSetI.getEntityData().set(EnforcerEntity.DATA_LightningCooldown, 50);
+				_datEntSetI.getEntityData().set(EnforcerEntity.DATA_LightningCooldown, 150);
 			if (entity instanceof EnforcerEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(EnforcerEntity.DATA_LightningTimer, 0);
 		}
