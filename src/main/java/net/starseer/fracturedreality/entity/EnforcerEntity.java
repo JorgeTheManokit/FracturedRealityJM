@@ -1,6 +1,6 @@
 package net.starseer.fracturedreality.entity;
 
-import net.starseer.fracturedreality.procedures.SpawnEnablerPresenterProcedure;
+import net.starseer.fracturedreality.procedures.SpawnEnablerEnforcerProcedure;
 import net.starseer.fracturedreality.procedures.PresenterEntityIsHurtProcedure;
 import net.starseer.fracturedreality.procedures.PresenterEntityDiesProcedure;
 import net.starseer.fracturedreality.procedures.EnforcerOnEntityTickUpdateProcedure;
@@ -148,7 +148,7 @@ public class EnforcerEntity extends Monster {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return SpawnEnablerPresenterProcedure.execute(world);
+			return SpawnEnablerEnforcerProcedure.execute(world);
 		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 

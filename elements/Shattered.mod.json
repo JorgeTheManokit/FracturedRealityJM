@@ -2,10 +2,10 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Enforcer",
+    "mobName": "Shattered",
     "mobLabel": "",
-    "mobModelName": "ModelEnforcer",
-    "mobModelTexture": "enforcer.png",
+    "mobModelName": "ModelShattered",
+    "mobModelTexture": "shattered_mimic.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -24,7 +24,7 @@
     "modelLayers": [
       {
         "model": "Default",
-        "texture": "presenter_glow.png",
+        "texture": "shattered_mimic_glow.png",
         "disableHurtOverlay": true,
         "glow": true
       }
@@ -32,7 +32,7 @@
     "animations": [
       {
         "animation": {
-          "value": "CUSTOM:EnforcerAnimation.base"
+          "value": "CUSTOM:ShatteredAnimation.Base"
         },
         "speed": 1.0,
         "walking": false,
@@ -40,18 +40,15 @@
       },
       {
         "animation": {
-          "value": "CUSTOM:EnforcerAnimation.callStrike"
+          "value": "CUSTOM:ShatteredAnimation.Walk"
         },
-        "speed": 2.0,
-        "condition": {
-          "name": "EnforcerCallPlaybackCondition"
-        },
-        "walking": false,
+        "speed": 1.0,
+        "walking": true,
         "amplitude": 1.0
       }
     ],
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelWidth": 2.5,
+    "modelHeight": 6.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -63,14 +60,14 @@
       "value": -1,
       "falpha": 0.0
     },
-    "spawnEggTexture": "enforcer_egg",
+    "spawnEggTexture": "shattered_egg",
     "creativeTabs": [
       {
         "value": "MISC"
       }
     ],
     "isBoss": false,
-    "bossBarColor": "PINK",
+    "bossBarColor": "PURPLE",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
       "value": ""
@@ -92,22 +89,22 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 4,
-    "attackKnockback": 0.0,
-    "knockbackResistance": 0.0,
-    "movementSpeed": 0.35,
-    "stepHeight": 1.0,
-    "armorBaseValue": 0.0,
-    "trackingRange": 128,
+    "attackStrength": 2,
+    "attackKnockback": 0.5,
+    "knockbackResistance": 10.0,
+    "movementSpeed": 0.30000000000000004,
+    "stepHeight": 0.6,
+    "armorBaseValue": 5.0,
+    "trackingRange": 64,
     "followRange": 64,
-    "health": 40,
-    "xpAmount": 0,
+    "health": 100,
+    "xpAmount": 1000,
     "waterMob": false,
     "breatheUnderwater": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "pushedByFluids": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "flyingMob": false,
     "inventorySize": 9,
@@ -118,17 +115,17 @@
     "canControlStrafe": false,
     "immuneToFire": false,
     "immuneToArrows": false,
-    "immuneToFallDamage": false,
+    "immuneToFallDamage": true,
     "immuneToCactus": false,
-    "immuneToDrowning": false,
+    "immuneToDrowning": true,
     "immuneToLightning": false,
-    "immuneToPotions": false,
+    "immuneToPotions": true,
     "immuneToPlayer": false,
-    "immuneToExplosion": false,
+    "immuneToExplosion": true,
     "immuneToTrident": false,
     "immuneToAnvil": false,
     "immuneToWither": false,
-    "immuneToDragonBreath": false,
+    "immuneToDragonBreath": true,
     "mobDrop": {
       "value": ""
     },
@@ -136,7 +133,7 @@
       "value": ""
     },
     "hurtSound": {
-      "value": ""
+      "value": "entity.generic.hurt"
     },
     "deathSound": {
       "value": "entity.generic.death"
@@ -149,32 +146,43 @@
     },
     "entityDataEntries": [
       {
-        "min": -2147483648,
-        "max": 2147483647,
-        "name": "LightningCooldown",
-        "type": "integer",
-        "value": 50
+        "name": "CurrentAttack",
+        "type": "string",
+        "value": "None"
       },
       {
         "min": -2147483648,
         "max": 2147483647,
-        "name": "LightningTimer",
+        "name": "SwitchAttackCooldown",
         "type": "integer",
         "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "AttackTimer",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "GroundTickAgo",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "name": "DoingMonologue",
+        "type": "logic",
+        "value": true
       }
     ],
-    "whenMobDies": {
-      "name": "PresenterEntityDies"
-    },
     "whenMobIsHurt": {
-      "name": "PresenterEntityIsHurt"
-    },
-    "onMobTickUpdate": {
-      "name": "EnforcerOnEntityTickUpdate"
+      "name": "StarseerEntityIsHurt"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">StarseerNotMonologue,StarseerNotMonologue</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">StarseerNotMonologue,StarseerNotMonologue</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">StarseerNotMonologue,StarseerNotMonologue</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">StarseerNotMonologue,StarseerNotMonologue</field><next><block type=\"look_around\"><field name=\"condition\">StarseerNotMonologue,StarseerNotMonologue</field><next><block type=\"swim_in_water\"><field name=\"condition\">StarseerNotMonologue,StarseerNotMonologue</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -185,20 +193,13 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
-    "spawningCondition": {
-      "name": "SpawnEnablerEnforcer"
-    },
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
     "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 1,
+    "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [
-      {
-        "value": "#mod:presenter_spawns"
-      }
-    ],
+    "restrictionBiomes": [],
     "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,

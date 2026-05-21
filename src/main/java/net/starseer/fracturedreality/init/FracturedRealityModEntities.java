@@ -61,6 +61,10 @@ public class FracturedRealityModEntities {
 			EntityType.Builder.<EnforcerEntity>of(EnforcerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ShatteredEntity>> SHATTERED = register("shattered",
+			EntityType.Builder.<ShatteredEntity>of(ShatteredEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(2.5f, 6f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -79,6 +83,7 @@ public class FracturedRealityModEntities {
 		StarArmEntity.init(event);
 		LightningStrikerEntity.init(event);
 		EnforcerEntity.init(event);
+		ShatteredEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -92,5 +97,6 @@ public class FracturedRealityModEntities {
 		event.put(STAR_ARM.get(), StarArmEntity.createAttributes().build());
 		event.put(LIGHTNING_STRIKER.get(), LightningStrikerEntity.createAttributes().build());
 		event.put(ENFORCER.get(), EnforcerEntity.createAttributes().build());
+		event.put(SHATTERED.get(), ShatteredEntity.createAttributes().build());
 	}
 }

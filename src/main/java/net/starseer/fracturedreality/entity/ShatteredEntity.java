@@ -1,11 +1,11 @@
 package net.starseer.fracturedreality.entity;
 
-import net.starseer.fracturedreality.procedures.*;
+import net.starseer.fracturedreality.procedures.StarseerNotMonologueProcedure;
+import net.starseer.fracturedreality.procedures.StarseerEntityIsHurtProcedure;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
-import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.entity.projectile.ThrownPotion;
@@ -22,10 +22,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -33,22 +30,17 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import javax.annotation.Nullable;
-
-public class StarseerEntity extends Monster {
-	public static final EntityDataAccessor<String> DATA_CurrentAttack = SynchedEntityData.defineId(StarseerEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<Integer> DATA_SwitchAttackCooldown = SynchedEntityData.defineId(StarseerEntity.class, EntityDataSerializers.INT);
-	public static final EntityDataAccessor<Integer> DATA_AttackTimer = SynchedEntityData.defineId(StarseerEntity.class, EntityDataSerializers.INT);
-	public static final EntityDataAccessor<Integer> DATA_GroundTickAgo = SynchedEntityData.defineId(StarseerEntity.class, EntityDataSerializers.INT);
-	public static final EntityDataAccessor<Boolean> DATA_DoingMonologue = SynchedEntityData.defineId(StarseerEntity.class, EntityDataSerializers.BOOLEAN);
+public class ShatteredEntity extends Monster {
+	public static final EntityDataAccessor<String> DATA_CurrentAttack = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_SwitchAttackCooldown = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_AttackTimer = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_GroundTickAgo = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_DoingMonologue = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.BOOLEAN);
 	public final AnimationState animationState0 = new AnimationState();
-	public final AnimationState animationState2 = new AnimationState();
-	public final AnimationState animationState3 = new AnimationState();
-	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.PURPLE, ServerBossEvent.BossBarOverlay.PROGRESS);
 
-	public StarseerEntity(EntityType<StarseerEntity> type, Level world) {
+	public ShatteredEntity(EntityType<ShatteredEntity> type, Level world) {
 		super(type, world);
-		xpReward = 32000;
+		xpReward = 1000;
 		setNoAi(false);
 		setPersistenceRequired();
 	}
@@ -69,21 +61,21 @@ public class StarseerEntity extends Monster {
 		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, false, false) {
 			@Override
 			public boolean canUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 
 			@Override
 			public boolean canContinueToUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canContinueToUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 		});
@@ -95,21 +87,21 @@ public class StarseerEntity extends Monster {
 
 			@Override
 			public boolean canUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 
 			@Override
 			public boolean canContinueToUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canContinueToUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 
@@ -117,84 +109,84 @@ public class StarseerEntity extends Monster {
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1) {
 			@Override
 			public boolean canUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 
 			@Override
 			public boolean canContinueToUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canContinueToUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 		});
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this) {
 			@Override
 			public boolean canUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 
 			@Override
 			public boolean canContinueToUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canContinueToUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 		});
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this) {
 			@Override
 			public boolean canUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 
 			@Override
 			public boolean canContinueToUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canContinueToUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 		});
 		this.goalSelector.addGoal(6, new FloatGoal(this) {
 			@Override
 			public boolean canUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 
 			@Override
 			public boolean canContinueToUse() {
-				double x = StarseerEntity.this.getX();
-				double y = StarseerEntity.this.getY();
-				double z = StarseerEntity.this.getZ();
-				Entity entity = StarseerEntity.this;
-				Level world = StarseerEntity.this.level();
+				double x = ShatteredEntity.this.getX();
+				double y = ShatteredEntity.this.getY();
+				double z = ShatteredEntity.this.getZ();
+				Entity entity = ShatteredEntity.this;
+				Level world = ShatteredEntity.this.level();
 				return super.canContinueToUse() && StarseerNotMonologueProcedure.execute(entity);
 			}
 		});
@@ -245,19 +237,6 @@ public class StarseerEntity extends Monster {
 	}
 
 	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		StarseerEntityDiesProcedure.execute(this.level());
-	}
-
-	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata) {
-		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
-		StarseerOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
-		return retval;
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("DataCurrentAttack", this.entityData.get(DATA_CurrentAttack));
@@ -283,43 +262,11 @@ public class StarseerEntity extends Monster {
 	}
 
 	@Override
-	public void awardKillScore(Entity entity, int score, DamageSource damageSource) {
-		super.awardKillScore(entity, score, damageSource);
-		StarseerThisEntityKillsAnotherOneProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
-	}
-
-	@Override
 	public void tick() {
 		super.tick();
 		if (this.level().isClientSide()) {
 			this.animationState0.animateWhen(true, this.tickCount);
-			this.animationState2.animateWhen(MoonBreakerAttackingCheckProcedure.execute(this), this.tickCount);
-			this.animationState3.animateWhen(StarseerSmashCondProcedure.execute(this), this.tickCount);
 		}
-	}
-
-	@Override
-	public void baseTick() {
-		super.baseTick();
-		StarseerOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
-	}
-
-	@Override
-	public void startSeenByPlayer(ServerPlayer player) {
-		super.startSeenByPlayer(player);
-		this.bossInfo.addPlayer(player);
-	}
-
-	@Override
-	public void stopSeenByPlayer(ServerPlayer player) {
-		super.stopSeenByPlayer(player);
-		this.bossInfo.removePlayer(player);
-	}
-
-	@Override
-	public void customServerAiStep() {
-		super.customServerAiStep();
-		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
@@ -328,7 +275,7 @@ public class StarseerEntity extends Monster {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 1000);
+		builder = builder.add(Attributes.MAX_HEALTH, 100);
 		builder = builder.add(Attributes.ARMOR, 5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 2);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 64);

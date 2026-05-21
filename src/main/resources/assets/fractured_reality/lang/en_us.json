@@ -126,5 +126,7 @@
   "jei.fractured_reality.void_steel_sword_guide": "When you hit a void being, this tool applies the poison potion effect to it.  The effect lasts for 60 seconds.",
   "entity.fractured_reality.lightning_striker": "Lightning Strike",
   "item.fractured_reality.enforcer_spawn_egg": "Enforcer Spawn Egg",
-  "entity.fractured_reality.enforcer": "Enforcer"
+  "entity.fractured_reality.enforcer": "Enforcer",
+  "entity.fractured_reality.shattered": "Shattered",
+  "item.fractured_reality.shattered_spawn_egg": "Shattered Spawn Egg"
 }

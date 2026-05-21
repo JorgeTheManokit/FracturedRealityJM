@@ -70,7 +70,7 @@ public class EventEnablerPhase2Procedure {
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).DoGravityFlux = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 6 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
-			FracturedRealityModVariables.MapVariables.get(world).SpawnPresenters = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 6 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
+			FracturedRealityModVariables.MapVariables.get(world).SpawnEnforcers = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 6 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).SpawnSummoners = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 10 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();

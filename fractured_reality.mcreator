@@ -3256,6 +3256,21 @@
         ]
       },
       "path": "~/Phase 2"
+    },
+    {
+      "name": "Shattered",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattered",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/shattered_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/entity/ShatteredEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/ShatteredRenderer.java"
+        ]
+      },
+      "path": "~/Phase 2"
     }
   ],
   "variable_elements": [
@@ -3904,7 +3919,9 @@
       "jei.fractured_reality.void_steel_sword_guide": "When you hit a void being, this tool applies the poison potion effect to it.  The effect lasts for 60 seconds.",
       "entity.fractured_reality.lightning_striker": "Lightning Strike",
       "item.fractured_reality.enforcer_spawn_egg": "Enforcer Spawn Egg",
-      "entity.fractured_reality.enforcer": "Enforcer"
+      "entity.fractured_reality.enforcer": "Enforcer",
+      "entity.fractured_reality.shattered": "Shattered",
+      "item.fractured_reality.shattered_spawn_egg": "Shattered Spawn Egg"
     }
   },
   "metadata": {
