@@ -123,5 +123,8 @@
   "jei.fractured_reality.void_steel_armor_guide": "Void steel armor reduces damage taken from void beings.",
   "item.fractured_reality.void_steel_sword.description_0": "Poisons void beings.",
   "item.fractured_reality.void_steel_sword": "Void Steel Sword",
-  "jei.fractured_reality.void_steel_sword_guide": "When you hit a void being, this tool applies the poison potion effect to it.  The effect lasts for 60 seconds."
+  "jei.fractured_reality.void_steel_sword_guide": "When you hit a void being, this tool applies the poison potion effect to it.  The effect lasts for 60 seconds.",
+  "entity.fractured_reality.lightning_striker": "Lightning Strike",
+  "item.fractured_reality.enforcer_spawn_egg": "Enforcer Spawn Egg",
+  "entity.fractured_reality.enforcer": "Enforcer"
 }

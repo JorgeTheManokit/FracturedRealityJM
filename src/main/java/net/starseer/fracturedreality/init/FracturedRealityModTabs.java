@@ -25,6 +25,7 @@ public class FracturedRealityModTabs {
 			tabData.accept(FracturedRealityModItems.BEAM_SUMMONER_SPAWN_EGG.get());
 			tabData.accept(FracturedRealityModItems.FACELESS_SPAWN_EGG.get());
 			tabData.accept(FracturedRealityModItems.MOON_BREAKER_SPAWN_EGG.get());
+			tabData.accept(FracturedRealityModItems.ENFORCER_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(FracturedRealityModItems.VOID_JETPACK_CHESTPLATE.get());
 			tabData.accept(FracturedRealityModItems.GRAPPLING_HOOK.get());

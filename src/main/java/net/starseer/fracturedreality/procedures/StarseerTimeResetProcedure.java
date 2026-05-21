@@ -30,6 +30,7 @@ public class StarseerTimeResetProcedure {
 			FracturedRealityModVariables.MapVariables.get(world).GenerateFractStructure = true;
 			FracturedRealityModVariables.MapVariables.get(world).DayCountOffset = FracturedRealityModVariables.MapVariables.get(world).DayCountOffset + FracturedRealityModVariables.MapVariables.get(world).DaysSurvived
 					+ Mth.nextInt(RandomSource.create(), 5, 10);
+			FracturedRealityModVariables.MapVariables.get(world).Phase = 2;
 			FracturedRealityModVariables.MapVariables.get(world).markSyncDirty();
 		}
 	}

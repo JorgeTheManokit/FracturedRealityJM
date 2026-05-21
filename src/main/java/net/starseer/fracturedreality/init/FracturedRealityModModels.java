@@ -15,6 +15,7 @@ public class FracturedRealityModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(ModelPresenter.LAYER_LOCATION, ModelPresenter::createBodyLayer);
+		event.registerLayerDefinition(ModelEnforcer.LAYER_LOCATION, ModelEnforcer::createBodyLayer);
 		event.registerLayerDefinition(ModelBeamSummoner.LAYER_LOCATION, ModelBeamSummoner::createBodyLayer);
 		event.registerLayerDefinition(ModelGrapplingPoint.LAYER_LOCATION, ModelGrapplingPoint::createBodyLayer);
 		event.registerLayerDefinition(ModelLaunchPad.LAYER_LOCATION, ModelLaunchPad::createBodyLayer);
@@ -23,6 +24,7 @@ public class FracturedRealityModModels {
 		event.registerLayerDefinition(Modelmoonbreaker.LAYER_LOCATION, Modelmoonbreaker::createBodyLayer);
 		event.registerLayerDefinition(ModelStarArm.LAYER_LOCATION, ModelStarArm::createBodyLayer);
 		event.registerLayerDefinition(Modelsmaller_armor_model.LAYER_LOCATION, Modelsmaller_armor_model::createBodyLayer);
+		event.registerLayerDefinition(ModelLIghtningStriker.LAYER_LOCATION, ModelLIghtningStriker::createBodyLayer);
 		event.registerLayerDefinition(ModelSummonedProjectileBeamer.LAYER_LOCATION, ModelSummonedProjectileBeamer::createBodyLayer);
 		event.registerLayerDefinition(ModelLightBeam.LAYER_LOCATION, ModelLightBeam::createBodyLayer);
 		event.registerLayerDefinition(ModelvoidBlockerTotem.LAYER_LOCATION, ModelvoidBlockerTotem::createBodyLayer);

@@ -23,5 +23,7 @@ public class FracturedRealityModEntityRenderers {
 		event.registerEntityRenderer(FracturedRealityModEntities.VOID_MISSILE.get(), VoidMissileRenderer::new);
 		event.registerEntityRenderer(FracturedRealityModEntities.STARSEER.get(), StarseerRenderer::new);
 		event.registerEntityRenderer(FracturedRealityModEntities.STAR_ARM.get(), StarArmRenderer::new);
+		event.registerEntityRenderer(FracturedRealityModEntities.LIGHTNING_STRIKER.get(), LightningStrikerRenderer::new);
+		event.registerEntityRenderer(FracturedRealityModEntities.ENFORCER.get(), EnforcerRenderer::new);
 	}
 }

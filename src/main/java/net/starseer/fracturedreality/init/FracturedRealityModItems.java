@@ -61,6 +61,7 @@ public class FracturedRealityModItems {
 	public static final DeferredItem<Item> DISK_2374;
 	public static final DeferredItem<Item> FORGOTTEN;
 	public static final DeferredItem<Item> VOID_STEEL_SWORD;
+	public static final DeferredItem<Item> ENFORCER_SPAWN_EGG;
 	static {
 		PRESENTER_SPAWN_EGG = REGISTRY.register("presenter_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.PRESENTER, -1, -1, new Item.Properties()));
 		BEAM_SUMMONER_SPAWN_EGG = REGISTRY.register("beam_summoner_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.BEAM_SUMMONER, -1, -1, new Item.Properties()));
@@ -97,6 +98,7 @@ public class FracturedRealityModItems {
 		DISK_2374 = REGISTRY.register("disk_2374", Disk2374Item::new);
 		FORGOTTEN = block(FracturedRealityModBlocks.FORGOTTEN);
 		VOID_STEEL_SWORD = REGISTRY.register("void_steel_sword", VoidSteelSwordItem::new);
+		ENFORCER_SPAWN_EGG = REGISTRY.register("enforcer_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.ENFORCER, -1, -1, new Item.Properties()));
 	}
 
 	// Start of user code block custom items

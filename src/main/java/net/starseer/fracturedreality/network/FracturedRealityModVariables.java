@@ -175,6 +175,7 @@ public class FracturedRealityModVariables {
 		public boolean StarseerDefeated = false;
 		public double DayCountOffset = 0;
 		public double Phase = 0;
+		public boolean SpawnEnforcers = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -204,6 +205,7 @@ public class FracturedRealityModVariables {
 			StarseerDefeated = nbt.getBoolean("StarseerDefeated");
 			DayCountOffset = nbt.getDouble("DayCountOffset");
 			Phase = nbt.getDouble("Phase");
+			SpawnEnforcers = nbt.getBoolean("SpawnEnforcers");
 		}
 
 		@Override
@@ -229,6 +231,7 @@ public class FracturedRealityModVariables {
 			nbt.putBoolean("StarseerDefeated", StarseerDefeated);
 			nbt.putDouble("DayCountOffset", DayCountOffset);
 			nbt.putDouble("Phase", Phase);
+			nbt.putBoolean("SpawnEnforcers", SpawnEnforcers);
 			return nbt;
 		}
 

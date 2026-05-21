@@ -39,22 +39,30 @@ public class SkyChangerProcedure {
 			return;
 		if ((entity.level().dimension()) == Level.OVERWORLD) {
 			if (!(entity instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(FracturedRealityModMobEffects.FALSE_SIGHT))) {
-				if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 0 && FracturedRealityModVariables.MapVariables.get(world).SkyPhase < 5) {
-					RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_background_cut.png"), 0xffffff, Math.min(1, 1));
+				if (FracturedRealityModVariables.MapVariables.get(world).Phase == 1) {
+					if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 0 && FracturedRealityModVariables.MapVariables.get(world).SkyPhase < 5) {
+						RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_background_cut.png"), 0xffffff, Math.min(1, 1));
+					}
+					if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 4) {
+						RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_background.png"), 0xffffff, Math.min(1, 1));
+					}
+					if (FracturedRealityModVariables.MapVariables.get(world).ShowAllseer) {
+						RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_starseer.png"), 0xffffff, Math.min(1, 1));
+					}
+					if (NightTimeCheckerProcedure.execute(world) && FracturedRealityModVariables.MapVariables.get(world).ShowWatchers) {
+						RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_watchers.png"), 0xffffff, Math.min(1, 1));
+					}
+					if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 0) {
+						RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_foreground.png"), 0xffffff,
+								Math.min((float) (FracturedRealityModVariables.MapVariables.get(world).SkyPhase * 0.2), 1));
+					}
+				} else {
+					if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 0) {
+						RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_foreground.png"), 0xffffff,
+								Math.min((float) (FracturedRealityModVariables.MapVariables.get(world).SkyPhase * 0.2), 1));
+					}
 				}
-				if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 4) {
-					RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_background.png"), 0xffffff, Math.min(1, 1));
-				}
-				if (FracturedRealityModVariables.MapVariables.get(world).ShowAllseer) {
-					RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_starseer.png"), 0xffffff, Math.min(1, 1));
-				}
-				if (NightTimeCheckerProcedure.execute(world) && FracturedRealityModVariables.MapVariables.get(world).ShowWatchers) {
-					RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_watchers.png"), 0xffffff, Math.min(1, 1));
-				}
-				if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 0) {
-					RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_foreground.png"), 0xffffff, Math.min((float) (FracturedRealityModVariables.MapVariables.get(world).SkyPhase * 0.2), 1));
-				}
-			} else if (entity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(FracturedRealityModMobEffects.FALSE_SIGHT)) {
+			} else if (entity instanceof LivingEntity _livEnt10 && _livEnt10.hasEffect(FracturedRealityModMobEffects.FALSE_SIGHT)) {
 				RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_false_lines.png"), 0xffffff, Math.min((float) 0.25, 1));
 				RenderUtils.renderCustomSun(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_false_sun.png"));
 				RenderUtils.renderCustomMoon(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_false_moon_phases.png"));
