@@ -24,6 +24,7 @@ public class FracturedRealityModModels {
 		event.registerLayerDefinition(Modelmoonbreaker.LAYER_LOCATION, Modelmoonbreaker::createBodyLayer);
 		event.registerLayerDefinition(ModelShattered.LAYER_LOCATION, ModelShattered::createBodyLayer);
 		event.registerLayerDefinition(ModelStarArm.LAYER_LOCATION, ModelStarArm::createBodyLayer);
+		event.registerLayerDefinition(Modeltruthseeker.LAYER_LOCATION, Modeltruthseeker::createBodyLayer);
 		event.registerLayerDefinition(Modelsmaller_armor_model.LAYER_LOCATION, Modelsmaller_armor_model::createBodyLayer);
 		event.registerLayerDefinition(ModelLIghtningStriker.LAYER_LOCATION, ModelLIghtningStriker::createBodyLayer);
 		event.registerLayerDefinition(ModelSummonedProjectileBeamer.LAYER_LOCATION, ModelSummonedProjectileBeamer::createBodyLayer);

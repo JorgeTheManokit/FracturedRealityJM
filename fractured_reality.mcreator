@@ -3271,6 +3271,22 @@
         ]
       },
       "path": "~/Phase 2"
+    },
+    {
+      "name": "Truthseeker",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "truthseeker",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/truthseeker_biome_modifier.json",
+          "src/main/resources/assets/fractured_reality/models/item/truthseeker_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/entity/TruthseekerEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/TruthseekerRenderer.java"
+        ]
+      },
+      "path": "~/Phase 2"
     }
   ],
   "variable_elements": [
@@ -3921,7 +3937,9 @@
       "item.fractured_reality.enforcer_spawn_egg": "Enforcer Spawn Egg",
       "entity.fractured_reality.enforcer": "Enforcer",
       "entity.fractured_reality.shattered": "Shattered",
-      "item.fractured_reality.shattered_spawn_egg": "Shattered Spawn Egg"
+      "item.fractured_reality.shattered_spawn_egg": "Shattered Spawn Egg",
+      "item.fractured_reality.truthseeker_spawn_egg": "Truthseeker Spawn Egg",
+      "entity.fractured_reality.truthseeker": "Truthseeker"
     }
   },
   "metadata": {

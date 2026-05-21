@@ -65,6 +65,10 @@ public class FracturedRealityModEntities {
 			EntityType.Builder.<ShatteredEntity>of(ShatteredEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2.5f, 6f));
+	public static final DeferredHolder<EntityType<?>, EntityType<TruthseekerEntity>> TRUTHSEEKER = register("truthseeker",
+			EntityType.Builder.<TruthseekerEntity>of(TruthseekerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.ridingOffset(-0.6f).sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -84,6 +88,7 @@ public class FracturedRealityModEntities {
 		LightningStrikerEntity.init(event);
 		EnforcerEntity.init(event);
 		ShatteredEntity.init(event);
+		TruthseekerEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -98,5 +103,6 @@ public class FracturedRealityModEntities {
 		event.put(LIGHTNING_STRIKER.get(), LightningStrikerEntity.createAttributes().build());
 		event.put(ENFORCER.get(), EnforcerEntity.createAttributes().build());
 		event.put(SHATTERED.get(), ShatteredEntity.createAttributes().build());
+		event.put(TRUTHSEEKER.get(), TruthseekerEntity.createAttributes().build());
 	}
 }
