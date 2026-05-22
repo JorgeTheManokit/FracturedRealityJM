@@ -23,6 +23,7 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -83,6 +84,10 @@ public class EnforcerEntity extends Monster {
 		Entity immediatesourceentity = damagesource.getDirectEntity();
 
 		PresenterEntityIsHurtProcedure.execute(world, x, y, z);
+		if (damagesource.is(DamageTypes.IN_FIRE))
+			return false;
+		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
+			return false;
 		return super.hurt(damagesource, amount);
 	}
 

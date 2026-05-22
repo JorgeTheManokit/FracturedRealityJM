@@ -24,7 +24,7 @@
     "modelLayers": [
       {
         "model": "Default",
-        "texture": "presenter_glow.png",
+        "texture": "enforcer_glow.png",
         "disableHurtOverlay": true,
         "glow": true
       }
@@ -116,12 +116,12 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "immuneToArrows": false,
     "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
-    "immuneToLightning": false,
+    "immuneToLightning": true,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,

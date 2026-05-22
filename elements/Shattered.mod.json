@@ -5,7 +5,7 @@
     "mobName": "Shattered",
     "mobLabel": "",
     "mobModelName": "ModelShattered",
-    "mobModelTexture": "shattered_mimic.png",
+    "mobModelTexture": "empty.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -24,9 +24,57 @@
     "modelLayers": [
       {
         "model": "Default",
+        "texture": "shattered_mimic.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ShatteredDisplayMimic"
+        }
+      },
+      {
+        "model": "Default",
         "texture": "shattered_mimic_glow.png",
         "disableHurtOverlay": true,
-        "glow": true
+        "glow": true,
+        "condition": {
+          "name": "ShatteredDisplayMimic"
+        }
+      },
+      {
+        "model": "Default",
+        "texture": "shattered_alt.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ShatteredDisplayAlternate"
+        }
+      },
+      {
+        "model": "Default",
+        "texture": "shattered_alt_glow.png",
+        "disableHurtOverlay": true,
+        "glow": true,
+        "condition": {
+          "name": "ShatteredDisplayAlternate"
+        }
+      },
+      {
+        "model": "Default",
+        "texture": "shattered.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ShatteredDisplayClassic"
+        }
+      },
+      {
+        "model": "Default",
+        "texture": "shattered_glow.png",
+        "disableHurtOverlay": true,
+        "glow": true,
+        "condition": {
+          "name": "ShatteredDisplayClassic"
+        }
       }
     ],
     "animations": [
@@ -101,10 +149,10 @@
     "xpAmount": 1000,
     "waterMob": false,
     "breatheUnderwater": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "pushedByFluids": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "flyingMob": false,
     "inventorySize": 9,
@@ -146,39 +194,18 @@
     },
     "entityDataEntries": [
       {
-        "name": "CurrentAttack",
-        "type": "string",
-        "value": "None"
-      },
-      {
         "min": -2147483648,
         "max": 2147483647,
-        "name": "SwitchAttackCooldown",
+        "name": "Variant",
         "type": "integer",
-        "value": 0
-      },
-      {
-        "min": -2147483648,
-        "max": 2147483647,
-        "name": "AttackTimer",
-        "type": "integer",
-        "value": 0
-      },
-      {
-        "min": -2147483648,
-        "max": 2147483647,
-        "name": "GroundTickAgo",
-        "type": "integer",
-        "value": 0
-      },
-      {
-        "name": "DoingMonologue",
-        "type": "logic",
-        "value": true
+        "value": 3
       }
     ],
     "whenMobIsHurt": {
       "name": "StarseerEntityIsHurt"
+    },
+    "onInitialSpawn": {
+      "name": "ShatteredOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",

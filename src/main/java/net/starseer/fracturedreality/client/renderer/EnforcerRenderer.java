@@ -21,7 +21,7 @@ public class EnforcerRenderer extends MobRenderer<EnforcerEntity, ModelEnforcer<
 	public EnforcerRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(ModelEnforcer.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<EnforcerEntity, ModelEnforcer<EnforcerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("fractured_reality:textures/entities/presenter_glow.png");
+			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("fractured_reality:textures/entities/enforcer_glow.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, EnforcerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {

@@ -2,6 +2,7 @@ package net.starseer.fracturedreality.entity;
 
 import net.starseer.fracturedreality.procedures.LightningStrikerOnEntityTickUpdateProcedure;
 
+import net.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
@@ -126,7 +127,27 @@ public class LightningStrikerEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		LightningStrikerOnEntityTickUpdateProcedure.execute(this.level(), this);
+		LightningStrikerOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+	}
+
+	@Override
+	public boolean canDrownInFluidType(FluidType type) {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level();
+		Entity entity = this;
+		return false;
+	}
+
+	@Override
+	public boolean isPushedByFluid() {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level();
+		Entity entity = this;
+		return false;
 	}
 
 	@Override

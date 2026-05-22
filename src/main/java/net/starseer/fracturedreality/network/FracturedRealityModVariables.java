@@ -176,6 +176,8 @@ public class FracturedRealityModVariables {
 		public double DayCountOffset = 0;
 		public double Phase = 0;
 		public boolean SpawnEnforcers = false;
+		public boolean ShatteredClassicAlreadySpawned = false;
+		public boolean ShatteredAlternateAlreadySpawned = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -206,6 +208,8 @@ public class FracturedRealityModVariables {
 			DayCountOffset = nbt.getDouble("DayCountOffset");
 			Phase = nbt.getDouble("Phase");
 			SpawnEnforcers = nbt.getBoolean("SpawnEnforcers");
+			ShatteredClassicAlreadySpawned = nbt.getBoolean("ShatteredClassicAlreadySpawned");
+			ShatteredAlternateAlreadySpawned = nbt.getBoolean("ShatteredAlternateAlreadySpawned");
 		}
 
 		@Override
@@ -232,6 +236,8 @@ public class FracturedRealityModVariables {
 			nbt.putDouble("DayCountOffset", DayCountOffset);
 			nbt.putDouble("Phase", Phase);
 			nbt.putBoolean("SpawnEnforcers", SpawnEnforcers);
+			nbt.putBoolean("ShatteredClassicAlreadySpawned", ShatteredClassicAlreadySpawned);
+			nbt.putBoolean("ShatteredAlternateAlreadySpawned", ShatteredAlternateAlreadySpawned);
 			return nbt;
 		}
 

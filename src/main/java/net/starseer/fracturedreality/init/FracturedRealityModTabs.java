@@ -46,6 +46,7 @@ public class FracturedRealityModTabs {
 			tabData.accept(FracturedRealityModItems.VOID_STEEL_INGOT.get());
 			tabData.accept(FracturedRealityModItems.VOID_UPGRADE_TEMPLATE.get());
 			tabData.accept(FracturedRealityModItems.BLANK_DISK.get());
+			tabData.accept(FracturedRealityModItems.STAR_DUST.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(FracturedRealityModItems.VOID_STEEL_HELMET.get());
 			tabData.accept(FracturedRealityModItems.VOID_STEEL_CHESTPLATE.get());

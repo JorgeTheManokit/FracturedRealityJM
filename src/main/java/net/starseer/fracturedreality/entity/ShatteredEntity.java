@@ -2,10 +2,13 @@ package net.starseer.fracturedreality.entity;
 
 import net.starseer.fracturedreality.procedures.StarseerNotMonologueProcedure;
 import net.starseer.fracturedreality.procedures.StarseerEntityIsHurtProcedure;
+import net.starseer.fracturedreality.procedures.ShatteredOnInitialEntitySpawnProcedure;
 
+import net.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.entity.projectile.ThrownPotion;
@@ -22,6 +25,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -30,12 +34,10 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import javax.annotation.Nullable;
+
 public class ShatteredEntity extends Monster {
-	public static final EntityDataAccessor<String> DATA_CurrentAttack = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<Integer> DATA_SwitchAttackCooldown = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.INT);
-	public static final EntityDataAccessor<Integer> DATA_AttackTimer = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.INT);
-	public static final EntityDataAccessor<Integer> DATA_GroundTickAgo = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.INT);
-	public static final EntityDataAccessor<Boolean> DATA_DoingMonologue = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_Variant = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.INT);
 	public final AnimationState animationState0 = new AnimationState();
 
 	public ShatteredEntity(EntityType<ShatteredEntity> type, Level world) {
@@ -48,11 +50,7 @@ public class ShatteredEntity extends Monster {
 	@Override
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
-		builder.define(DATA_CurrentAttack, "None");
-		builder.define(DATA_SwitchAttackCooldown, 0);
-		builder.define(DATA_AttackTimer, 0);
-		builder.define(DATA_GroundTickAgo, 0);
-		builder.define(DATA_DoingMonologue, true);
+		builder.define(DATA_Variant, 3);
 	}
 
 	@Override
@@ -237,28 +235,23 @@ public class ShatteredEntity extends Monster {
 	}
 
 	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
+		ShatteredOnInitialEntitySpawnProcedure.execute(world, this);
+		return retval;
+	}
+
+	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
-		compound.putString("DataCurrentAttack", this.entityData.get(DATA_CurrentAttack));
-		compound.putInt("DataSwitchAttackCooldown", this.entityData.get(DATA_SwitchAttackCooldown));
-		compound.putInt("DataAttackTimer", this.entityData.get(DATA_AttackTimer));
-		compound.putInt("DataGroundTickAgo", this.entityData.get(DATA_GroundTickAgo));
-		compound.putBoolean("DataDoingMonologue", this.entityData.get(DATA_DoingMonologue));
+		compound.putInt("DataVariant", this.entityData.get(DATA_Variant));
 	}
 
 	@Override
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
-		if (compound.contains("DataCurrentAttack"))
-			this.entityData.set(DATA_CurrentAttack, compound.getString("DataCurrentAttack"));
-		if (compound.contains("DataSwitchAttackCooldown"))
-			this.entityData.set(DATA_SwitchAttackCooldown, compound.getInt("DataSwitchAttackCooldown"));
-		if (compound.contains("DataAttackTimer"))
-			this.entityData.set(DATA_AttackTimer, compound.getInt("DataAttackTimer"));
-		if (compound.contains("DataGroundTickAgo"))
-			this.entityData.set(DATA_GroundTickAgo, compound.getInt("DataGroundTickAgo"));
-		if (compound.contains("DataDoingMonologue"))
-			this.entityData.set(DATA_DoingMonologue, compound.getBoolean("DataDoingMonologue"));
+		if (compound.contains("DataVariant"))
+			this.entityData.set(DATA_Variant, compound.getInt("DataVariant"));
 	}
 
 	@Override
@@ -267,6 +260,26 @@ public class ShatteredEntity extends Monster {
 		if (this.level().isClientSide()) {
 			this.animationState0.animateWhen(true, this.tickCount);
 		}
+	}
+
+	@Override
+	public boolean canDrownInFluidType(FluidType type) {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level();
+		Entity entity = this;
+		return false;
+	}
+
+	@Override
+	public boolean isPushedByFluid() {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level();
+		Entity entity = this;
+		return false;
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {

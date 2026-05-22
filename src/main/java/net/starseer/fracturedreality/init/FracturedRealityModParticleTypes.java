@@ -15,4 +15,5 @@ import net.minecraft.core.particles.ParticleType;
 public class FracturedRealityModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(Registries.PARTICLE_TYPE, FracturedRealityMod.MODID);
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> VOID_DRIP = REGISTRY.register("void_drip", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> GREEN_SPARK = REGISTRY.register("green_spark", () -> new SimpleParticleType(true));
 }

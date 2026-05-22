@@ -45,6 +45,13 @@ public class GravityFluxOnEntityProcedure {
 							_entity.getAttribute(Attributes.GRAVITY).addPermanentModifier(modifier);
 						}
 					}
+					if (entity instanceof LivingEntity _entity) {
+						AttributeModifier modifier = new AttributeModifier(ResourceLocation.parse("fractured_reality:grav_flux_changer"), (0 - 1 / FracturedRealityModVariables.MapVariables.get(world).GravityFlux),
+								AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
+						if (!_entity.getAttribute(Attributes.FALL_DAMAGE_MULTIPLIER).hasModifier(modifier.id())) {
+							_entity.getAttribute(Attributes.FALL_DAMAGE_MULTIPLIER).addPermanentModifier(modifier);
+						}
+					}
 					if (entity instanceof Player) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
@@ -56,9 +63,12 @@ public class GravityFluxOnEntityProcedure {
 					}
 				}
 			} else {
-				if (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttribute(Attributes.GRAVITY).hasModifier(ResourceLocation.parse("fractured_reality:grav_flux_changer"))) {
+				if (entity instanceof LivingEntity _livingEntity5 && _livingEntity5.getAttribute(Attributes.GRAVITY).hasModifier(ResourceLocation.parse("fractured_reality:grav_flux_changer"))) {
 					if (entity instanceof LivingEntity _entity) {
 						_entity.getAttribute(Attributes.GRAVITY).removeModifier(ResourceLocation.parse("fractured_reality:grav_flux_changer"));
+					}
+					if (entity instanceof LivingEntity _entity) {
+						_entity.getAttribute(Attributes.FALL_DAMAGE_MULTIPLIER).removeModifier(ResourceLocation.parse("fractured_reality:grav_flux_changer"));
 					}
 					if (entity instanceof Player) {
 						if (world instanceof Level _level) {

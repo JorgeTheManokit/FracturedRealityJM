@@ -3,11 +3,14 @@
   "values": [
     "fractured_reality:starseer",
     "fractured_reality:presenter",
+    "fractured_reality:enforcer",
     "fractured_reality:star_arm",
+    "fractured_reality:shattered",
     "fractured_reality:beam_summoner",
     "fractured_reality:light_beam",
     "fractured_reality:moon_breaker",
     "fractured_reality:void_missile",
+    "fractured_reality:truthseeker",
     "fractured_reality:faceless",
     "fractured_reality:summoned_projectile_beamer"
   ]

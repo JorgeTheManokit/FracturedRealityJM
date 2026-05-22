@@ -17,8 +17,8 @@
               "value": "CUSTOM:VoidDrop"
             },
             "weight": 1,
-            "minCount": 0,
-            "maxCount": 2,
+            "minCount": 4,
+            "maxCount": 13,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -41,7 +41,7 @@
             },
             "weight": 8,
             "minCount": 1,
-            "maxCount": 9,
+            "maxCount": 1,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -65,7 +65,7 @@
         ]
       }
     ],
-    "name": "enforcer_loot",
+    "name": "entities/enforcer",
     "namespace": "mod"
   }
 }

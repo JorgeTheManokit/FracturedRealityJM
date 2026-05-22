@@ -1,0 +1,41 @@
+package net.starseer.fracturedreality.item;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
+
+public class StarDustItem extends Item {
+	public StarDustItem() {
+		super(new Item.Properties().fireResistant().rarity(Rarity.RARE));
+	}
+
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.EAT;
+	}
+
+	@Override
+	public SoundEvent getEatingSound() {
+		return SoundEvents.EMPTY;
+	}
+
+	@Override
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
+		return 32;
+	}
+
+	@Override
+	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
+		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
+		entity.startUsingItem(hand);
+		return ar;
+	}
+}
