@@ -3482,6 +3482,155 @@
         ]
       },
       "path": "~/Phase 2"
+    },
+    {
+      "name": "ShatteredOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattered_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/ShatteredOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "StarcoreVibrationReceived",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starcore_vibration_received",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "vibrationX",
+            "type": "number"
+          },
+          {
+            "name": "vibrationY",
+            "type": "number"
+          },
+          {
+            "name": "vibrationZ",
+            "type": "number"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarcoreVibrationReceivedProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "Starcore",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starcore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/entity/StarcoreEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/starcore_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/StarcoreRenderer.java",
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/starcore_biome_modifier.json"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "GetThreatLevel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_threat_level",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/GetThreatLevelProcedure.java"
+        ]
+      },
+      "path": "~/Threat"
+    },
+    {
+      "name": "ThreatClientTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "threat_client_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/ThreatClientTickProcedure.java"
+        ]
+      },
+      "path": "~/Threat"
     }
   ],
   "variable_elements": [
@@ -3640,6 +3789,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "threatRepeatCooldown",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -3862,6 +4017,86 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase1.negligible",
+      "files": [
+        "threat_phase1_negligible"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase1.minor",
+      "files": [
+        "threat_phase1_minor"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase1.moderate",
+      "files": [
+        "threat_phase1_moderate"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase1.major",
+      "files": [
+        "threat_phase1_major"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase1.severe",
+      "files": [
+        "threat_phase1_severe"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase2.negligible",
+      "files": [
+        "threat_phase2_negligible"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase2.minor",
+      "files": [
+        "threat_phase2_minor"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase2.moderate",
+      "files": [
+        "threat_phase2_moderate"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase2.major",
+      "files": [
+        "threat_phase2_major"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.threat.phase2.severe",
+      "files": [
+        "threat_phase2_severe"
+      ],
+      "category": "hostile",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
@@ -4016,6 +4251,21 @@
       "CUSTOM:VoidSteel.body",
       "CUSTOM:VoidSteel.legs",
       "CUSTOM:VoidSteel.boots"
+    ],
+    "GAME_EVENTS:minecraft:starcore_can_listen": [],
+    "ENTITIES:mod:low_threat": [
+      "CUSTOM:Presenter",
+      "CUSTOM:BeamSummoner"
+    ],
+    "ENTITIES:mod:medium_threat": [
+      "CUSTOM:Faceless",
+      "CUSTOM:Enforcer",
+      "CUSTOM:Starcore"
+    ],
+    "ENTITIES:mod:high_threat": [
+      "CUSTOM:MoonBreaker",
+      "CUSTOM:Shattered",
+      "CUSTOM:Truthseeker"
     ]
   },
   "tab_element_order": {},
@@ -4153,18 +4403,30 @@
       "item.fractured_reality.shattered_spawn_egg": "Shattered Spawn Egg",
       "item.fractured_reality.truthseeker_spawn_egg": "Truthseeker Spawn Egg",
       "entity.fractured_reality.truthseeker": "Truthseeker",
-      "item.fractured_reality.star_dust": "Star Dust"
+      "item.fractured_reality.star_dust": "Star Dust",
+      "item.fractured_reality.starcore_spawn_egg": "Starcore Spawn Egg",
+      "entity.fractured_reality.starcore": "Starcore",
+      "subtitles.fr.threat.phase1.negligible": "",
+      "subtitles.fr.threat.phase1.minor": "",
+      "subtitles.fr.threat.phase1.moderate": "",
+      "subtitles.fr.threat.phase1.major": "",
+      "subtitles.fr.threat.phase1.severe": "",
+      "subtitles.fr.threat.phase2.negligible": "",
+      "subtitles.fr.threat.phase2.minor": "",
+      "subtitles.fr.threat.phase2.moderate": "",
+      "subtitles.fr.threat.phase2.major": "",
+      "subtitles.fr.threat.phase2.severe": ""
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModConfigs.java",
-      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
+      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModScreens.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModJeiInformation.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticleTypes.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMobEffects.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModPotions.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModBrewingRecipes.java",
@@ -4174,14 +4436,14 @@
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntityRenderers.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntities.java",
       "src/main/java/net/starseer/fracturedreality/client/RenderUtils.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModSounds.java",
-      "src/main/resources/assets/fractured_reality/sounds.json",
+      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
       "src/main/java/net/starseer/fracturedreality/FracturedRealityMod.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModTabs.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java"
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/assets/fractured_reality/sounds.json"
     ]
   },
   "foldersRoot": {
@@ -4230,6 +4492,10 @@
       },
       {
         "name": "DevTools",
+        "children": []
+      },
+      {
+        "name": "Threat",
         "children": []
       }
     ]

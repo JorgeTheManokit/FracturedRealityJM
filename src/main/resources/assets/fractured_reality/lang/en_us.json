@@ -131,5 +131,17 @@
   "item.fractured_reality.shattered_spawn_egg": "Shattered Spawn Egg",
   "item.fractured_reality.truthseeker_spawn_egg": "Truthseeker Spawn Egg",
   "entity.fractured_reality.truthseeker": "Truthseeker",
-  "item.fractured_reality.star_dust": "Star Dust"
+  "item.fractured_reality.star_dust": "Star Dust",
+  "item.fractured_reality.starcore_spawn_egg": "Starcore Spawn Egg",
+  "entity.fractured_reality.starcore": "Starcore",
+  "subtitles.fr.threat.phase1.negligible": "",
+  "subtitles.fr.threat.phase1.minor": "",
+  "subtitles.fr.threat.phase1.moderate": "",
+  "subtitles.fr.threat.phase1.major": "",
+  "subtitles.fr.threat.phase1.severe": "",
+  "subtitles.fr.threat.phase2.negligible": "",
+  "subtitles.fr.threat.phase2.minor": "",
+  "subtitles.fr.threat.phase2.moderate": "",
+  "subtitles.fr.threat.phase2.major": "",
+  "subtitles.fr.threat.phase2.severe": ""
 }

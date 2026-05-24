@@ -69,6 +69,10 @@ public class FracturedRealityModEntities {
 			EntityType.Builder.<TruthseekerEntity>of(TruthseekerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
 
 					.sized(1.9f, 6f));
+	public static final DeferredHolder<EntityType<?>, EntityType<StarcoreEntity>> STARCORE = register("starcore",
+			EntityType.Builder.<StarcoreEntity>of(StarcoreEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.875f, 0.875f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -89,6 +93,7 @@ public class FracturedRealityModEntities {
 		EnforcerEntity.init(event);
 		ShatteredEntity.init(event);
 		TruthseekerEntity.init(event);
+		StarcoreEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -104,5 +109,6 @@ public class FracturedRealityModEntities {
 		event.put(ENFORCER.get(), EnforcerEntity.createAttributes().build());
 		event.put(SHATTERED.get(), ShatteredEntity.createAttributes().build());
 		event.put(TRUTHSEEKER.get(), TruthseekerEntity.createAttributes().build());
+		event.put(STARCORE.get(), StarcoreEntity.createAttributes().build());
 	}
 }

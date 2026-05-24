@@ -387,5 +387,85 @@
         "stream": true
       }
     ]
+  },
+  "fr.threat.phase1.negligible": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase1_negligible",
+        "stream": false
+      }
+    ]
+  },
+  "fr.threat.phase1.minor": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase1_minor",
+        "stream": false
+      }
+    ]
+  },
+  "fr.threat.phase1.moderate": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase1_moderate",
+        "stream": false
+      }
+    ]
+  },
+  "fr.threat.phase1.major": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase1_major",
+        "stream": false
+      }
+    ]
+  },
+  "fr.threat.phase1.severe": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase1_severe",
+        "stream": false
+      }
+    ]
+  },
+  "fr.threat.phase2.negligible": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase2_negligible",
+        "stream": false
+      }
+    ]
+  },
+  "fr.threat.phase2.minor": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase2_minor",
+        "stream": false
+      }
+    ]
+  },
+  "fr.threat.phase2.moderate": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase2_moderate",
+        "stream": false
+      }
+    ]
+  },
+  "fr.threat.phase2.major": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase2_major",
+        "stream": false
+      }
+    ]
+  },
+  "fr.threat.phase2.severe": {
+    "sounds": [
+      {
+        "name": "fractured_reality:threat_phase2_severe",
+        "stream": false
+      }
+    ]
   }
 }

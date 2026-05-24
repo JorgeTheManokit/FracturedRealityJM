@@ -49,4 +49,24 @@ public class FracturedRealityModSounds {
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.lore_discs.subject_2193")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> FR_LORE_DISCS_SUBJECT_2374 = REGISTRY.register("fr.lore_discs.subject_2374",
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.lore_discs.subject_2374")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE1_NEGLIGIBLE = REGISTRY.register("fr.threat.phase1.negligible",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase1.negligible")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE1_MINOR = REGISTRY.register("fr.threat.phase1.minor",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase1.minor")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE1_MODERATE = REGISTRY.register("fr.threat.phase1.moderate",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase1.moderate")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE1_MAJOR = REGISTRY.register("fr.threat.phase1.major",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase1.major")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE1_SEVERE = REGISTRY.register("fr.threat.phase1.severe",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase1.severe")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE2_NEGLIGIBLE = REGISTRY.register("fr.threat.phase2.negligible",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase2.negligible")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE2_MINOR = REGISTRY.register("fr.threat.phase2.minor",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase2.minor")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE2_MODERATE = REGISTRY.register("fr.threat.phase2.moderate",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase2.moderate")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE2_MAJOR = REGISTRY.register("fr.threat.phase2.major",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase2.major")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE2_SEVERE = REGISTRY.register("fr.threat.phase2.severe",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase2.severe")));
 }

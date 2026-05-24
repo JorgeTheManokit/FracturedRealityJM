@@ -47,11 +47,15 @@ public class FogChangerProcedure {
 					} else {
 						CalculatedDistance = 200;
 					}
-					fogColor = 0x180006;
 					fogRenderEvent.setNearPlaneDistance((float) CalculatedDistance);
 					fogRenderEvent.setFarPlaneDistance((float) (CalculatedDistance * 3));
 					if (!fogRenderEvent.isCanceled()) {
 						fogRenderEvent.setCanceled(true);
+					}
+					if (FracturedRealityModVariables.MapVariables.get(world).Phase == 1) {
+						fogColor = 0x180006;
+					} else if (FracturedRealityModVariables.MapVariables.get(world).Phase == 2) {
+						fogColor = 0x003333;
 					}
 				}
 			}

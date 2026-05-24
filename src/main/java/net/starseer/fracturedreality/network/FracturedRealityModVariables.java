@@ -73,6 +73,7 @@ public class FracturedRealityModVariables {
 	public static void clonePlayer(PlayerEvent.Clone event) {
 		PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
 		PlayerVariables clone = new PlayerVariables();
+		clone.threatRepeatCooldown = original.threatRepeatCooldown;
 		if (!event.isWasDeath()) {
 			clone.HallucinationHideDelay = original.HallucinationHideDelay;
 			clone.ShowHallucination = original.ShowHallucination;
@@ -301,12 +302,14 @@ public class FracturedRealityModVariables {
 		boolean _syncDirty = false;
 		public double HallucinationHideDelay = 0;
 		public double ShowHallucination = 0;
+		public double threatRepeatCooldown = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("HallucinationHideDelay", HallucinationHideDelay);
 			nbt.putDouble("ShowHallucination", ShowHallucination);
+			nbt.putDouble("threatRepeatCooldown", threatRepeatCooldown);
 			return nbt;
 		}
 
@@ -314,6 +317,7 @@ public class FracturedRealityModVariables {
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
 			HallucinationHideDelay = nbt.getDouble("HallucinationHideDelay");
 			ShowHallucination = nbt.getDouble("ShowHallucination");
+			threatRepeatCooldown = nbt.getDouble("threatRepeatCooldown");
 		}
 
 		public void markSyncDirty() {

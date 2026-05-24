@@ -19,7 +19,6 @@ public class TruthseekerOnEntityTickUpdateProcedure {
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
-		MoonbreakerSoundsProcedure.execute(world, x, y, z);
 		target = entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null;
 		if (!(target == null)) {
 			if (FracturedRealityServerConfigConfiguration.VOID_GRIEFING.get()) {
@@ -69,6 +68,6 @@ public class TruthseekerOnEntityTickUpdateProcedure {
 			}
 		}
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (FracturedRealityModParticleTypes.GREEN_SPARK.get()), x, (y + 5.875), z, 1, 0, 0, 0, 0.25);
+			_level.sendParticles((SimpleParticleType) (FracturedRealityModParticleTypes.GREEN_SPARK.get()), x, (y + 5.875), z, 1, 0, 0, 0, 0.125);
 	}
 }

@@ -39,12 +39,12 @@ public class GreenSparkParticle extends TextureSheetParticle {
 		this.setSize(0.1f, 0.1f);
 		this.quadSize *= 0.5f;
 		this.lifetime = 28;
-		this.gravity = 0.25f;
+		this.gravity = 0.5f;
 		this.hasPhysics = true;
 		this.xd = vx * 0.5;
 		this.yd = vy * 0.5;
 		this.zd = vz * 0.5;
-		this.angularVelocity = 0.01f;
+		this.angularVelocity = 0.05f;
 		this.angularAcceleration = 0f;
 		this.setSpriteFromAge(spriteSet);
 	}
