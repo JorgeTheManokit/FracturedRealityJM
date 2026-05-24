@@ -1,131 +1,121 @@
 package net.starseer.fracturedreality.procedures;
 
 import net.starseer.fracturedreality.network.FracturedRealityModVariables;
+import net.starseer.fracturedreality.FracturedRealityMod;
 
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import javax.annotation.Nullable;
+
+import java.util.ArrayList;
 
 @EventBusSubscriber
 public class ThreatClientTickProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(PlayerTickEvent.Post event) {
-		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+	public static void onWorldTick(LevelTickEvent.Post event) {
+		execute(event, event.getLevel());
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
+	public static void execute(LevelAccessor world) {
+		execute(null, world);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
-			return;
+	private static void execute(@Nullable Event event, LevelAccessor world) {
 		double threatLevel = 0;
-		threatLevel = GetThreatLevelProcedure.execute(world, x, y, z);
-		if (entity.getData(FracturedRealityModVariables.PLAYER_VARIABLES).threatRepeatCooldown == 0) {
-			if (world.isClientSide()) {
+		for (Entity entityiterator : new ArrayList<>(world.players())) {
+			threatLevel = GetThreatLevelProcedure.execute(world, entityiterator.getX(), entityiterator.getY(), entityiterator.getZ());
+			FracturedRealityMod.LOGGER.info("playsound fractured_reality:fr.threat.phase1.severe hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1");
+			if (entityiterator.getData(FracturedRealityModVariables.PLAYER_VARIABLES).threatRepeatCooldown <= 0) {
 				if (FracturedRealityModVariables.MapVariables.get(world).Phase == 1) {
 					if (threatLevel == 5) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.severe")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.severe")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase1.severe hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					} else if (threatLevel == 4) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.major")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.major")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase1.major hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					} else if (threatLevel == 3) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.moderate")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.moderate")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase1.moderate hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					} else if (threatLevel == 2) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.minor")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.minor")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase1.minor hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					} else if (threatLevel == 1) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.negligible")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase1.negligible")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase1.negligible hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					}
 				} else if (FracturedRealityModVariables.MapVariables.get(world).Phase == 2) {
 					if (threatLevel == 5) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.severe")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.severe")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase2.severe hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					} else if (threatLevel == 4) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.major")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.major")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase2.major hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					} else if (threatLevel == 3) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.moderate")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.moderate")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase2.moderate hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					} else if (threatLevel == 2) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.minor")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.minor")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase2.minor hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					} else if (threatLevel == 1) {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.negligible")), SoundSource.HOSTILE, 100, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.threat.phase2.negligible")), SoundSource.HOSTILE, 100, 1, false);
-							}
-						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+											.withSuppressedOutput(),
+									("playsound fractured_reality:fr.threat.phase2.negligible hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1"));
 					}
 				}
 			}
-		}
-		{
-			FracturedRealityModVariables.PlayerVariables _vars = entity.getData(FracturedRealityModVariables.PLAYER_VARIABLES);
-			_vars.threatRepeatCooldown = entity.getData(FracturedRealityModVariables.PLAYER_VARIABLES).threatRepeatCooldown == 0 ? 240 : entity.getData(FracturedRealityModVariables.PLAYER_VARIABLES).threatRepeatCooldown - 1;
-			_vars.markSyncDirty();
+			if (threatLevel == 0) {
+				{
+					FracturedRealityModVariables.PlayerVariables _vars = entityiterator.getData(FracturedRealityModVariables.PLAYER_VARIABLES);
+					_vars.threatRepeatCooldown = 1;
+					_vars.markSyncDirty();
+				}
+			}
+			{
+				FracturedRealityModVariables.PlayerVariables _vars = entityiterator.getData(FracturedRealityModVariables.PLAYER_VARIABLES);
+				_vars.threatRepeatCooldown = entityiterator.getData(FracturedRealityModVariables.PLAYER_VARIABLES).threatRepeatCooldown == 0 ? 240 : entityiterator.getData(FracturedRealityModVariables.PLAYER_VARIABLES).threatRepeatCooldown - 1;
+				_vars.markSyncDirty();
+			}
 		}
 	}
 }

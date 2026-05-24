@@ -1,5 +1,7 @@
 package net.starseer.fracturedreality.procedures;
 
+import net.starseer.fracturedreality.FracturedRealityMod;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
@@ -76,6 +78,7 @@ public class GetThreatLevelProcedure {
 		} else {
 			threatLevel = 0;
 		}
+		FracturedRealityMod.LOGGER.info(threatLevel);
 		return threatLevel;
 	}
 }

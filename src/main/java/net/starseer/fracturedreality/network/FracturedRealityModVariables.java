@@ -175,7 +175,7 @@ public class FracturedRealityModVariables {
 		public boolean SpawnSummoners = false;
 		public boolean StarseerDefeated = false;
 		public double DayCountOffset = 0;
-		public double Phase = 0;
+		public double Phase = 1.0;
 		public boolean SpawnEnforcers = false;
 		public boolean ShatteredClassicAlreadySpawned = false;
 		public boolean ShatteredAlternateAlreadySpawned = false;
