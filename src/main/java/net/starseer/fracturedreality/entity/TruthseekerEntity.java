@@ -1,5 +1,6 @@
 package net.starseer.fracturedreality.entity;
 
+import net.starseer.fracturedreality.procedures.TruthseekerSpawnEnablerProcedure;
 import net.starseer.fracturedreality.procedures.TruthseekerOnEntityTickUpdateProcedure;
 import net.starseer.fracturedreality.init.FracturedRealityModEntities;
 
@@ -21,7 +22,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -33,6 +33,7 @@ public class TruthseekerEntity extends Monster {
 		super(type, world);
 		xpReward = 150;
 		setNoAi(false);
+		setPersistenceRequired();
 	}
 
 	@Override
@@ -52,6 +53,11 @@ public class TruthseekerEntity extends Monster {
 	}
 
 	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
 	}
@@ -64,6 +70,8 @@ public class TruthseekerEntity extends Monster {
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
 		if (damagesource.is(DamageTypes.IN_FIRE))
+			return false;
+		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
 			return false;
 		if (damagesource.is(DamageTypes.FALLING_ANVIL))
 			return false;
@@ -105,9 +113,12 @@ public class TruthseekerEntity extends Monster {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(FracturedRealityModEntities.TRUTHSEEKER.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
-				RegisterSpawnPlacementsEvent.Operation.REPLACE);
+		event.register(FracturedRealityModEntities.TRUTHSEEKER.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return TruthseekerSpawnEnablerProcedure.execute(world);
+		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

@@ -1,6 +1,7 @@
 package net.starseer.fracturedreality.entity;
 
 import net.starseer.fracturedreality.procedures.StarcoreVibrationReceivedProcedure;
+import net.starseer.fracturedreality.procedures.StarcoreSpawnEnablerProcedure;
 import net.starseer.fracturedreality.init.FracturedRealityModEntities;
 import net.starseer.fracturedreality.FracturedRealityMod;
 
@@ -34,7 +35,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -59,7 +59,7 @@ public class StarcoreEntity extends Monster implements VibrationSystem {
 
 	public StarcoreEntity(EntityType<StarcoreEntity> type, Level world) {
 		super(type, world);
-		xpReward = 0;
+		xpReward = 50;
 		setNoAi(false);
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
@@ -135,6 +135,16 @@ public class StarcoreEntity extends Monster implements VibrationSystem {
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
+			return false;
+		if (damagesource.is(DamageTypes.FALL))
+			return false;
+		if (damagesource.is(DamageTypes.CACTUS))
+			return false;
+		if (damagesource.is(DamageTypes.DROWN))
+			return false;
+		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
+			return false;
 		if (damagesource.is(DamageTypes.FALLING_ANVIL))
 			return false;
 		return super.hurt(damagesource, amount);
@@ -225,19 +235,23 @@ public class StarcoreEntity extends Monster implements VibrationSystem {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(FracturedRealityModEntities.STARCORE.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
-				RegisterSpawnPlacementsEvent.Operation.REPLACE);
+		event.register(FracturedRealityModEntities.STARCORE.get(), SpawnPlacementTypes.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return StarcoreSpawnEnablerProcedure.execute(world);
+		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 10);
-		builder = builder.add(Attributes.ARMOR, 0);
+		builder = builder.add(Attributes.MAX_HEALTH, 50);
+		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 64);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 4);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		builder = builder.add(NeoForgeMod.SWIM_SPEED, 0.3);
 		return builder;

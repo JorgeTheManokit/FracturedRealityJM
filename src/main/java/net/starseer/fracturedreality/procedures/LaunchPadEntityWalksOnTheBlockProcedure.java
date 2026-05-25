@@ -1,5 +1,6 @@
 package net.starseer.fracturedreality.procedures;
 
+import net.starseer.fracturedreality.network.FracturedRealityModVariables;
 import net.starseer.fracturedreality.FracturedRealityMod;
 
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -12,7 +13,11 @@ public class LaunchPadEntityWalksOnTheBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		entity.push(0, 256, 0);
+		if (FracturedRealityModVariables.MapVariables.get(world).ShowAllseer && FracturedRealityModVariables.MapVariables.get(world).Phase == 1) {
+			entity.push(0, 256, 0);
+		} else {
+			entity.push(0, 16, 0);
+		}
 		{
 			BlockPos _pos = BlockPos.containing(x, y, z);
 			BlockState _bs = world.getBlockState(_pos);

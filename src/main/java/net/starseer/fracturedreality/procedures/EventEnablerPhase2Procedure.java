@@ -68,27 +68,19 @@ public class EventEnablerPhase2Procedure {
 			}
 			FracturedRealityModVariables.MapVariables.get(world).ShowWatchers = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 5 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
-			FracturedRealityModVariables.MapVariables.get(world).DoGravityFlux = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 6 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
+			FracturedRealityModVariables.MapVariables.get(world).SpawnStarCores = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 6 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
-			FracturedRealityModVariables.MapVariables.get(world).SpawnEnforcers = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 6 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
+			FracturedRealityModVariables.MapVariables.get(world).SpawnEnforcers = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 8 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
-			FracturedRealityModVariables.MapVariables.get(world).SpawnSummoners = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 10 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
+			FracturedRealityModVariables.MapVariables.get(world).SpawnShattered = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 10 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
-			FracturedRealityModVariables.MapVariables.get(world).SpawnFaceless = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 10 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
-					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
-			FracturedRealityModVariables.MapVariables.get(world).SpawnMoonbreakers = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 20 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
+			FracturedRealityModVariables.MapVariables.get(world).SpawnTruthseekers = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 10 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).ShowAllseer = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 25 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
-			FracturedRealityModVariables.MapVariables.get(world).IntenseGravityFlux = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 25 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
-					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).AllowWeather = !(FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 25 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get());
-			FracturedRealityModVariables.MapVariables.get(world).DoRandomLightning = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 40 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
-					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
-			FracturedRealityModVariables.MapVariables.get(world).DoAudioHallucinations = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 10 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
-					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
-			FracturedRealityModVariables.MapVariables.get(world).DoVisualHallucinations = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 25 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
+			FracturedRealityModVariables.MapVariables.get(world).DoRandomLightning = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 6 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).markSyncDirty();
 		}

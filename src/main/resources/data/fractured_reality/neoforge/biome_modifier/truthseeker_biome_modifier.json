@@ -1,8 +1,6 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": {
-    "type": "neoforge:any"
-  },
+  "biomes": "#fractured_reality:truthseeker_spawns",
   "spawners": {
     "type": "fractured_reality:truthseeker",
     "weight": 20,

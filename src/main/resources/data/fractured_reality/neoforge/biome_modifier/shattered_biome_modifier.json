@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#fractured_reality:shattered_spawns",
+  "spawners": {
+    "type": "fractured_reality:shattered",
+    "weight": 10,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

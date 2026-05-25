@@ -60,7 +60,7 @@
       "value": -1,
       "falpha": 0.0
     },
-    "spawnEggTexture": "",
+    "spawnEggTexture": "starcore_egg",
     "creativeTabs": [
       {
         "value": "MISC"
@@ -91,14 +91,14 @@
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 3,
     "attackKnockback": 0.0,
-    "knockbackResistance": 0.0,
-    "movementSpeed": 0.3,
+    "knockbackResistance": 4.0,
+    "movementSpeed": 0.30000000000000004,
     "stepHeight": 0.6,
-    "armorBaseValue": 0.0,
-    "trackingRange": 64,
-    "followRange": 16,
-    "health": 10,
-    "xpAmount": 0,
+    "armorBaseValue": 10.0,
+    "trackingRange": 128,
+    "followRange": 64,
+    "health": 50,
+    "xpAmount": 50,
     "waterMob": true,
     "breatheUnderwater": {
       "fixedValue": true
@@ -113,12 +113,12 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "immuneToArrows": false,
-    "immuneToFallDamage": false,
-    "immuneToCactus": false,
-    "immuneToDrowning": false,
-    "immuneToLightning": false,
+    "immuneToFallDamage": true,
+    "immuneToCactus": true,
+    "immuneToDrowning": true,
+    "immuneToLightning": true,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
@@ -160,11 +160,18 @@
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 20,
-    "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 4,
-    "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [],
+    "spawningCondition": {
+      "name": "StarcoreSpawnEnabler"
+    },
+    "spawningProbability": 10,
+    "mobSpawningType": "misc",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 3,
+    "restrictionBiomes": [
+      {
+        "value": "#mod:starcore_spawns"
+      }
+    ],
     "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,

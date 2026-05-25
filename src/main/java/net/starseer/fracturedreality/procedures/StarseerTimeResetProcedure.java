@@ -27,6 +27,14 @@ public class StarseerTimeResetProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world) {
 		if (FracturedRealityModVariables.MapVariables.get(world).StarseerDefeated) {
 			FracturedRealityModVariables.MapVariables.get(world).StarseerDefeated = false;
+			FracturedRealityModVariables.MapVariables.get(world).SpawnPresenters = false;
+			FracturedRealityModVariables.MapVariables.get(world).SpawnSummoners = false;
+			FracturedRealityModVariables.MapVariables.get(world).SpawnFaceless = false;
+			FracturedRealityModVariables.MapVariables.get(world).DoGravityFlux = false;
+			FracturedRealityModVariables.MapVariables.get(world).IntenseGravityFlux = false;
+			FracturedRealityModVariables.MapVariables.get(world).DoVisualHallucinations = false;
+			FracturedRealityModVariables.MapVariables.get(world).DoAudioHallucinations = false;
+			FracturedRealityModVariables.MapVariables.get(world).SpawnMoonbreakers = false;
 			FracturedRealityModVariables.MapVariables.get(world).GenerateFractStructure = true;
 			FracturedRealityModVariables.MapVariables.get(world).DayCountOffset = FracturedRealityModVariables.MapVariables.get(world).DayCountOffset + FracturedRealityModVariables.MapVariables.get(world).DaysSurvived
 					+ Mth.nextInt(RandomSource.create(), 5, 10);

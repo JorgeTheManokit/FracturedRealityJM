@@ -220,13 +220,20 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
-    "spawningProbability": 20,
+    "spawningCondition": {
+      "name": "ShatteredSpawnEnabler"
+    },
+    "spawningProbability": 10,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "#mod:shattered_spawns"
+      }
+    ],
     "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,

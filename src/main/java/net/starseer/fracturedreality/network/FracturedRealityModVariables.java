@@ -179,6 +179,9 @@ public class FracturedRealityModVariables {
 		public boolean SpawnEnforcers = false;
 		public boolean ShatteredClassicAlreadySpawned = false;
 		public boolean ShatteredAlternateAlreadySpawned = false;
+		public boolean SpawnStarCores = false;
+		public boolean SpawnTruthseekers = false;
+		public boolean SpawnShattered = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -211,6 +214,9 @@ public class FracturedRealityModVariables {
 			SpawnEnforcers = nbt.getBoolean("SpawnEnforcers");
 			ShatteredClassicAlreadySpawned = nbt.getBoolean("ShatteredClassicAlreadySpawned");
 			ShatteredAlternateAlreadySpawned = nbt.getBoolean("ShatteredAlternateAlreadySpawned");
+			SpawnStarCores = nbt.getBoolean("SpawnStarCores");
+			SpawnTruthseekers = nbt.getBoolean("SpawnTruthseekers");
+			SpawnShattered = nbt.getBoolean("SpawnShattered");
 		}
 
 		@Override
@@ -239,6 +245,9 @@ public class FracturedRealityModVariables {
 			nbt.putBoolean("SpawnEnforcers", SpawnEnforcers);
 			nbt.putBoolean("ShatteredClassicAlreadySpawned", ShatteredClassicAlreadySpawned);
 			nbt.putBoolean("ShatteredAlternateAlreadySpawned", ShatteredAlternateAlreadySpawned);
+			nbt.putBoolean("SpawnStarCores", SpawnStarCores);
+			nbt.putBoolean("SpawnTruthseekers", SpawnTruthseekers);
+			nbt.putBoolean("SpawnShattered", SpawnShattered);
 			return nbt;
 		}
 

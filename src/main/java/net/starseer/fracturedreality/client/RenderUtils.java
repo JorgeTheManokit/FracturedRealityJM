@@ -18,16 +18,16 @@ import com.mojang.blaze3d.platform.GlStateManager;
 public class RenderUtils {
 	public static final ResourceLocation SUN_LOCATION = ResourceLocation.withDefaultNamespace("textures/environment/sun.png");
 	public static final ResourceLocation MOON_LOCATION = ResourceLocation.withDefaultNamespace("textures/environment/moon_phases.png");
-	private static final Minecraft mc = Minecraft.getInstance();
 
 	public static void swapVanillaTexture(ResourceLocation original, ResourceLocation replacement) {
-		TextureManager textureManager = mc.getTextureManager();
+		TextureManager textureManager = Minecraft.getInstance().getTextureManager();
 		SimpleTexture newTexture = new SimpleTexture(replacement);
 		newTexture.bind();
 		textureManager.register(original, newTexture);
 	}
 
 	public static void renderCustomSun(RenderLevelStageEvent event, ResourceLocation texture) {
+		Minecraft mc = Minecraft.getInstance();
 		PoseStack posestack = event.getPoseStack();
 		posestack.pushPose();
 		posestack.mulPose(event.getModelViewMatrix());
@@ -57,6 +57,7 @@ public class RenderUtils {
 	}
 
 	public static void renderCustomMoon(RenderLevelStageEvent event, ResourceLocation texture) {
+		Minecraft mc = Minecraft.getInstance();
 		PoseStack posestack = event.getPoseStack();
 		posestack.pushPose();
 		posestack.mulPose(event.getModelViewMatrix());

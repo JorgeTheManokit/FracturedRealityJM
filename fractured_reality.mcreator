@@ -3232,6 +3232,7 @@
         "files": [
           "src/main/resources/assets/fractured_reality/models/item/shattered_spawn_egg.json",
           "src/main/java/net/starseer/fracturedreality/entity/ShatteredEntity.java",
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/shattered_biome_modifier.json",
           "src/main/java/net/starseer/fracturedreality/client/renderer/ShatteredRenderer.java"
         ]
       },
@@ -3557,9 +3558,9 @@
       "registry_name": "starcore",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/entity/StarcoreEntity.java",
           "src/main/resources/assets/fractured_reality/models/item/starcore_spawn_egg.json",
           "src/main/java/net/starseer/fracturedreality/client/renderer/StarcoreRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/StarcoreEntity.java",
           "src/main/resources/data/fractured_reality/neoforge/biome_modifier/starcore_biome_modifier.json"
         ]
       },
@@ -3615,6 +3616,91 @@
         ]
       },
       "path": "~/Threat"
+    },
+    {
+      "name": "StarcoreSpawnEnabler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starcore_spawn_enabler",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarcoreSpawnEnablerProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "TruthseekerSpawnEnabler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "truthseeker_spawn_enabler",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/TruthseekerSpawnEnablerProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "ShatteredSpawnEnabler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattered_spawn_enabler",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/ShatteredSpawnEnablerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "StarcoreLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starcore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/entities/starcore.json"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "TruthseekerLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "truthseeker_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/entities/truthseeker.json"
+        ]
+      },
+      "path": "~/Phase 2"
     }
   ],
   "variable_elements": [
@@ -3779,6 +3865,24 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "SpawnStarCores",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SpawnTruthseekers",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SpawnShattered",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -4236,7 +4340,9 @@
       "CUSTOM:VoidSteel.legs",
       "CUSTOM:VoidSteel.boots"
     ],
-    "GAME_EVENTS:minecraft:starcore_can_listen": [],
+    "GAME_EVENTS:minecraft:starcore_can_listen": [
+      "#minecraft:vibrations"
+    ],
     "ENTITIES:mod:low_threat": [
       "CUSTOM:Presenter",
       "CUSTOM:BeamSummoner"
@@ -4250,6 +4356,20 @@
       "CUSTOM:MoonBreaker",
       "CUSTOM:Shattered",
       "CUSTOM:Truthseeker"
+    ],
+    "BIOMES:mod:starcore_spawns": [
+      "#minecraft:is_overworld",
+      "#minecraft:is_nether",
+      "#minecraft:is_end"
+    ],
+    "BIOMES:mod:truthseeker_spawns": [
+      "#minecraft:is_overworld",
+      "#minecraft:is_end",
+      "#minecraft:is_nether"
+    ],
+    "BIOMES:mod:shattered_spawns": [
+      "#minecraft:is_overworld",
+      "#minecraft:is_nether"
     ]
   },
   "tab_element_order": {},
@@ -4405,12 +4525,12 @@
   "metadata": {
     "files": [
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModConfigs.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
       "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModScreens.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModJeiInformation.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticleTypes.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticleTypes.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMobEffects.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModPotions.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModBrewingRecipes.java",
@@ -4420,14 +4540,14 @@
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntityRenderers.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntities.java",
       "src/main/java/net/starseer/fracturedreality/client/RenderUtils.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModSounds.java",
+      "src/main/resources/pack.mcmeta",
       "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModSounds.java",
+      "src/main/resources/assets/fractured_reality/sounds.json",
       "src/main/java/net/starseer/fracturedreality/FracturedRealityMod.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModTabs.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/assets/fractured_reality/sounds.json"
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java"
     ]
   },
   "foldersRoot": {

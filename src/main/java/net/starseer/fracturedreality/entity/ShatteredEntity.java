@@ -2,12 +2,15 @@ package net.starseer.fracturedreality.entity;
 
 import net.starseer.fracturedreality.procedures.StarseerNotMonologueProcedure;
 import net.starseer.fracturedreality.procedures.StarseerEntityIsHurtProcedure;
+import net.starseer.fracturedreality.procedures.ShatteredSpawnEnablerProcedure;
 import net.starseer.fracturedreality.procedures.ShatteredOnInitialEntitySpawnProcedure;
+import net.starseer.fracturedreality.init.FracturedRealityModEntities;
 
 import net.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
@@ -283,6 +286,12 @@ public class ShatteredEntity extends Monster {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(FracturedRealityModEntities.SHATTERED.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return ShatteredSpawnEnablerProcedure.execute(world);
+		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
