@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 15,
+  "cookingtime": 400,
+  "ingredient": {
+    "item": "fractured_reality:star_dust"
+  },
+  "result": {
+    "id": "fractured_reality:star_shard"
+  }
+}

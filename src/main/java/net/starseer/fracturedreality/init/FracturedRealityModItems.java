@@ -66,6 +66,7 @@ public class FracturedRealityModItems {
 	public static final DeferredItem<Item> TRUTHSEEKER_SPAWN_EGG;
 	public static final DeferredItem<Item> STAR_DUST;
 	public static final DeferredItem<Item> STARCORE_SPAWN_EGG;
+	public static final DeferredItem<Item> STAR_SHARD;
 	static {
 		PRESENTER_SPAWN_EGG = REGISTRY.register("presenter_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.PRESENTER, -1, -1, new Item.Properties()));
 		BEAM_SUMMONER_SPAWN_EGG = REGISTRY.register("beam_summoner_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.BEAM_SUMMONER, -1, -1, new Item.Properties()));
@@ -107,6 +108,7 @@ public class FracturedRealityModItems {
 		TRUTHSEEKER_SPAWN_EGG = REGISTRY.register("truthseeker_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.TRUTHSEEKER, -1, -1, new Item.Properties()));
 		STAR_DUST = REGISTRY.register("star_dust", StarDustItem::new);
 		STARCORE_SPAWN_EGG = REGISTRY.register("starcore_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.STARCORE, -1, -1, new Item.Properties()));
+		STAR_SHARD = REGISTRY.register("star_shard", StarShardItem::new);
 	}
 
 	// Start of user code block custom items

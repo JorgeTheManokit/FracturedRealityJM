@@ -37,6 +37,11 @@ public class FracturedRealityModBrewingRecipes implements IModPlugin {
 		potion2.set(DataComponents.POTION_CONTENTS, new PotionContents(FracturedRealityModPotions.REALITY_DISTORTION));
 		brewingRecipes.add(factory.createBrewingRecipe(List.copyOf(ingredientStack), potion.copy(), potion2.copy()));
 		ingredientStack.clear();
+		ingredientStack.add(new ItemStack(FracturedRealityModItems.STAR_DUST.get()));
+		potion.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.THICK));
+		potion2.set(DataComponents.POTION_CONTENTS, new PotionContents(FracturedRealityModPotions.HIGHLIGHTING));
+		brewingRecipes.add(factory.createBrewingRecipe(List.copyOf(ingredientStack), potion.copy(), potion2.copy()));
+		ingredientStack.clear();
 		registration.addRecipes(RecipeTypes.BREWING, brewingRecipes);
 	}
 }

@@ -247,7 +247,7 @@ public class StarseerEntity extends Monster {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		StarseerEntityDiesProcedure.execute(this.level());
+		StarseerEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

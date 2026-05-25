@@ -1,0 +1,22 @@
+{
+  "_fv": 79,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Highlighting",
+    "splashName": "Splash Potion of Highlighting",
+    "lingeringName": "Lingering Potion of Highlighting",
+    "arrowName": "Arrow of Highlighting",
+    "effects": [
+      {
+        "effect": {
+          "value": "GLOWING"
+        },
+        "duration": 9600,
+        "infinite": false,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

@@ -3,6 +3,7 @@
  */
 package net.starseer.fracturedreality.init;
 
+import net.starseer.fracturedreality.client.particle.WhiteSparkParticle;
 import net.starseer.fracturedreality.client.particle.VoidDripParticle;
 import net.starseer.fracturedreality.client.particle.GreenSparkParticle;
 
@@ -17,5 +18,6 @@ public class FracturedRealityModParticles {
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
 		event.registerSpriteSet(FracturedRealityModParticleTypes.VOID_DRIP.get(), VoidDripParticle::provider);
 		event.registerSpriteSet(FracturedRealityModParticleTypes.GREEN_SPARK.get(), GreenSparkParticle::provider);
+		event.registerSpriteSet(FracturedRealityModParticleTypes.WHITE_SPARK.get(), WhiteSparkParticle::provider);
 	}
 }

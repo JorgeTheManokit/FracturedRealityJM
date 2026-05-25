@@ -2125,6 +2125,18 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -3701,6 +3713,92 @@
         ]
       },
       "path": "~/Phase 2"
+    },
+    {
+      "name": "StarShard",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_shard",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/item/StarShardItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/star_shard.json"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "SmeltingStarDustToShard",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smelting_star_dust_to_shard",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/smelting_star_dust_to_shard.json",
+          "src/main/resources/data/fractured_reality/advancement/recipes/smelting_star_dust_to_shard.json"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "Highlighting",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "highlighting",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "BrewHighlightingPotion",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brew_highlighting_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/recipe/brewing/BrewHighlightingPotionBrewingRecipe.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "WhiteSparkParticleVisualScale",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_spark_particle_visual_scale",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "age",
+            "type": "number"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/WhiteSparkParticleVisualScaleProcedure.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "WhiteSpark",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_spark",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/particles/white_spark.json",
+          "src/main/java/net/starseer/fracturedreality/client/particle/WhiteSparkParticle.java"
+        ]
+      },
+      "path": "~/StarseerBossfight"
     }
   ],
   "variable_elements": [
@@ -4519,7 +4617,12 @@
       "subtitles.fr.threat.phase2.minor": "",
       "subtitles.fr.threat.phase2.moderate": "",
       "subtitles.fr.threat.phase2.major": "",
-      "subtitles.fr.threat.phase2.severe": ""
+      "subtitles.fr.threat.phase2.severe": "",
+      "item.fractured_reality.star_shard": "Star Shard",
+      "item.minecraft.tipped_arrow.effect.highlighting": "Arrow of Highlighting",
+      "item.minecraft.splash_potion.effect.highlighting": "Splash Potion of Highlighting",
+      "item.minecraft.lingering_potion.effect.highlighting": "Lingering Potion of Highlighting",
+      "item.minecraft.potion.effect.highlighting": "Potion of Highlighting"
     }
   },
   "metadata": {
