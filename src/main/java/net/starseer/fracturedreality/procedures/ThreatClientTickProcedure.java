@@ -1,7 +1,6 @@
 package net.starseer.fracturedreality.procedures;
 
 import net.starseer.fracturedreality.network.FracturedRealityModVariables;
-import net.starseer.fracturedreality.FracturedRealityMod;
 
 import net.neoforged.neoforge.event.tick.LevelTickEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -36,7 +35,6 @@ public class ThreatClientTickProcedure {
 		double threatLevel = 0;
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
 			threatLevel = GetThreatLevelProcedure.execute(world, entityiterator.getX(), entityiterator.getY(), entityiterator.getZ());
-			FracturedRealityMod.LOGGER.info("playsound fractured_reality:fr.threat.phase1.severe hostile " + entityiterator.getDisplayName().getString() + " ~ ~ ~ 100 1");
 			if (entityiterator.getData(FracturedRealityModVariables.PLAYER_VARIABLES).threatRepeatCooldown <= 0) {
 				if (FracturedRealityModVariables.MapVariables.get(world).Phase == 1) {
 					if (threatLevel == 5) {
