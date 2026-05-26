@@ -467,5 +467,53 @@
         "stream": false
       }
     ]
+  },
+  "fr.supernova.intro": {
+    "sounds": [
+      {
+        "name": "fractured_reality:supernova_intro",
+        "stream": false
+      }
+    ]
+  },
+  "fr.supernova.outro": {
+    "sounds": [
+      {
+        "name": "fractured_reality:gravflux_start",
+        "stream": false
+      }
+    ]
+  },
+  "fr.supernova.middle1": {
+    "sounds": [
+      {
+        "name": "fractured_reality:supernova_section_0",
+        "stream": false
+      }
+    ]
+  },
+  "fr.supernova.middle2": {
+    "sounds": [
+      {
+        "name": "fractured_reality:supernova_section_1",
+        "stream": false
+      }
+    ]
+  },
+  "fr.supernova.middle3": {
+    "sounds": [
+      {
+        "name": "fractured_reality:supernova_section_2",
+        "stream": false
+      }
+    ]
+  },
+  "fr.supernova.middle4": {
+    "sounds": [
+      {
+        "name": "fractured_reality:supernova_section_3",
+        "stream": false
+      }
+    ]
   }
 }

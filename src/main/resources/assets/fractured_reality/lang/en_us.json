@@ -151,5 +151,11 @@
   "item.minecraft.potion.effect.highlighting": "Potion of Highlighting",
   "block.fractured_reality.void_drill": "Void Drill",
   "item.fractured_reality.follower_spawn_egg": "Follower Spawn Egg",
-  "entity.fractured_reality.follower": "Follower"
+  "entity.fractured_reality.follower": "Follower",
+  "subtitles.fr.supernova.intro": "",
+  "subtitles.fr.supernova.outro": "",
+  "subtitles.fr.supernova.middle1": "",
+  "subtitles.fr.supernova.middle2": "",
+  "subtitles.fr.supernova.middle3": "",
+  "subtitles.fr.supernova.middle4": ""
 }

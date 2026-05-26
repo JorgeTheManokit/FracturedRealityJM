@@ -69,4 +69,14 @@ public class FracturedRealityModSounds {
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase2.major")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE2_SEVERE = REGISTRY.register("fr.threat.phase2.severe",
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase2.severe")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_INTRO = REGISTRY.register("fr.supernova.intro", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.intro")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_OUTRO = REGISTRY.register("fr.supernova.outro", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.outro")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_MIDDLE1 = REGISTRY.register("fr.supernova.middle1",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.middle1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_MIDDLE2 = REGISTRY.register("fr.supernova.middle2",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.middle2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_MIDDLE3 = REGISTRY.register("fr.supernova.middle3",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.middle3")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_MIDDLE4 = REGISTRY.register("fr.supernova.middle4",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.middle4")));
 }

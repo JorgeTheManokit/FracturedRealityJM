@@ -3686,7 +3686,8 @@
         "files": [
           "src/main/java/net/starseer/fracturedreality/procedures/ShatteredSpawnEnablerProcedure.java"
         ]
-      }
+      },
+      "path": "~/Phase 2"
     },
     {
       "name": "StarcoreLoot",
@@ -4451,6 +4452,54 @@
       ],
       "category": "hostile",
       "subtitle": ""
+    },
+    {
+      "name": "fr.supernova.intro",
+      "files": [
+        "supernova_intro"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.supernova.outro",
+      "files": [
+        "gravflux_start"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.supernova.middle1",
+      "files": [
+        "supernova_section_0"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.supernova.middle2",
+      "files": [
+        "supernova_section_1"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.supernova.middle3",
+      "files": [
+        "supernova_section_2"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.supernova.middle4",
+      "files": [
+        "supernova_section_3"
+      ],
+      "category": "hostile",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
@@ -4793,7 +4842,13 @@
       "item.minecraft.potion.effect.highlighting": "Potion of Highlighting",
       "block.fractured_reality.void_drill": "Void Drill",
       "item.fractured_reality.follower_spawn_egg": "Follower Spawn Egg",
-      "entity.fractured_reality.follower": "Follower"
+      "entity.fractured_reality.follower": "Follower",
+      "subtitles.fr.supernova.intro": "",
+      "subtitles.fr.supernova.outro": "",
+      "subtitles.fr.supernova.middle1": "",
+      "subtitles.fr.supernova.middle2": "",
+      "subtitles.fr.supernova.middle3": "",
+      "subtitles.fr.supernova.middle4": ""
     }
   },
   "metadata": {
