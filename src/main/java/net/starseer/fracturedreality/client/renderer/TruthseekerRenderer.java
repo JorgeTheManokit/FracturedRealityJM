@@ -49,6 +49,7 @@ public class TruthseekerRenderer extends MobRenderer<TruthseekerEntity, Modeltru
 				this.root().getAllParts().forEach(ModelPart::resetPose);
 				this.animate(entity.animationState0, truthseekerAnimation.base, ageInTicks, 1f);
 				this.animateWalk(truthseekerAnimation.walk, limbSwing, limbSwingAmount, 1f, 1f);
+				this.animate(entity.animationState2, truthseekerAnimation.attack, ageInTicks, 1f);
 			}
 		};
 

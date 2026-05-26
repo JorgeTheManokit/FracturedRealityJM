@@ -148,5 +148,8 @@
   "item.minecraft.tipped_arrow.effect.highlighting": "Arrow of Highlighting",
   "item.minecraft.splash_potion.effect.highlighting": "Splash Potion of Highlighting",
   "item.minecraft.lingering_potion.effect.highlighting": "Lingering Potion of Highlighting",
-  "item.minecraft.potion.effect.highlighting": "Potion of Highlighting"
+  "item.minecraft.potion.effect.highlighting": "Potion of Highlighting",
+  "block.fractured_reality.void_drill": "Void Drill",
+  "item.fractured_reality.follower_spawn_egg": "Follower Spawn Egg",
+  "entity.fractured_reality.follower": "Follower"
 }

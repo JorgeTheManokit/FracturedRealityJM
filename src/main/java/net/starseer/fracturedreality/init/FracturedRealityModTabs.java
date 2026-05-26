@@ -29,6 +29,7 @@ public class FracturedRealityModTabs {
 			tabData.accept(FracturedRealityModItems.SHATTERED_SPAWN_EGG.get());
 			tabData.accept(FracturedRealityModItems.TRUTHSEEKER_SPAWN_EGG.get());
 			tabData.accept(FracturedRealityModItems.STARCORE_SPAWN_EGG.get());
+			tabData.accept(FracturedRealityModItems.FOLLOWER_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(FracturedRealityModItems.VOID_JETPACK_CHESTPLATE.get());
 			tabData.accept(FracturedRealityModItems.GRAPPLING_HOOK.get());

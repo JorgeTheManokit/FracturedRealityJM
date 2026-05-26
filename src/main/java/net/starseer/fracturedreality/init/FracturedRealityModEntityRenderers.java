@@ -28,5 +28,6 @@ public class FracturedRealityModEntityRenderers {
 		event.registerEntityRenderer(FracturedRealityModEntities.SHATTERED.get(), ShatteredRenderer::new);
 		event.registerEntityRenderer(FracturedRealityModEntities.TRUTHSEEKER.get(), TruthseekerRenderer::new);
 		event.registerEntityRenderer(FracturedRealityModEntities.STARCORE.get(), StarcoreRenderer::new);
+		event.registerEntityRenderer(FracturedRealityModEntities.FOLLOWER.get(), FollowerRenderer::new);
 	}
 }

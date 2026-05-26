@@ -5,7 +5,7 @@ import net.starseer.fracturedreality.procedures.ShatteredDisplayClassicProcedure
 import net.starseer.fracturedreality.procedures.ShatteredDisplayAlternateProcedure;
 import net.starseer.fracturedreality.entity.ShatteredEntity;
 import net.starseer.fracturedreality.client.model.animations.ShatteredAnimation;
-import net.starseer.fracturedreality.client.model.ModelShattered;
+import net.starseer.fracturedreality.client.model.ModelStarseer;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.resources.ResourceLocation;
@@ -22,10 +22,10 @@ import net.minecraft.client.model.HierarchicalModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelShattered<ShatteredEntity>> {
+public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelStarseer<ShatteredEntity>> {
 	public ShatteredRenderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(ModelShattered.LAYER_LOCATION)), 0.5f);
-		this.addLayer(new RenderLayer<ShatteredEntity, ModelShattered<ShatteredEntity>>(this) {
+		super(context, new AnimatedModel(context.bakeLayer(ModelStarseer.LAYER_LOCATION)), 0.5f);
+		this.addLayer(new RenderLayer<ShatteredEntity, ModelStarseer<ShatteredEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("fractured_reality:textures/entities/shattered_mimic.png");
 
 			@Override
@@ -40,7 +40,7 @@ public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelShatter
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<ShatteredEntity, ModelShattered<ShatteredEntity>>(this) {
+		this.addLayer(new RenderLayer<ShatteredEntity, ModelStarseer<ShatteredEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("fractured_reality:textures/entities/shattered_mimic_glow.png");
 
 			@Override
@@ -55,7 +55,7 @@ public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelShatter
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<ShatteredEntity, ModelShattered<ShatteredEntity>>(this) {
+		this.addLayer(new RenderLayer<ShatteredEntity, ModelStarseer<ShatteredEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("fractured_reality:textures/entities/shattered_alt.png");
 
 			@Override
@@ -70,7 +70,7 @@ public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelShatter
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<ShatteredEntity, ModelShattered<ShatteredEntity>>(this) {
+		this.addLayer(new RenderLayer<ShatteredEntity, ModelStarseer<ShatteredEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("fractured_reality:textures/entities/shattered_alt_glow.png");
 
 			@Override
@@ -85,7 +85,7 @@ public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelShatter
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<ShatteredEntity, ModelShattered<ShatteredEntity>>(this) {
+		this.addLayer(new RenderLayer<ShatteredEntity, ModelStarseer<ShatteredEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("fractured_reality:textures/entities/shattered.png");
 
 			@Override
@@ -100,7 +100,7 @@ public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelShatter
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<ShatteredEntity, ModelShattered<ShatteredEntity>>(this) {
+		this.addLayer(new RenderLayer<ShatteredEntity, ModelStarseer<ShatteredEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("fractured_reality:textures/entities/shattered_glow.png");
 
 			@Override
@@ -122,7 +122,7 @@ public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelShatter
 		return ResourceLocation.parse("fractured_reality:textures/entities/empty.png");
 	}
 
-	private static final class AnimatedModel extends ModelShattered<ShatteredEntity> {
+	private static final class AnimatedModel extends ModelStarseer<ShatteredEntity> {
 		private final ModelPart root;
 		private final HierarchicalModel animator = new HierarchicalModel<ShatteredEntity>() {
 			@Override
@@ -135,6 +135,7 @@ public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelShatter
 				this.root().getAllParts().forEach(ModelPart::resetPose);
 				this.animate(entity.animationState0, ShatteredAnimation.Base, ageInTicks, 1f);
 				this.animateWalk(ShatteredAnimation.Walk, limbSwing, limbSwingAmount, 1f, 1f);
+				this.animate(entity.animationState2, ShatteredAnimation.Attack, ageInTicks, 1f);
 			}
 		};
 

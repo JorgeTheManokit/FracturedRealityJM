@@ -3799,6 +3799,93 @@
         ]
       },
       "path": "~/StarseerBossfight"
+    },
+    {
+      "name": "VoidDrillPlaybackCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_drill_playback_condition",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidDrillPlaybackConditionProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "VoidDrill",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_drill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidDrillRenderer.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_drill.json",
+          "src/main/resources/assets/fractured_reality/blockstates/void_drill.json",
+          "src/main/java/net/starseer/fracturedreality/block/VoidDrillBlock.java",
+          "src/main/java/net/starseer/fracturedreality/block/entity/VoidDrillBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/block/void_drill.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_drill.json"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "Follower",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "follower",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/follower_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/FollowerRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/FollowerEntity.java",
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/follower_biome_modifier.json"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "FollowerSpawnEnabler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "follower_spawn_enabler",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/FollowerSpawnEnablerProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
     }
   ],
   "variable_elements": [
@@ -3978,6 +4065,12 @@
     },
     {
       "name": "SpawnShattered",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "SpawnFollowers",
       "type": "logic",
       "scope": "map",
       "value": "false"
@@ -4622,7 +4715,10 @@
       "item.minecraft.tipped_arrow.effect.highlighting": "Arrow of Highlighting",
       "item.minecraft.splash_potion.effect.highlighting": "Splash Potion of Highlighting",
       "item.minecraft.lingering_potion.effect.highlighting": "Lingering Potion of Highlighting",
-      "item.minecraft.potion.effect.highlighting": "Potion of Highlighting"
+      "item.minecraft.potion.effect.highlighting": "Potion of Highlighting",
+      "block.fractured_reality.void_drill": "Void Drill",
+      "item.fractured_reality.follower_spawn_egg": "Follower Spawn Egg",
+      "entity.fractured_reality.follower": "Follower"
     }
   },
   "metadata": {

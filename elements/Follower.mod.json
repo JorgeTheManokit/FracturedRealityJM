@@ -2,10 +2,10 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Truthseeker",
+    "mobName": "Follower",
     "mobLabel": "",
-    "mobModelName": "Modeltruthseeker",
-    "mobModelTexture": "truthseeker.png",
+    "mobModelName": "ModelPresenter",
+    "mobModelTexture": "follower.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -16,7 +16,7 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.7
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
@@ -24,7 +24,7 @@
     "modelLayers": [
       {
         "model": "Default",
-        "texture": "truthseeker_glow.png",
+        "texture": "follower_glow.png",
         "disableHurtOverlay": true,
         "glow": true
       }
@@ -32,34 +32,15 @@
     "animations": [
       {
         "animation": {
-          "value": "CUSTOM:truthseekerAnimation.base"
+          "value": "CUSTOM:PresenterAnimation.base"
         },
         "speed": 1.0,
-        "walking": false,
-        "amplitude": 1.0
-      },
-      {
-        "animation": {
-          "value": "CUSTOM:truthseekerAnimation.walk"
-        },
-        "speed": 1.0,
-        "walking": true,
-        "amplitude": 1.0
-      },
-      {
-        "animation": {
-          "value": "CUSTOM:truthseekerAnimation.attack"
-        },
-        "speed": 1.0,
-        "condition": {
-          "name": "MoonBreakerAttackingCheck"
-        },
         "walking": false,
         "amplitude": 1.0
       }
     ],
-    "modelWidth": 1.9000000000000001,
-    "modelHeight": 6.0,
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -71,7 +52,7 @@
       "value": -1,
       "falpha": 0.0
     },
-    "spawnEggTexture": "truthseeker_egg",
+    "spawnEggTexture": "presenter_egg",
     "creativeTabs": [
       {
         "value": "MISC"
@@ -100,16 +81,16 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 10,
-    "attackKnockback": 3.0,
-    "knockbackResistance": 1.0,
-    "movementSpeed": 0.5,
-    "stepHeight": 1.5,
+    "attackStrength": 4,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.35,
+    "stepHeight": 1.0,
     "armorBaseValue": 0.0,
-    "trackingRange": 64,
-    "followRange": 16,
-    "health": 200,
-    "xpAmount": 150,
+    "trackingRange": 128,
+    "followRange": 64,
+    "health": 40,
+    "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
       "fixedValue": true
@@ -124,17 +105,17 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": true,
+    "immuneToFire": false,
     "immuneToArrows": false,
     "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
-    "immuneToLightning": true,
+    "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
     "immuneToTrident": false,
-    "immuneToAnvil": true,
+    "immuneToAnvil": false,
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
@@ -144,7 +125,7 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": ""
     },
     "deathSound": {
       "value": "entity.generic.death"
@@ -156,12 +137,18 @@
       "value": ""
     },
     "entityDataEntries": [],
+    "whenMobDies": {
+      "name": "PresenterEntityDies"
+    },
+    "whenMobIsHurt": {
+      "name": "PresenterEntityIsHurt"
+    },
     "onMobTickUpdate": {
-      "name": "TruthseekerOnEntityTickUpdate"
+      "name": "PresenterOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -173,17 +160,17 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
-    "doesDespawnWhenIdle": false,
+    "doesDespawnWhenIdle": true,
     "spawningCondition": {
-      "name": "TruthseekerSpawnEnabler"
+      "name": "FollowerSpawnEnabler"
     },
     "spawningProbability": 20,
     "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 4,
+    "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "#mod:truthseeker_spawns"
+        "value": "#mod:presenter_spawns"
       }
     ],
     "spawnInDungeons": false,

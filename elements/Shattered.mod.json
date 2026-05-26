@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Shattered",
     "mobLabel": "",
-    "mobModelName": "ModelShattered",
+    "mobModelName": "ModelStarseer",
     "mobModelTexture": "empty.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -93,10 +93,18 @@
         "speed": 1.0,
         "walking": true,
         "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:ShatteredAnimation.Attack"
+        },
+        "speed": 1.0,
+        "walking": false,
+        "amplitude": 1.0
       }
     ],
-    "modelWidth": 2.5,
-    "modelHeight": 6.0,
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,

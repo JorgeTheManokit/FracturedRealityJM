@@ -22,6 +22,7 @@ public class FracturedRealityModBlocks {
 	public static final DeferredBlock<Block> LAUNCH_PAD;
 	public static final DeferredBlock<Block> DISK_BURNER;
 	public static final DeferredBlock<Block> FORGOTTEN;
+	public static final DeferredBlock<Block> VOID_DRILL;
 	static {
 		HOOK_FABRICATOR = REGISTRY.register("hook_fabricator", HookFabricatorBlock::new);
 		GRAPPLING_POINT = REGISTRY.register("grappling_point", GrapplingPointBlock::new);
@@ -32,6 +33,7 @@ public class FracturedRealityModBlocks {
 		LAUNCH_PAD = REGISTRY.register("launch_pad", LaunchPadBlock::new);
 		DISK_BURNER = REGISTRY.register("disk_burner", DiskBurnerBlock::new);
 		FORGOTTEN = REGISTRY.register("forgotten", ForgottenBlock::new);
+		VOID_DRILL = REGISTRY.register("void_drill", VoidDrillBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

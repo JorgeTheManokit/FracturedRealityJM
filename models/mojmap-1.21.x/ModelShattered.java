@@ -19,6 +19,10 @@ public class ModelShattered<T extends Entity> extends EntityModel<T> {
 	private final ModelPart RLArm2;
 	private final ModelPart RLArm3;
 	private final ModelPart RLArm4;
+	private final ModelPart LLArm;
+	private final ModelPart LLArm2;
+	private final ModelPart LLArm3;
+	private final ModelPart LLArm4;
 	private final ModelPart ArmSpine2;
 	private final ModelPart HeadThingIDFK;
 	private final ModelPart EyeThing;
@@ -53,6 +57,10 @@ public class ModelShattered<T extends Entity> extends EntityModel<T> {
 		this.RLArm2 = this.RLArm.getChild("RLArm2");
 		this.RLArm3 = this.RLArm2.getChild("RLArm3");
 		this.RLArm4 = this.RLArm3.getChild("RLArm4");
+		this.LLArm = this.ArmSpine.getChild("LLArm");
+		this.LLArm2 = this.LLArm.getChild("LLArm2");
+		this.LLArm3 = this.LLArm2.getChild("LLArm3");
+		this.LLArm4 = this.LLArm3.getChild("LLArm4");
 		this.ArmSpine2 = this.ArmSpine.getChild("ArmSpine2");
 		this.HeadThingIDFK = this.ArmSpine2.getChild("HeadThingIDFK");
 		this.EyeThing = this.HeadThingIDFK.getChild("EyeThing");
@@ -118,6 +126,12 @@ public class ModelShattered<T extends Entity> extends EntityModel<T> {
 
 		PartDefinition cube_r5 = Spine2
 				.addOrReplaceChild("cube_r5",
+						CubeListBuilder.create().texOffs(48, 43).addBox(0.0F, -0.5F, -0.5F, 3.0F, 1.0F, 1.0F,
+								new CubeDeformation(0.0F)),
+						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
+
+		PartDefinition cube_r6 = Spine2
+				.addOrReplaceChild("cube_r6",
 						CubeListBuilder.create().texOffs(48, 41).addBox(0.0F, -0.5F, -0.5F, 3.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 2.8798F));
@@ -125,14 +139,14 @@ public class ModelShattered<T extends Entity> extends EntityModel<T> {
 		PartDefinition Spine3 = Spine2.addOrReplaceChild("Spine3", CubeListBuilder.create().texOffs(24, 6).addBox(-1.0F,
 				-4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -4.0F, 0.0F));
 
-		PartDefinition cube_r6 = Spine3
-				.addOrReplaceChild("cube_r6",
+		PartDefinition cube_r7 = Spine3
+				.addOrReplaceChild("cube_r7",
 						CubeListBuilder.create().texOffs(48, 39).addBox(0.0F, -0.5F, -0.5F, 4.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
 
-		PartDefinition cube_r7 = Spine3
-				.addOrReplaceChild("cube_r7",
+		PartDefinition cube_r8 = Spine3
+				.addOrReplaceChild("cube_r8",
 						CubeListBuilder.create().texOffs(48, 37).addBox(0.0F, -0.5F, -0.5F, 4.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 2.8798F));
@@ -140,47 +154,66 @@ public class ModelShattered<T extends Entity> extends EntityModel<T> {
 		PartDefinition Spine4 = Spine3.addOrReplaceChild("Spine4", CubeListBuilder.create().texOffs(40, 24).addBox(
 				-1.0F, -4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -4.0F, 0.0F));
 
-		PartDefinition cube_r8 = Spine4
-				.addOrReplaceChild("cube_r8",
+		PartDefinition cube_r9 = Spine4
+				.addOrReplaceChild("cube_r9",
 						CubeListBuilder.create().texOffs(12, 48).addBox(0.0F, -0.5F, -0.5F, 5.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
 
+		PartDefinition cube_r10 = Spine4
+				.addOrReplaceChild("cube_r10",
+						CubeListBuilder.create().texOffs(0, 48).addBox(0.0F, -0.5F, -0.5F, 5.0F, 1.0F, 1.0F,
+								new CubeDeformation(0.0F)),
+						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 2.8798F));
+
 		PartDefinition Spine5 = Spine4.addOrReplaceChild("Spine5", CubeListBuilder.create().texOffs(40, 18).addBox(
 				-1.0F, -4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -4.0F, 0.0F));
 
-		PartDefinition cube_r9 = Spine5
-				.addOrReplaceChild("cube_r9",
+		PartDefinition cube_r11 = Spine5
+				.addOrReplaceChild("cube_r11",
 						CubeListBuilder.create().texOffs(40, 2).addBox(0.0F, -0.5F, -0.5F, 6.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
 
+		PartDefinition cube_r12 = Spine5
+				.addOrReplaceChild("cube_r12",
+						CubeListBuilder.create().texOffs(40, 0).addBox(0.0F, -0.5F, -0.5F, 6.0F, 1.0F, 1.0F,
+								new CubeDeformation(0.0F)),
+						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 2.8798F));
+
 		PartDefinition Spine6 = Spine5.addOrReplaceChild("Spine6", CubeListBuilder.create().texOffs(40, 36).addBox(
 				-1.0F, -4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -4.0F, 0.0F));
 
-		PartDefinition cube_r10 = Spine6
-				.addOrReplaceChild("cube_r10",
+		PartDefinition cube_r13 = Spine6
+				.addOrReplaceChild("cube_r13",
 						CubeListBuilder.create().texOffs(16, 20).addBox(0.0F, -0.5F, -0.5F, 7.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
 
-		PartDefinition cube_r11 = Spine6
-				.addOrReplaceChild("cube_r11",
+		PartDefinition cube_r14 = Spine6
+				.addOrReplaceChild("cube_r14",
 						CubeListBuilder.create().texOffs(0, 20).addBox(0.0F, -0.5F, -0.5F, 7.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 2.8798F));
 
 		PartDefinition ArmSpine = Spine6.addOrReplaceChild("ArmSpine",
 				CubeListBuilder.create().texOffs(40, 30)
-						.addBox(-1.0F, -4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(48, 29)
+						.addBox(-1.0F, -4.0F, -1.0F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(48, 25)
+						.addBox(11.0F, 0.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(48, 29)
 						.addBox(-13.0F, 0.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, -4.0F, 0.0F));
 
-		PartDefinition cube_r12 = ArmSpine
-				.addOrReplaceChild("cube_r12",
+		PartDefinition cube_r15 = ArmSpine
+				.addOrReplaceChild("cube_r15",
 						CubeListBuilder.create().texOffs(0, 18).addBox(0.0F, -0.5F, -0.5F, 12.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 2.8798F));
+
+		PartDefinition cube_r16 = ArmSpine
+				.addOrReplaceChild("cube_r16",
+						CubeListBuilder.create().texOffs(0, 16).addBox(0.0F, -0.5F, -0.5F, 12.0F, 1.0F, 1.0F,
+								new CubeDeformation(0.0F)),
+						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
 
 		PartDefinition RLArm = ArmSpine.addOrReplaceChild("RLArm", CubeListBuilder.create().texOffs(16, 22).addBox(
 				-0.5F, 0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-12.0F, 2.0F, 0.0F));
@@ -194,6 +227,18 @@ public class ModelShattered<T extends Entity> extends EntityModel<T> {
 		PartDefinition RLArm4 = RLArm3.addOrReplaceChild("RLArm4", CubeListBuilder.create().texOffs(16, 22).addBox(
 				-0.5F, 0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.0F, 0.0F));
 
+		PartDefinition LLArm = ArmSpine.addOrReplaceChild("LLArm", CubeListBuilder.create().texOffs(56, 24).addBox(
+				-0.5F, 0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(12.0F, 2.0F, 0.0F));
+
+		PartDefinition LLArm2 = LLArm.addOrReplaceChild("LLArm2", CubeListBuilder.create().texOffs(56, 24).addBox(-0.5F,
+				0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.0F, 0.0F));
+
+		PartDefinition LLArm3 = LLArm2.addOrReplaceChild("LLArm3", CubeListBuilder.create().texOffs(56, 24).addBox(
+				-0.5F, 0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.0F, 0.0F));
+
+		PartDefinition LLArm4 = LLArm3.addOrReplaceChild("LLArm4", CubeListBuilder.create().texOffs(56, 24).addBox(
+				-0.5F, 0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.0F, 0.0F));
+
 		PartDefinition ArmSpine2 = ArmSpine.addOrReplaceChild("ArmSpine2",
 				CubeListBuilder.create().texOffs(48, 33)
 						.addBox(14.0F, 0.5F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(40, 42)
@@ -201,14 +246,14 @@ public class ModelShattered<T extends Entity> extends EntityModel<T> {
 						.addBox(-16.0F, 0.5F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, -4.0F, 0.0F));
 
-		PartDefinition cube_r13 = ArmSpine2
-				.addOrReplaceChild("cube_r13",
+		PartDefinition cube_r17 = ArmSpine2
+				.addOrReplaceChild("cube_r17",
 						CubeListBuilder.create().texOffs(0, 14).addBox(0.0F, -0.5F, -0.5F, 15.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
 
-		PartDefinition cube_r14 = ArmSpine2
-				.addOrReplaceChild("cube_r14",
+		PartDefinition cube_r18 = ArmSpine2
+				.addOrReplaceChild("cube_r18",
 						CubeListBuilder.create().texOffs(0, 12).addBox(0.0F, -0.5F, -0.5F, 15.0F, 1.0F, 1.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 2.8798F));
@@ -219,11 +264,17 @@ public class ModelShattered<T extends Entity> extends EntityModel<T> {
 						.addBox(-1.0F, -3.0F, -1.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, -4.0F, 0.0F));
 
-		PartDefinition cube_r15 = HeadThingIDFK.addOrReplaceChild("cube_r15",
+		PartDefinition cube_r19 = HeadThingIDFK.addOrReplaceChild("cube_r19",
 				CubeListBuilder.create().texOffs(48, 49)
 						.addBox(5.0F, 0.5F, -0.5F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(40, 4)
 						.addBox(0.0F, -0.5F, -0.5F, 6.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 2.618F));
+
+		PartDefinition cube_r20 = HeadThingIDFK.addOrReplaceChild("cube_r20",
+				CubeListBuilder.create().texOffs(48, 45)
+						.addBox(5.0F, -3.5F, -0.5F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(40, 6)
+						.addBox(0.0F, -0.5F, -0.5F, 6.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, -2.0F, 0.0F, 0.0F, 0.0F, 0.5236F));
 
 		PartDefinition EyeThing = HeadThingIDFK.addOrReplaceChild("EyeThing", CubeListBuilder.create().texOffs(0, 0)
 				.addBox(-6.0F, -6.0F, 0.0F, 12.0F, 12.0F, 0.0F, new CubeDeformation(0.0F)),
@@ -244,16 +295,16 @@ public class ModelShattered<T extends Entity> extends EntityModel<T> {
 		PartDefinition RUArm4 = RUArm3.addOrReplaceChild("RUArm4", CubeListBuilder.create().texOffs(16, 35).addBox(
 				-0.5F, 0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.0F, 0.0F));
 
-		PartDefinition LUArm = ArmSpine2.addOrReplaceChild("LUArm", CubeListBuilder.create().texOffs(16, 35).addBox(
+		PartDefinition LUArm = ArmSpine2.addOrReplaceChild("LUArm", CubeListBuilder.create().texOffs(58, 37).addBox(
 				-0.5F, 0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(15.0F, 2.5F, 0.0F));
 
-		PartDefinition LUArm2 = LUArm.addOrReplaceChild("LUArm2", CubeListBuilder.create().texOffs(16, 35).addBox(-0.5F,
+		PartDefinition LUArm2 = LUArm.addOrReplaceChild("LUArm2", CubeListBuilder.create().texOffs(58, 37).addBox(-0.5F,
 				0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.0F, 0.0F));
 
-		PartDefinition LUArm3 = LUArm2.addOrReplaceChild("LUArm3", CubeListBuilder.create().texOffs(16, 35).addBox(
+		PartDefinition LUArm3 = LUArm2.addOrReplaceChild("LUArm3", CubeListBuilder.create().texOffs(58, 37).addBox(
 				-0.5F, 0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.0F, 0.0F));
 
-		PartDefinition LUArm4 = LUArm3.addOrReplaceChild("LUArm4", CubeListBuilder.create().texOffs(16, 35).addBox(
+		PartDefinition LUArm4 = LUArm3.addOrReplaceChild("LUArm4", CubeListBuilder.create().texOffs(58, 37).addBox(
 				-0.5F, 0.0F, -0.5F, 1.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 12.0F, 0.0F));
 
 		PartDefinition RLeg = Hips.addOrReplaceChild("RLeg", CubeListBuilder.create().texOffs(36, 39).addBox(-0.5F,

@@ -42,6 +42,7 @@ import javax.annotation.Nullable;
 public class ShatteredEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_Variant = SynchedEntityData.defineId(ShatteredEntity.class, EntityDataSerializers.INT);
 	public final AnimationState animationState0 = new AnimationState();
+	public final AnimationState animationState2 = new AnimationState();
 
 	public ShatteredEntity(EntityType<ShatteredEntity> type, Level world) {
 		super(type, world);
@@ -262,6 +263,7 @@ public class ShatteredEntity extends Monster {
 		super.tick();
 		if (this.level().isClientSide()) {
 			this.animationState0.animateWhen(true, this.tickCount);
+			this.animationState2.animateWhen(true, this.tickCount);
 		}
 	}
 

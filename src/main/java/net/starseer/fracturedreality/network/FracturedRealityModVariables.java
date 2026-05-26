@@ -182,6 +182,7 @@ public class FracturedRealityModVariables {
 		public boolean SpawnStarCores = false;
 		public boolean SpawnTruthseekers = false;
 		public boolean SpawnShattered = false;
+		public boolean SpawnFollowers = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -217,6 +218,7 @@ public class FracturedRealityModVariables {
 			SpawnStarCores = nbt.getBoolean("SpawnStarCores");
 			SpawnTruthseekers = nbt.getBoolean("SpawnTruthseekers");
 			SpawnShattered = nbt.getBoolean("SpawnShattered");
+			SpawnFollowers = nbt.getBoolean("SpawnFollowers");
 		}
 
 		@Override
@@ -248,6 +250,7 @@ public class FracturedRealityModVariables {
 			nbt.putBoolean("SpawnStarCores", SpawnStarCores);
 			nbt.putBoolean("SpawnTruthseekers", SpawnTruthseekers);
 			nbt.putBoolean("SpawnShattered", SpawnShattered);
+			nbt.putBoolean("SpawnFollowers", SpawnFollowers);
 			return nbt;
 		}
 

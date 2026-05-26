@@ -29,6 +29,7 @@ public class FracturedRealityModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LaunchPadBlockEntity>> LAUNCH_PAD = register("launch_pad", FracturedRealityModBlocks.LAUNCH_PAD, LaunchPadBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DiskBurnerBlockEntity>> DISK_BURNER = register("disk_burner", FracturedRealityModBlocks.DISK_BURNER, DiskBurnerBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ForgottenBlockEntity>> FORGOTTEN = register("forgotten", FracturedRealityModBlocks.FORGOTTEN, ForgottenBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VoidDrillBlockEntity>> VOID_DRILL = register("void_drill", FracturedRealityModBlocks.VOID_DRILL, VoidDrillBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -45,5 +46,6 @@ public class FracturedRealityModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, LAUNCH_PAD.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DISK_BURNER.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FORGOTTEN.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, VOID_DRILL.get(), SidedInvWrapper::new);
 	}
 }

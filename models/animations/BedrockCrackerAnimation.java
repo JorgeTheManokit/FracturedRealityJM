@@ -1,0 +1,22 @@
+// Save this class in your mod and generate all required imports
+
+/**
+ * Made with Blockbench 5.1.4 Exported for Minecraft version 1.19 or later with
+ * Mojang mappings
+ * 
+ * @author Author
+ */
+public class BedrockCrackerAnimation {
+	public static final AnimationDefinition Crack = AnimationDefinition.Builder.withLength(2.0F).looping()
+			.addAnimation("Head",
+					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.CATMULLROM),
+							new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 12.0F, 0.0F),
+									AnimationChannel.Interpolations.CATMULLROM),
+							new Keyframe(0.125F, KeyframeAnimations.posVec(0.0F, -12.0F, 0.0F),
+									AnimationChannel.Interpolations.CATMULLROM),
+							new Keyframe(2.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.CATMULLROM)))
+			.build();
+}
