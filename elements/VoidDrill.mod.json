@@ -48,7 +48,13 @@
         "subtract": false
       }
     ],
-    "customProperties": [],
+    "customProperties": [
+      {
+        "name": "CUSTOM:digging",
+        "type": "logic",
+        "value": false
+      }
+    ],
     "name": "Void Drill",
     "specialInformation": {
       "fixedValue": []

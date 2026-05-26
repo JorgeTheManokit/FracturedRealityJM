@@ -3840,13 +3840,13 @@
       "registry_name": "void_drill",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidDrillRenderer.java",
-          "src/main/resources/data/fractured_reality/loot_table/blocks/void_drill.json",
-          "src/main/resources/assets/fractured_reality/blockstates/void_drill.json",
-          "src/main/java/net/starseer/fracturedreality/block/VoidDrillBlock.java",
-          "src/main/java/net/starseer/fracturedreality/block/entity/VoidDrillBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_drill.json",
           "src/main/resources/assets/fractured_reality/models/block/void_drill.json",
-          "src/main/resources/assets/fractured_reality/models/item/void_drill.json"
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_drill.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/VoidDrillBlockEntity.java",
+          "src/main/java/net/starseer/fracturedreality/block/VoidDrillBlock.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidDrillRenderer.java",
+          "src/main/resources/assets/fractured_reality/blockstates/void_drill.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3859,10 +3859,10 @@
       "registry_name": "follower",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/follower_spawn_egg.json",
-          "src/main/java/net/starseer/fracturedreality/client/renderer/FollowerRenderer.java",
           "src/main/java/net/starseer/fracturedreality/entity/FollowerEntity.java",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/follower_biome_modifier.json"
+          "src/main/java/net/starseer/fracturedreality/client/renderer/FollowerRenderer.java",
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/follower_biome_modifier.json",
+          "src/main/resources/assets/fractured_reality/models/item/follower_spawn_egg.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3883,6 +3883,81 @@
         "return_type": "logic",
         "files": [
           "src/main/java/net/starseer/fracturedreality/procedures/FollowerSpawnEnablerProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "FollowerOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "follower_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/FollowerOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "IsDaytime",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_daytime",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/IsDaytimeProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "IsNighttime",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_nighttime",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/IsNighttimeProcedure.java"
         ]
       },
       "path": "~/Phase 2"
@@ -4724,12 +4799,12 @@
   "metadata": {
     "files": [
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModConfigs.java",
-      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
+      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModScreens.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModJeiInformation.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticleTypes.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMobEffects.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModPotions.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModBrewingRecipes.java",
@@ -4739,14 +4814,14 @@
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntityRenderers.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntities.java",
       "src/main/java/net/starseer/fracturedreality/client/RenderUtils.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModSounds.java",
-      "src/main/resources/assets/fractured_reality/sounds.json",
+      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
       "src/main/java/net/starseer/fracturedreality/FracturedRealityMod.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModTabs.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java"
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/assets/fractured_reality/sounds.json"
     ]
   },
   "foldersRoot": {
@@ -4806,7 +4881,7 @@
   "workspaceSettings": {
     "modid": "fractured_reality",
     "modName": "Fractured Reality",
-    "version": "1.2.0-PrivateBeta2",
+    "version": "1.2.0-PrivateBeta3",
     "description": "As reality breaks and the sky cracks apart, mysterious beings are unleashed upon the world. The cycle of day and night breaks, the rain disappears, and the mobs spawn less and less. The players have to shelter from the gravity fluctuations pulling them up into the sky. It is up to the players to solve what happened and fix their world. The players will have to solve puzzles and find a way to go above and beyond. Once the world is repaired, everything will go back to normal, but not for long. ",
     "author": "Jorge M.",
     "websiteURL": "https://modrinth.com/project/vZ2PEXzS",

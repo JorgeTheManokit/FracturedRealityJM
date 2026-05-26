@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "fractured_reality:item/presenter_egg"
+    "layer0": "fractured_reality:item/follower_egg"
   }
 }

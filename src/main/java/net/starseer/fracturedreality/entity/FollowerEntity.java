@@ -1,9 +1,6 @@
 package net.starseer.fracturedreality.entity;
 
-import net.starseer.fracturedreality.procedures.PresenterOnEntityTickUpdateProcedure;
-import net.starseer.fracturedreality.procedures.PresenterEntityIsHurtProcedure;
-import net.starseer.fracturedreality.procedures.PresenterEntityDiesProcedure;
-import net.starseer.fracturedreality.procedures.FollowerSpawnEnablerProcedure;
+import net.starseer.fracturedreality.procedures.*;
 import net.starseer.fracturedreality.init.FracturedRealityModEntities;
 
 import net.neoforged.neoforge.fluids.FluidType;
@@ -15,11 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.OpenDoorGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
@@ -41,18 +34,81 @@ public class FollowerEntity extends Monster {
 	protected void registerGoals() {
 		super.registerGoals();
 		this.getNavigation().getNodeEvaluator().setCanOpenDoors(true);
-		this.goalSelector.addGoal(1, new OpenDoorGoal(this, true));
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true, false));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, true) {
+		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, Player.class, (float) 6, 1.4, 1.2) {
+			@Override
+			public boolean canUse() {
+				double x = FollowerEntity.this.getX();
+				double y = FollowerEntity.this.getY();
+				double z = FollowerEntity.this.getZ();
+				Entity entity = FollowerEntity.this;
+				Level world = FollowerEntity.this.level();
+				return super.canUse() && IsDaytimeProcedure.execute(world);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = FollowerEntity.this.getX();
+				double y = FollowerEntity.this.getY();
+				double z = FollowerEntity.this.getZ();
+				Entity entity = FollowerEntity.this;
+				Level world = FollowerEntity.this.level();
+				return super.canContinueToUse() && IsDaytimeProcedure.execute(world);
+			}
+		});
+		this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, (float) 64) {
+			@Override
+			public boolean canUse() {
+				double x = FollowerEntity.this.getX();
+				double y = FollowerEntity.this.getY();
+				double z = FollowerEntity.this.getZ();
+				Entity entity = FollowerEntity.this;
+				Level world = FollowerEntity.this.level();
+				return super.canUse() && IsDaytimeProcedure.execute(world);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = FollowerEntity.this.getX();
+				double y = FollowerEntity.this.getY();
+				double z = FollowerEntity.this.getZ();
+				Entity entity = FollowerEntity.this;
+				Level world = FollowerEntity.this.level();
+				return super.canContinueToUse() && IsDaytimeProcedure.execute(world);
+			}
+		});
+		this.goalSelector.addGoal(3, new OpenDoorGoal(this, true));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Player.class, true, false) {
+			@Override
+			public boolean canUse() {
+				double x = FollowerEntity.this.getX();
+				double y = FollowerEntity.this.getY();
+				double z = FollowerEntity.this.getZ();
+				Entity entity = FollowerEntity.this;
+				Level world = FollowerEntity.this.level();
+				return super.canUse() && IsNighttimeProcedure.execute(world);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = FollowerEntity.this.getX();
+				double y = FollowerEntity.this.getY();
+				double z = FollowerEntity.this.getZ();
+				Entity entity = FollowerEntity.this;
+				Level world = FollowerEntity.this.level();
+				return super.canContinueToUse() && IsNighttimeProcedure.execute(world);
+			}
+		});
+		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, true) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(7, new FloatGoal(this));
+		this.goalSelector.addGoal(6, new MoveBackToVillageGoal(this, 0.6, false));
+		this.goalSelector.addGoal(7, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(8, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(10, new FloatGoal(this));
 	}
 
 	@Override
@@ -91,7 +147,7 @@ public class FollowerEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		PresenterOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		FollowerOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
