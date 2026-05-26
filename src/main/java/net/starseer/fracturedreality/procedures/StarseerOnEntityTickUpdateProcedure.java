@@ -10,6 +10,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -119,10 +120,50 @@ public class StarseerOnEntityTickUpdateProcedure {
 					}
 				}
 			}
+			if ((entity instanceof StarseerEntity _datEntI ? _datEntI.getEntityData().get(StarseerEntity.DATA_BossThemeLoopCooldown) : 0) <= 0) {
+				if ((100d / (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) * (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) >= 75) {
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.middle1")), SoundSource.HOSTILE, 100, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.middle1")), SoundSource.HOSTILE, 100, 1, false);
+						}
+					}
+				} else if ((100d / (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) * (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) >= 50) {
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.middle2")), SoundSource.HOSTILE, 100, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.middle2")), SoundSource.HOSTILE, 100, 1, false);
+						}
+					}
+				} else if ((100d / (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) * (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) >= 25) {
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.middle3")), SoundSource.HOSTILE, 100, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.middle3")), SoundSource.HOSTILE, 100, 1, false);
+						}
+					}
+				} else {
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.middle4")), SoundSource.HOSTILE, 100, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.middle4")), SoundSource.HOSTILE, 100, 1, false);
+						}
+					}
+				}
+			}
 			if (entity instanceof StarseerEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(StarseerEntity.DATA_SwitchAttackCooldown, (int) Math.max((entity instanceof StarseerEntity _datEntI ? _datEntI.getEntityData().get(StarseerEntity.DATA_SwitchAttackCooldown) : 0) - 1, 0));
 			if (entity instanceof StarseerEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(StarseerEntity.DATA_AttackTimer, (int) Math.max((entity instanceof StarseerEntity _datEntI ? _datEntI.getEntityData().get(StarseerEntity.DATA_AttackTimer) : 0) - 1, 0));
+			if (entity instanceof StarseerEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(StarseerEntity.DATA_BossThemeLoopCooldown,
+						(int) ((entity instanceof StarseerEntity _datEntI ? _datEntI.getEntityData().get(StarseerEntity.DATA_BossThemeLoopCooldown) : 0) <= 0
+								? 120
+								: (entity instanceof StarseerEntity _datEntI ? _datEntI.getEntityData().get(StarseerEntity.DATA_BossThemeLoopCooldown) : 0) - 1));
 			if (entity.fallDistance == 0 && (entity instanceof StarseerEntity _datEntI ? _datEntI.getEntityData().get(StarseerEntity.DATA_GroundTickAgo) : 0) > 3) {
 				if (world instanceof Level _level && !_level.isClientSide())
 					_level.explode(null, x, y, z, 2, Level.ExplosionInteraction.NONE);

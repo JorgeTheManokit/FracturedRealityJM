@@ -55,5 +55,12 @@ public class StarseerOnInitialEntitySpawnProcedure {
 					_datEntSetL.getEntityData().set(StarseerEntity.DATA_DoingMonologue, false);
 			});
 		}
+		if (world instanceof Level _level) {
+			if (!_level.isClientSide()) {
+				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.intro")), SoundSource.HOSTILE, 100, 1);
+			} else {
+				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.supernova.intro")), SoundSource.HOSTILE, 100, 1, false);
+			}
+		}
 	}
 }

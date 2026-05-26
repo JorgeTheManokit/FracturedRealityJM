@@ -197,6 +197,13 @@
         "name": "DoingMonologue",
         "type": "logic",
         "value": true
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "BossThemeLoopCooldown",
+        "type": "integer",
+        "value": 600
       }
     ],
     "whenMobDies": {

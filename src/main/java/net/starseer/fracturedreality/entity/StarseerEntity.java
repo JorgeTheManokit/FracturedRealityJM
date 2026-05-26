@@ -41,6 +41,7 @@ public class StarseerEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_AttackTimer = SynchedEntityData.defineId(StarseerEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_GroundTickAgo = SynchedEntityData.defineId(StarseerEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Boolean> DATA_DoingMonologue = SynchedEntityData.defineId(StarseerEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_BossThemeLoopCooldown = SynchedEntityData.defineId(StarseerEntity.class, EntityDataSerializers.INT);
 	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState2 = new AnimationState();
 	public final AnimationState animationState3 = new AnimationState();
@@ -61,6 +62,7 @@ public class StarseerEntity extends Monster {
 		builder.define(DATA_AttackTimer, 0);
 		builder.define(DATA_GroundTickAgo, 0);
 		builder.define(DATA_DoingMonologue, true);
+		builder.define(DATA_BossThemeLoopCooldown, 600);
 	}
 
 	@Override
@@ -265,6 +267,7 @@ public class StarseerEntity extends Monster {
 		compound.putInt("DataAttackTimer", this.entityData.get(DATA_AttackTimer));
 		compound.putInt("DataGroundTickAgo", this.entityData.get(DATA_GroundTickAgo));
 		compound.putBoolean("DataDoingMonologue", this.entityData.get(DATA_DoingMonologue));
+		compound.putInt("DataBossThemeLoopCooldown", this.entityData.get(DATA_BossThemeLoopCooldown));
 	}
 
 	@Override
@@ -280,6 +283,8 @@ public class StarseerEntity extends Monster {
 			this.entityData.set(DATA_GroundTickAgo, compound.getInt("DataGroundTickAgo"));
 		if (compound.contains("DataDoingMonologue"))
 			this.entityData.set(DATA_DoingMonologue, compound.getBoolean("DataDoingMonologue"));
+		if (compound.contains("DataBossThemeLoopCooldown"))
+			this.entityData.set(DATA_BossThemeLoopCooldown, compound.getInt("DataBossThemeLoopCooldown"));
 	}
 
 	@Override
