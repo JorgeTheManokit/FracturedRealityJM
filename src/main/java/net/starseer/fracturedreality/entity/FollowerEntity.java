@@ -104,11 +104,10 @@ public class FollowerEntity extends Monster {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
-		this.goalSelector.addGoal(6, new MoveBackToVillageGoal(this, 0.6, false));
-		this.goalSelector.addGoal(7, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(8, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(10, new FloatGoal(this));
+		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(7, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(9, new FloatGoal(this));
 	}
 
 	@Override

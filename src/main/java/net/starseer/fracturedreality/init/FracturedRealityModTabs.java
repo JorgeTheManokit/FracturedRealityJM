@@ -64,6 +64,8 @@ public class FracturedRealityModTabs {
 			if (tabData.hasPermissions()) {
 				tabData.accept(FracturedRealityModBlocks.FORGOTTEN.get().asItem());
 			}
+		} else if (tabData.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
+			tabData.accept(FracturedRealityModBlocks.VOID_DRILL.get().asItem());
 		}
 	}
 }
