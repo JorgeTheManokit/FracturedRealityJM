@@ -3841,13 +3841,13 @@
       "registry_name": "void_drill",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidDrillRenderer.java",
-          "src/main/resources/data/fractured_reality/loot_table/blocks/void_drill.json",
-          "src/main/resources/assets/fractured_reality/blockstates/void_drill.json",
-          "src/main/java/net/starseer/fracturedreality/block/VoidDrillBlock.java",
-          "src/main/java/net/starseer/fracturedreality/block/entity/VoidDrillBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_drill.json",
           "src/main/resources/assets/fractured_reality/models/block/void_drill.json",
-          "src/main/resources/assets/fractured_reality/models/item/void_drill.json"
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_drill.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/VoidDrillBlockEntity.java",
+          "src/main/java/net/starseer/fracturedreality/block/VoidDrillBlock.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidDrillRenderer.java",
+          "src/main/resources/assets/fractured_reality/blockstates/void_drill.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3860,10 +3860,10 @@
       "registry_name": "follower",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/follower_spawn_egg.json",
-          "src/main/java/net/starseer/fracturedreality/client/renderer/FollowerRenderer.java",
           "src/main/java/net/starseer/fracturedreality/entity/FollowerEntity.java",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/follower_biome_modifier.json"
+          "src/main/java/net/starseer/fracturedreality/client/renderer/FollowerRenderer.java",
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/follower_biome_modifier.json",
+          "src/main/resources/assets/fractured_reality/models/item/follower_spawn_egg.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3959,37 +3959,6 @@
         "return_type": "logic",
         "files": [
           "src/main/java/net/starseer/fracturedreality/procedures/IsNighttimeProcedure.java"
-        ]
-      },
-      "path": "~/Phase 2"
-    },
-    {
-      "name": "VoidDrillRedstoneOn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "void_drill_redstone_on",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/starseer/fracturedreality/procedures/VoidDrillRedstoneOnProcedure.java"
         ]
       },
       "path": "~/Phase 2"
@@ -4885,12 +4854,12 @@
   "metadata": {
     "files": [
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModConfigs.java",
-      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
+      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModScreens.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModJeiInformation.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticleTypes.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMobEffects.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModPotions.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModBrewingRecipes.java",
@@ -4900,14 +4869,14 @@
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntityRenderers.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntities.java",
       "src/main/java/net/starseer/fracturedreality/client/RenderUtils.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModSounds.java",
-      "src/main/resources/assets/fractured_reality/sounds.json",
+      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
       "src/main/java/net/starseer/fracturedreality/FracturedRealityMod.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModTabs.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java"
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/assets/fractured_reality/sounds.json"
     ]
   },
   "foldersRoot": {
