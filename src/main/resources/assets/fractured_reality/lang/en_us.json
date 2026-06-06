@@ -157,5 +157,14 @@
   "subtitles.fr.supernova.middle1": "",
   "subtitles.fr.supernova.middle2": "",
   "subtitles.fr.supernova.middle3": "",
-  "subtitles.fr.supernova.middle4": ""
+  "subtitles.fr.supernova.middle4": "",
+  "block.fractured_reality.soul_magma": "Soul Magma",
+  "block.fractured_reality.soul_lava": "Soul Lava",
+  "fluid_type.fractured_reality.soul_lava": "Soul Lava",
+  "fluid.fractured_reality.soul_lava": "Soul Lava",
+  "block.fractured_reality.enforcer_decorative": "Enforcer Decorative",
+  "block.fractured_reality.truth_seeker_decorative": "Truthseeker Decorative",
+  "block.fractured_reality.follower_decorative": "Follower Decorative",
+  "block.fractured_reality.star_core_decorative": "Star Core Decorative",
+  "block.fractured_reality.hippocrates": "Hippocrates"
 }

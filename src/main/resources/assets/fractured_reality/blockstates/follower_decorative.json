@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fractured_reality:block/follower_decorative"
+    },
+    "facing=east": {
+      "model": "fractured_reality:block/follower_decorative",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "fractured_reality:block/follower_decorative",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fractured_reality:block/follower_decorative",
+      "y": 270
+    }
+  }
+}

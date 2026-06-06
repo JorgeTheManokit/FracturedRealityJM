@@ -37,7 +37,7 @@ public class EnforcerOnEntityTickUpdateProcedure {
 		if ((entity instanceof EnforcerEntity _datEntI ? _datEntI.getEntityData().get(EnforcerEntity.DATA_LightningCooldown) : 0) <= 0) {
 			if (entity instanceof EnforcerEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(EnforcerEntity.DATA_LightningTimer, (int) ((entity instanceof EnforcerEntity _datEntI ? _datEntI.getEntityData().get(EnforcerEntity.DATA_LightningTimer) : 0) + 1));
-			if ((entity instanceof EnforcerEntity _datEntI ? _datEntI.getEntityData().get(EnforcerEntity.DATA_LightningTimer) : 0) % 10 == 0) {
+			if ((entity instanceof EnforcerEntity _datEntI ? _datEntI.getEntityData().get(EnforcerEntity.DATA_LightningTimer) : 0) % 40 == 0) {
 				if (!world.getEntitiesOfClass(Player.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(64 / 2d), e -> true).isEmpty()) {
 					{
 						final Vec3 _center = new Vec3(x, y, z);

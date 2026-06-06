@@ -3132,10 +3132,10 @@
       "registry_name": "enforcer",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/EnforcerRenderer.java",
-          "src/main/java/net/starseer/fracturedreality/entity/EnforcerEntity.java",
           "src/main/resources/assets/fractured_reality/models/item/enforcer_spawn_egg.json",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/enforcer_biome_modifier.json"
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/enforcer_biome_modifier.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/EnforcerRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/EnforcerEntity.java"
         ]
       },
       "path": "~/Phase 2"
@@ -3242,10 +3242,10 @@
       "registry_name": "shattered",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/shattered_spawn_egg.json",
-          "src/main/java/net/starseer/fracturedreality/entity/ShatteredEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/ShatteredRenderer.java",
           "src/main/resources/data/fractured_reality/neoforge/biome_modifier/shattered_biome_modifier.json",
-          "src/main/java/net/starseer/fracturedreality/client/renderer/ShatteredRenderer.java"
+          "src/main/java/net/starseer/fracturedreality/entity/ShatteredEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/shattered_spawn_egg.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3258,10 +3258,10 @@
       "registry_name": "truthseeker",
       "metadata": {
         "files": [
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/truthseeker_biome_modifier.json",
           "src/main/resources/assets/fractured_reality/models/item/truthseeker_spawn_egg.json",
-          "src/main/java/net/starseer/fracturedreality/entity/TruthseekerEntity.java",
-          "src/main/java/net/starseer/fracturedreality/client/renderer/TruthseekerRenderer.java"
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/truthseeker_biome_modifier.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/TruthseekerRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/TruthseekerEntity.java"
         ]
       },
       "path": "~/Phase 2"
@@ -3570,9 +3570,9 @@
       "registry_name": "starcore",
       "metadata": {
         "files": [
+          "src/main/java/net/starseer/fracturedreality/entity/StarcoreEntity.java",
           "src/main/resources/assets/fractured_reality/models/item/starcore_spawn_egg.json",
           "src/main/java/net/starseer/fracturedreality/client/renderer/StarcoreRenderer.java",
-          "src/main/java/net/starseer/fracturedreality/entity/StarcoreEntity.java",
           "src/main/resources/data/fractured_reality/neoforge/biome_modifier/starcore_biome_modifier.json"
         ]
       },
@@ -3962,6 +3962,132 @@
         ]
       },
       "path": "~/Phase 2"
+    },
+    {
+      "name": "SoulMagma",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_magma",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/block/soul_magma.json",
+          "src/main/resources/assets/fractured_reality/models/item/soul_magma.json",
+          "src/main/java/net/starseer/fracturedreality/block/SoulMagmaBlock.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/soul_magma.json",
+          "src/main/resources/assets/fractured_reality/blockstates/soul_magma.json"
+        ]
+      }
+    },
+    {
+      "name": "SoulLava",
+      "type": "fluid",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_lava",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/block/soul_lava.json",
+          "src/main/java/net/starseer/fracturedreality/fluid/SoulLavaFluid.java",
+          "src/main/java/net/starseer/fracturedreality/fluid/types/SoulLavaFluidType.java",
+          "src/main/resources/assets/fractured_reality/blockstates/soul_lava.json",
+          "src/main/java/net/starseer/fracturedreality/block/SoulLavaBlock.java",
+          "src/main/resources/assets/fractured_reality/models/item/soul_lava_bucket.json"
+        ]
+      }
+    },
+    {
+      "name": "EnforcerDecorative",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "enforcer_decorative",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/entity/EnforcerDecorativeBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/blockstates/enforcer_decorative.json",
+          "src/main/java/net/starseer/fracturedreality/block/EnforcerDecorativeBlock.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/EnforcerDecorativeRenderer.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/enforcer_decorative.json",
+          "src/main/resources/assets/fractured_reality/models/block/enforcer_decorative.json",
+          "src/main/resources/assets/fractured_reality/models/item/enforcer_decorative.json"
+        ]
+      },
+      "path": "~/Phase 2/Decorative Entities"
+    },
+    {
+      "name": "TruthSeekerDecorative",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "truth_seeker_decorative",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/truth_seeker_decorative.json",
+          "src/main/resources/assets/fractured_reality/blockstates/truth_seeker_decorative.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/truth_seeker_decorative.json",
+          "src/main/java/net/starseer/fracturedreality/block/TruthSeekerDecorativeBlock.java",
+          "src/main/java/net/starseer/fracturedreality/block/entity/TruthSeekerDecorativeBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/block/truth_seeker_decorative.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/TruthSeekerDecorativeRenderer.java"
+        ]
+      },
+      "path": "~/Phase 2/Decorative Entities"
+    },
+    {
+      "name": "FollowerDecorative",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "follower_decorative",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/blockstates/follower_decorative.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/follower_decorative.json",
+          "src/main/java/net/starseer/fracturedreality/block/FollowerDecorativeBlock.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/FollowerDecorativeRenderer.java",
+          "src/main/resources/assets/fractured_reality/models/block/follower_decorative.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/FollowerDecorativeBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/follower_decorative.json"
+        ]
+      },
+      "path": "~/Phase 2/Decorative Entities"
+    },
+    {
+      "name": "StarCoreDecorative",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "star_core_decorative",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/blockstates/star_core_decorative.json",
+          "src/main/java/net/starseer/fracturedreality/block/StarCoreDecorativeBlock.java",
+          "src/main/java/net/starseer/fracturedreality/block/entity/StarCoreDecorativeBlockEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/StarCoreDecorativeRenderer.java",
+          "src/main/resources/assets/fractured_reality/models/item/star_core_decorative.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/star_core_decorative.json",
+          "src/main/resources/assets/fractured_reality/models/block/star_core_decorative.json"
+        ]
+      },
+      "path": "~/Phase 2/Decorative Entities"
+    },
+    {
+      "name": "Hippocrates",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hippocrates",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/block/hippocrates.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/hippocrates.json",
+          "src/main/resources/assets/fractured_reality/models/item/hippocrates.json",
+          "src/main/resources/assets/fractured_reality/blockstates/hippocrates.json",
+          "src/main/java/net/starseer/fracturedreality/block/HippocratesBlock.java"
+        ]
+      },
+      "path": "~/Phase 2/Decorative Entities"
     }
   ],
   "variable_elements": [
@@ -4685,6 +4811,9 @@
     "BIOMES:mod:shattered_spawns": [
       "#minecraft:is_overworld",
       "#minecraft:is_nether"
+    ],
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:SoulLava"
     ]
   },
   "tab_element_order": {},
@@ -4848,12 +4977,23 @@
       "subtitles.fr.supernova.middle1": "",
       "subtitles.fr.supernova.middle2": "",
       "subtitles.fr.supernova.middle3": "",
-      "subtitles.fr.supernova.middle4": ""
+      "subtitles.fr.supernova.middle4": "",
+      "block.fractured_reality.soul_magma": "Soul Magma",
+      "block.fractured_reality.soul_lava": "Soul Lava",
+      "fluid_type.fractured_reality.soul_lava": "Soul Lava",
+      "fluid.fractured_reality.soul_lava": "Soul Lava",
+      "block.fractured_reality.enforcer_decorative": "Enforcer Decorative",
+      "block.fractured_reality.truth_seeker_decorative": "Truthseeker Decorative",
+      "block.fractured_reality.follower_decorative": "Follower Decorative",
+      "block.fractured_reality.star_core_decorative": "Star Core Decorative",
+      "block.fractured_reality.hippocrates": "Hippocrates"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModConfigs.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModFluidTypes.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModFluids.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
       "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModScreens.java",
@@ -4875,6 +5015,7 @@
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModTabs.java",
       "src/main/resources/pack.mcmeta",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java",
+      "src/main/resources/fractured_reality.mixins.json",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/resources/assets/fractured_reality/sounds.json"
     ]
@@ -4921,7 +5062,12 @@
       },
       {
         "name": "Phase 2",
-        "children": []
+        "children": [
+          {
+            "name": "Decorative Entities",
+            "children": []
+          }
+        ]
       },
       {
         "name": "DevTools",
@@ -4936,7 +5082,7 @@
   "workspaceSettings": {
     "modid": "fractured_reality",
     "modName": "Fractured Reality",
-    "version": "1.2.0-PrivateBeta3",
+    "version": "1.2.0-PrivateBeta8",
     "description": "As reality breaks and the sky cracks apart, mysterious beings are unleashed upon the world. The cycle of day and night breaks, the rain disappears, and the mobs spawn less and less. The players have to shelter from the gravity fluctuations pulling them up into the sky. It is up to the players to solve what happened and fix their world. The players will have to solve puzzles and find a way to go above and beyond. Once the world is repaired, everything will go back to normal, but not for long. ",
     "author": "Jorge M.",
     "websiteURL": "https://modrinth.com/project/vZ2PEXzS",

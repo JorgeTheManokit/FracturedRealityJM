@@ -23,6 +23,13 @@ public class FracturedRealityModBlocks {
 	public static final DeferredBlock<Block> DISK_BURNER;
 	public static final DeferredBlock<Block> FORGOTTEN;
 	public static final DeferredBlock<Block> VOID_DRILL;
+	public static final DeferredBlock<Block> SOUL_MAGMA;
+	public static final DeferredBlock<Block> SOUL_LAVA;
+	public static final DeferredBlock<Block> ENFORCER_DECORATIVE;
+	public static final DeferredBlock<Block> TRUTH_SEEKER_DECORATIVE;
+	public static final DeferredBlock<Block> FOLLOWER_DECORATIVE;
+	public static final DeferredBlock<Block> STAR_CORE_DECORATIVE;
+	public static final DeferredBlock<Block> HIPPOCRATES;
 	static {
 		HOOK_FABRICATOR = REGISTRY.register("hook_fabricator", HookFabricatorBlock::new);
 		GRAPPLING_POINT = REGISTRY.register("grappling_point", GrapplingPointBlock::new);
@@ -34,6 +41,13 @@ public class FracturedRealityModBlocks {
 		DISK_BURNER = REGISTRY.register("disk_burner", DiskBurnerBlock::new);
 		FORGOTTEN = REGISTRY.register("forgotten", ForgottenBlock::new);
 		VOID_DRILL = REGISTRY.register("void_drill", VoidDrillBlock::new);
+		SOUL_MAGMA = REGISTRY.register("soul_magma", SoulMagmaBlock::new);
+		SOUL_LAVA = REGISTRY.register("soul_lava", SoulLavaBlock::new);
+		ENFORCER_DECORATIVE = REGISTRY.register("enforcer_decorative", EnforcerDecorativeBlock::new);
+		TRUTH_SEEKER_DECORATIVE = REGISTRY.register("truth_seeker_decorative", TruthSeekerDecorativeBlock::new);
+		FOLLOWER_DECORATIVE = REGISTRY.register("follower_decorative", FollowerDecorativeBlock::new);
+		STAR_CORE_DECORATIVE = REGISTRY.register("star_core_decorative", StarCoreDecorativeBlock::new);
+		HIPPOCRATES = REGISTRY.register("hippocrates", HippocratesBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

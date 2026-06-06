@@ -63,6 +63,11 @@ public class FracturedRealityModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
 			if (tabData.hasPermissions()) {
 				tabData.accept(FracturedRealityModBlocks.FORGOTTEN.get().asItem());
+				tabData.accept(FracturedRealityModBlocks.SOUL_MAGMA.get().asItem());
+				tabData.accept(FracturedRealityModBlocks.ENFORCER_DECORATIVE.get().asItem());
+				tabData.accept(FracturedRealityModBlocks.TRUTH_SEEKER_DECORATIVE.get().asItem());
+				tabData.accept(FracturedRealityModBlocks.FOLLOWER_DECORATIVE.get().asItem());
+				tabData.accept(FracturedRealityModBlocks.STAR_CORE_DECORATIVE.get().asItem());
 			}
 		} else if (tabData.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
 			tabData.accept(FracturedRealityModBlocks.VOID_DRILL.get().asItem());

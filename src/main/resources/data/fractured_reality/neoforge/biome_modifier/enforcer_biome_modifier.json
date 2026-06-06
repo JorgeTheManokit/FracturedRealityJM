@@ -3,7 +3,7 @@
   "biomes": "#fractured_reality:presenter_spawns",
   "spawners": {
     "type": "fractured_reality:enforcer",
-    "weight": 20,
+    "weight": 5,
     "minCount": 1,
     "maxCount": 4
   }

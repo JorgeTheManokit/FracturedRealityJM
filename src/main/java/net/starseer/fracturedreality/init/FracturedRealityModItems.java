@@ -69,6 +69,12 @@ public class FracturedRealityModItems {
 	public static final DeferredItem<Item> STAR_SHARD;
 	public static final DeferredItem<Item> VOID_DRILL;
 	public static final DeferredItem<Item> FOLLOWER_SPAWN_EGG;
+	public static final DeferredItem<Item> SOUL_MAGMA;
+	public static final DeferredItem<Item> ENFORCER_DECORATIVE;
+	public static final DeferredItem<Item> TRUTH_SEEKER_DECORATIVE;
+	public static final DeferredItem<Item> FOLLOWER_DECORATIVE;
+	public static final DeferredItem<Item> STAR_CORE_DECORATIVE;
+	public static final DeferredItem<Item> HIPPOCRATES;
 	static {
 		PRESENTER_SPAWN_EGG = REGISTRY.register("presenter_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.PRESENTER, -1, -1, new Item.Properties()));
 		BEAM_SUMMONER_SPAWN_EGG = REGISTRY.register("beam_summoner_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.BEAM_SUMMONER, -1, -1, new Item.Properties()));
@@ -113,6 +119,12 @@ public class FracturedRealityModItems {
 		STAR_SHARD = REGISTRY.register("star_shard", StarShardItem::new);
 		VOID_DRILL = block(FracturedRealityModBlocks.VOID_DRILL);
 		FOLLOWER_SPAWN_EGG = REGISTRY.register("follower_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.FOLLOWER, -1, -1, new Item.Properties()));
+		SOUL_MAGMA = block(FracturedRealityModBlocks.SOUL_MAGMA);
+		ENFORCER_DECORATIVE = block(FracturedRealityModBlocks.ENFORCER_DECORATIVE);
+		TRUTH_SEEKER_DECORATIVE = block(FracturedRealityModBlocks.TRUTH_SEEKER_DECORATIVE);
+		FOLLOWER_DECORATIVE = block(FracturedRealityModBlocks.FOLLOWER_DECORATIVE);
+		STAR_CORE_DECORATIVE = block(FracturedRealityModBlocks.STAR_CORE_DECORATIVE);
+		HIPPOCRATES = block(FracturedRealityModBlocks.HIPPOCRATES);
 	}
 
 	// Start of user code block custom items

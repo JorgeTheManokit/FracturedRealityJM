@@ -3,7 +3,7 @@
   "biomes": "#fractured_reality:shattered_spawns",
   "spawners": {
     "type": "fractured_reality:shattered",
-    "weight": 10,
+    "weight": 2,
     "minCount": 4,
     "maxCount": 4
   }

@@ -177,7 +177,7 @@
     "spawningCondition": {
       "name": "TruthseekerSpawnEnabler"
     },
-    "spawningProbability": 20,
+    "spawningProbability": 1,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,

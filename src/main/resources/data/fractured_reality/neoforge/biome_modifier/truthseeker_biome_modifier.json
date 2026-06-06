@@ -3,7 +3,7 @@
   "biomes": "#fractured_reality:truthseeker_spawns",
   "spawners": {
     "type": "fractured_reality:truthseeker",
-    "weight": 20,
+    "weight": 1,
     "minCount": 4,
     "maxCount": 4
   }

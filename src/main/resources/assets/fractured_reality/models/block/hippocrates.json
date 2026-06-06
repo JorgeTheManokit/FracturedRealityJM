@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "fractured_reality:block/grappling_point",
+    "up": "fractured_reality:block/grappling_point",
+    "north": "fractured_reality:block/grappling_point",
+    "east": "fractured_reality:block/grappling_point",
+    "south": "fractured_reality:block/grappling_point",
+    "west": "fractured_reality:block/grappling_point",
+    "particle": "fractured_reality:block/grappling_point"
+  },
+  "render_type": "solid"
+}

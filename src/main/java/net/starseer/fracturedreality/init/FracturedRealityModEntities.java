@@ -64,7 +64,7 @@ public class FracturedRealityModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<ShatteredEntity>> SHATTERED = register("shattered",
 			EntityType.Builder.<ShatteredEntity>of(ShatteredEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.sized(2.5f, 6.25f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TruthseekerEntity>> TRUTHSEEKER = register("truthseeker",
 			EntityType.Builder.<TruthseekerEntity>of(TruthseekerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
 

@@ -30,6 +30,11 @@ public class FracturedRealityModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DiskBurnerBlockEntity>> DISK_BURNER = register("disk_burner", FracturedRealityModBlocks.DISK_BURNER, DiskBurnerBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ForgottenBlockEntity>> FORGOTTEN = register("forgotten", FracturedRealityModBlocks.FORGOTTEN, ForgottenBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VoidDrillBlockEntity>> VOID_DRILL = register("void_drill", FracturedRealityModBlocks.VOID_DRILL, VoidDrillBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EnforcerDecorativeBlockEntity>> ENFORCER_DECORATIVE = register("enforcer_decorative", FracturedRealityModBlocks.ENFORCER_DECORATIVE, EnforcerDecorativeBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TruthSeekerDecorativeBlockEntity>> TRUTH_SEEKER_DECORATIVE = register("truth_seeker_decorative", FracturedRealityModBlocks.TRUTH_SEEKER_DECORATIVE,
+			TruthSeekerDecorativeBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FollowerDecorativeBlockEntity>> FOLLOWER_DECORATIVE = register("follower_decorative", FracturedRealityModBlocks.FOLLOWER_DECORATIVE, FollowerDecorativeBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<StarCoreDecorativeBlockEntity>> STAR_CORE_DECORATIVE = register("star_core_decorative", FracturedRealityModBlocks.STAR_CORE_DECORATIVE, StarCoreDecorativeBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -47,5 +52,9 @@ public class FracturedRealityModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DISK_BURNER.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FORGOTTEN.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, VOID_DRILL.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ENFORCER_DECORATIVE.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TRUTH_SEEKER_DECORATIVE.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FOLLOWER_DECORATIVE.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, STAR_CORE_DECORATIVE.get(), SidedInvWrapper::new);
 	}
 }

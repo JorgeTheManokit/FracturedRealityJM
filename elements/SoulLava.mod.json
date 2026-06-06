@@ -1,0 +1,60 @@
+{
+  "_fv": 79,
+  "_type": "fluid",
+  "definition": {
+    "name": "Soul Lava",
+    "bucketName": "Soul Lava Bucket",
+    "textureStill": "soul_lava_still",
+    "textureFlowing": "soul_lava_flow",
+    "textureRenderOverlay": "",
+    "hasFog": true,
+    "fogColor": {
+      "value": -16711681,
+      "falpha": 0.0
+    },
+    "fogStartDistance": {
+      "fixedValue": 0.0
+    },
+    "fogEndDistance": {
+      "fixedValue": 2.0
+    },
+    "tintType": "No tint",
+    "canMultiply": true,
+    "flowRate": 5,
+    "levelDecrease": 2,
+    "slopeFindDistance": 4,
+    "spawnParticles": false,
+    "dripParticle": {
+      "value": "CUSTOM:VoidDrip"
+    },
+    "flowStrength": 1.0,
+    "luminosity": 0,
+    "density": 1000,
+    "viscosity": 1000,
+    "temperature": 300,
+    "type": "LAVA",
+    "generateBucket": false,
+    "textureBucket": "minecraft:lava_bucket",
+    "creativeTabs": [
+      {
+        "value": "OP_BLOCKS"
+      }
+    ],
+    "emptySound": {
+      "value": "item.bucket.empty_lava"
+    },
+    "rarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "resistance": 100.0,
+    "luminance": 0,
+    "lightOpacity": 1,
+    "emissiveRendering": true,
+    "tickRate": 0,
+    "ignitedByLava": false,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "DEFAULT"
+  }
+}

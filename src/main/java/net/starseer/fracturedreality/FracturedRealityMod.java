@@ -49,6 +49,8 @@ public class FracturedRealityMod {
 		FracturedRealityModMobEffects.REGISTRY.register(modEventBus);
 		FracturedRealityModMenus.REGISTRY.register(modEventBus);
 		FracturedRealityModParticleTypes.REGISTRY.register(modEventBus);
+		FracturedRealityModFluids.REGISTRY.register(modEventBus);
+		FracturedRealityModFluidTypes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

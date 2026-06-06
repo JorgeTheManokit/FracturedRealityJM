@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "fractured_reality:block/soul_magma",
+    "up": "fractured_reality:block/soul_magma",
+    "north": "fractured_reality:block/soul_magma",
+    "east": "fractured_reality:block/soul_magma",
+    "south": "fractured_reality:block/soul_magma",
+    "west": "fractured_reality:block/soul_magma",
+    "particle": "fractured_reality:block/soul_magma"
+  },
+  "render_type": "solid"
+}
