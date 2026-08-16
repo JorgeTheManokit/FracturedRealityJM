@@ -18,6 +18,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class PresenterRenderer extends MobRenderer<PresenterEntity, ModelPresenter<PresenterEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("fractured_reality:textures/entities/presenter.png");
+
 	public PresenterRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(ModelPresenter.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<PresenterEntity, ModelPresenter<PresenterEntity>>(this) {
@@ -33,7 +35,7 @@ public class PresenterRenderer extends MobRenderer<PresenterEntity, ModelPresent
 
 	@Override
 	public ResourceLocation getTextureLocation(PresenterEntity entity) {
-		return ResourceLocation.parse("fractured_reality:textures/entities/presenter.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends ModelPresenter<PresenterEntity> {

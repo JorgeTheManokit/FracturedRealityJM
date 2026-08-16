@@ -20,9 +20,11 @@ public class FracturedRealityModModels {
 		event.registerLayerDefinition(ModelStarseer.LAYER_LOCATION, ModelStarseer::createBodyLayer);
 		event.registerLayerDefinition(ModelForgotten.LAYER_LOCATION, ModelForgotten::createBodyLayer);
 		event.registerLayerDefinition(ModelShattered.LAYER_LOCATION, ModelShattered::createBodyLayer);
+		event.registerLayerDefinition(ModelvoidGenerator.LAYER_LOCATION, ModelvoidGenerator::createBodyLayer);
 		event.registerLayerDefinition(ModelStarArm.LAYER_LOCATION, ModelStarArm::createBodyLayer);
 		event.registerLayerDefinition(ModelStarCore.LAYER_LOCATION, ModelStarCore::createBodyLayer);
 		event.registerLayerDefinition(ModelLIghtningStriker.LAYER_LOCATION, ModelLIghtningStriker::createBodyLayer);
+		event.registerLayerDefinition(ModelDoorHologram.LAYER_LOCATION, ModelDoorHologram::createBodyLayer);
 		event.registerLayerDefinition(ModelvoidBlockerTotem.LAYER_LOCATION, ModelvoidBlockerTotem::createBodyLayer);
 		event.registerLayerDefinition(ModelhookFabricator.LAYER_LOCATION, ModelhookFabricator::createBodyLayer);
 		event.registerLayerDefinition(ModelStarseerSpawner.LAYER_LOCATION, ModelStarseerSpawner::createBodyLayer);
@@ -34,6 +36,7 @@ public class FracturedRealityModModels {
 		event.registerLayerDefinition(Modelsmaller_armor_model.LAYER_LOCATION, Modelsmaller_armor_model::createBodyLayer);
 		event.registerLayerDefinition(ModelSummonedProjectileBeamer.LAYER_LOCATION, ModelSummonedProjectileBeamer::createBodyLayer);
 		event.registerLayerDefinition(ModelLightBeam.LAYER_LOCATION, ModelLightBeam::createBodyLayer);
+		event.registerLayerDefinition(Modelshard_lantern.LAYER_LOCATION, Modelshard_lantern::createBodyLayer);
 		event.registerLayerDefinition(ModelBedrockCracker.LAYER_LOCATION, ModelBedrockCracker::createBodyLayer);
 		event.registerLayerDefinition(ModelFaceless.LAYER_LOCATION, ModelFaceless::createBodyLayer);
 		event.registerLayerDefinition(ModelVoidJetpack.LAYER_LOCATION, ModelVoidJetpack::createBodyLayer);

@@ -5,7 +5,6 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public class FracturedRealityServerConfigConfiguration {
 	public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 	public static final ModConfigSpec SPEC;
-
 	public static final ModConfigSpec.ConfigValue<Double> PREP_TIME;
 	public static final ModConfigSpec.ConfigValue<Double> TIME_SCALE;
 	public static final ModConfigSpec.ConfigValue<Boolean> VOID_GRIEFING;

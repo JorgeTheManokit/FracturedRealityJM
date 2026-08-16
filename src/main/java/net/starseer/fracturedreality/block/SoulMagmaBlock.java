@@ -1,7 +1,5 @@
 package net.starseer.fracturedreality.block;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -13,12 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class SoulMagmaBlock extends Block {
 	public SoulMagmaBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.NETHERRACK).strength(1f, 10f).lightLevel(s -> 5));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
+		super(BlockBehaviour.Properties.of().sound(SoundType.NETHERRACK).strength(1f, 10f).lightLevel(blockstate -> 5));
 	}
 
 	@Override

@@ -8,6 +8,10 @@ import net.starseer.fracturedreality.FracturedRealityMod;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
@@ -29,7 +33,16 @@ public class FracturedRealityModBlocks {
 	public static final DeferredBlock<Block> TRUTH_SEEKER_DECORATIVE;
 	public static final DeferredBlock<Block> FOLLOWER_DECORATIVE;
 	public static final DeferredBlock<Block> STAR_CORE_DECORATIVE;
-	public static final DeferredBlock<Block> HIPPOCRATES;
+	public static final DeferredBlock<Block> WARPED_LADDER;
+	public static final DeferredBlock<Block> DOOR_BLOCKER_MOLTEN;
+	public static final DeferredBlock<Block> DOOR_BLOCKER_RAGNAROK;
+	public static final DeferredBlock<Block> DOOR_BLOCKER_INVISIBLE;
+	public static final DeferredBlock<Block> VOIDSLATE;
+	public static final DeferredBlock<Block> GRASSY_VOID_SLATE;
+	public static final DeferredBlock<Block> VOID_GENERATOR;
+	public static final DeferredBlock<Block> VOID_STEEL_BLOCK;
+	public static final DeferredBlock<Block> VOID_STEEL_BARS;
+	public static final DeferredBlock<Block> SHARD_LANTERN;
 	static {
 		HOOK_FABRICATOR = REGISTRY.register("hook_fabricator", HookFabricatorBlock::new);
 		GRAPPLING_POINT = REGISTRY.register("grappling_point", GrapplingPointBlock::new);
@@ -47,8 +60,30 @@ public class FracturedRealityModBlocks {
 		TRUTH_SEEKER_DECORATIVE = REGISTRY.register("truth_seeker_decorative", TruthSeekerDecorativeBlock::new);
 		FOLLOWER_DECORATIVE = REGISTRY.register("follower_decorative", FollowerDecorativeBlock::new);
 		STAR_CORE_DECORATIVE = REGISTRY.register("star_core_decorative", StarCoreDecorativeBlock::new);
-		HIPPOCRATES = REGISTRY.register("hippocrates", HippocratesBlock::new);
+		WARPED_LADDER = REGISTRY.register("warped_ladder", WarpedLadderBlock::new);
+		DOOR_BLOCKER_MOLTEN = REGISTRY.register("door_blocker_molten", DoorBlockerMoltenBlock::new);
+		DOOR_BLOCKER_RAGNAROK = REGISTRY.register("door_blocker_ragnarok", DoorBlockerRagnarokBlock::new);
+		DOOR_BLOCKER_INVISIBLE = REGISTRY.register("door_blocker_invisible", DoorBlockerInvisibleBlock::new);
+		VOIDSLATE = REGISTRY.register("voidslate", VoidslateBlock::new);
+		GRASSY_VOID_SLATE = REGISTRY.register("grassy_void_slate", GrassyVoidSlateBlock::new);
+		VOID_GENERATOR = REGISTRY.register("void_generator", VoidGeneratorBlock::new);
+		VOID_STEEL_BLOCK = REGISTRY.register("void_steel_block", VoidSteelBlockBlock::new);
+		VOID_STEEL_BARS = REGISTRY.register("void_steel_bars", VoidSteelBarsBlock::new);
+		SHARD_LANTERN = REGISTRY.register("shard_lantern", ShardLanternBlock::new);
 	}
+
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
+	@EventBusSubscriber(Dist.CLIENT)
+	public static class BlocksClientSideHandler {
+		@SubscribeEvent
+		public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {
+			GrassyVoidSlateBlock.blockColorLoad(event);
+		}
+
+		@SubscribeEvent
+		public static void itemColorLoad(RegisterColorHandlersEvent.Item event) {
+			GrassyVoidSlateBlock.itemColorLoad(event);
+		}
+	}
 }

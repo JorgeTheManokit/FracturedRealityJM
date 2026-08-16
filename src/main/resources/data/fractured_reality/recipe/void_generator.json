@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "fractured_reality:void_steel_ingot"
+    },
+    "b": {
+      "item": "fractured_reality:star_shard"
+    },
+    "c": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "result": {
+    "id": "fractured_reality:void_generator",
+    "count": 1
+  }
+}

@@ -5,8 +5,8 @@ import net.starseer.fracturedreality.network.FracturedRealityModVariables;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
+import net.neoforged.bus.api.ICancellableEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
@@ -38,8 +38,8 @@ public class SpawnBlockerProcedure {
 		if (entity instanceof Mob _mob && _mob.getSpawnType() == MobSpawnType.CHUNK_GENERATION) {
 			if (!entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("fractured_reality:unspawnblockable"))) && !(entity instanceof Player)) {
 				if (!(Mth.nextDouble(RandomSource.create(), 0, 100) <= FracturedRealityModVariables.MapVariables.get(world).NonFRMobSpawnChance)) {
-					if (event instanceof ICancellableEvent _cancellable) {
-						_cancellable.setCanceled(true);
+					if (event instanceof ICancellableEvent cancellableEvent) {
+						cancellableEvent.setCanceled(true);
 					}
 				}
 			}
@@ -47,8 +47,8 @@ public class SpawnBlockerProcedure {
 		if (entity instanceof Mob _mob && _mob.getSpawnType() == MobSpawnType.NATURAL) {
 			if (!entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("fractured_reality:unspawnblockable"))) && !(entity instanceof Player)) {
 				if (!(Mth.nextDouble(RandomSource.create(), 0, 100) <= FracturedRealityModVariables.MapVariables.get(world).NonFRMobSpawnChance)) {
-					if (event instanceof ICancellableEvent _cancellable) {
-						_cancellable.setCanceled(true);
+					if (event instanceof ICancellableEvent cancellableEvent) {
+						cancellableEvent.setCanceled(true);
 					}
 				}
 			}

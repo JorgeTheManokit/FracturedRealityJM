@@ -166,5 +166,15 @@
   "block.fractured_reality.truth_seeker_decorative": "Truthseeker Decorative",
   "block.fractured_reality.follower_decorative": "Follower Decorative",
   "block.fractured_reality.star_core_decorative": "Star Core Decorative",
-  "block.fractured_reality.hippocrates": "Hippocrates"
+  "block.fractured_reality.warped_ladder": "Warped Ladder",
+  "block.fractured_reality.door_blocker_molten": "Door Blocker Molten",
+  "block.fractured_reality.door_blocker_ragnarok": "Door Blocker Ragnarok",
+  "block.fractured_reality.door_blocker_invisible": "Door Blocker Invisible",
+  "biome.fractured_reality.the_floor": "The Floor",
+  "block.fractured_reality.voidslate": "Voidslate",
+  "block.fractured_reality.grassy_void_slate": "Grassy Voidslate",
+  "block.fractured_reality.void_generator": "Void Generator",
+  "block.fractured_reality.void_steel_block": "Void Steel Block",
+  "block.fractured_reality.void_steel_bars": "Void Steel Bars",
+  "block.fractured_reality.shard_lantern": "Void Steel Block"
 }

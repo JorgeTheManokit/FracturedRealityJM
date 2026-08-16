@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "particle",
   "definition": {
     "texture": "void_drip",
@@ -10,6 +10,7 @@
     "scale": {
       "fixedValue": 0.19999999999999998
     },
+    "fixedScale": false,
     "speedFactor": 0.0,
     "gravity": 0.25,
     "maxAge": 20,

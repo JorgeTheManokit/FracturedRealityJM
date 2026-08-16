@@ -1,7 +1,5 @@
 package net.starseer.fracturedreality.block;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.starseer.fracturedreality.block.entity.GrapplingPointBlockEntity;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -24,8 +22,8 @@ import net.minecraft.core.BlockPos;
 
 public class GrapplingPointBlock extends Block implements EntityBlock {
 	public GrapplingPointBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GLASS).strength(15f, 10f).lightLevel(s -> 15).noCollission().noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
-				.isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.HAT));
+		super(BlockBehaviour.Properties.of().sound(SoundType.GLASS).strength(15f, 10f).lightLevel(blockstate -> 15).noCollission().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false)
+				.instrument(NoteBlockInstrument.HAT));
 	}
 
 	@Override

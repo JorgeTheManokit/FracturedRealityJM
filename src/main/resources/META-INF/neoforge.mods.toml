@@ -4,7 +4,7 @@ license="MIT License"
 
 [[mods]]
 modId="fractured_reality"
-version="1.2.08"
+version="1.2.0-PrivateBeta11"
 displayName="Fractured Reality"
 displayURL="https://modrinth.com/project/vZ2PEXzS"
 logoFile="logo.png"
@@ -15,8 +15,6 @@ description="As reality breaks and the sky cracks apart, mysterious beings are u
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
-[[mixins]]
-    config = "fractured_reality.mixins.json"
 
 # Start of user code block custom mixins
 # End of user code block custom mixins

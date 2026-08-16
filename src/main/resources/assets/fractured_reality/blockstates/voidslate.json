@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "fractured_reality:block/voidslate",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "fractured_reality:block/voidslate"
+    },
+    "axis=z": {
+      "model": "fractured_reality:block/voidslate",
+      "x": 90
+    }
+  }
+}

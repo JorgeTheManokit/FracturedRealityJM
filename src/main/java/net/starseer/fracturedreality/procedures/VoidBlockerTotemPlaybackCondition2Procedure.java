@@ -1,10 +1,20 @@
 package net.starseer.fracturedreality.procedures;
 
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class VoidBlockerTotemPlaybackCondition2Procedure {
 	public static boolean execute(BlockState blockstate) {
-		return (blockstate.getBlock().getStateDefinition().getProperty("power_level") instanceof IntegerProperty _getip1 ? blockstate.getValue(_getip1) : -1) > 1;
+		return (getPropertyByName(blockstate, "power_level") instanceof IntegerProperty _getip1 ? blockstate.getValue(_getip1) : -1) > 1;
+	}
+
+	private static Property<?> getPropertyByName(BlockState state, String name) {
+		for (Property<?> property : state.getProperties()) {
+			if (property.getName().equals(name)) {
+				return property;
+			}
+		}
+		return null;
 	}
 }

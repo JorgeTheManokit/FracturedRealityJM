@@ -35,6 +35,11 @@ public class FracturedRealityModBlockEntities {
 			TruthSeekerDecorativeBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FollowerDecorativeBlockEntity>> FOLLOWER_DECORATIVE = register("follower_decorative", FracturedRealityModBlocks.FOLLOWER_DECORATIVE, FollowerDecorativeBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<StarCoreDecorativeBlockEntity>> STAR_CORE_DECORATIVE = register("star_core_decorative", FracturedRealityModBlocks.STAR_CORE_DECORATIVE, StarCoreDecorativeBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DoorBlockerMoltenBlockEntity>> DOOR_BLOCKER_MOLTEN = register("door_blocker_molten", FracturedRealityModBlocks.DOOR_BLOCKER_MOLTEN, DoorBlockerMoltenBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DoorBlockerRagnarokBlockEntity>> DOOR_BLOCKER_RAGNAROK = register("door_blocker_ragnarok", FracturedRealityModBlocks.DOOR_BLOCKER_RAGNAROK,
+			DoorBlockerRagnarokBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VoidGeneratorBlockEntity>> VOID_GENERATOR = register("void_generator", FracturedRealityModBlocks.VOID_GENERATOR, VoidGeneratorBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ShardLanternBlockEntity>> SHARD_LANTERN = register("shard_lantern", FracturedRealityModBlocks.SHARD_LANTERN, ShardLanternBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -56,5 +61,9 @@ public class FracturedRealityModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TRUTH_SEEKER_DECORATIVE.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FOLLOWER_DECORATIVE.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, STAR_CORE_DECORATIVE.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DOOR_BLOCKER_MOLTEN.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DOOR_BLOCKER_RAGNAROK.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, VOID_GENERATOR.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, SHARD_LANTERN.get(), SidedInvWrapper::new);
 	}
 }

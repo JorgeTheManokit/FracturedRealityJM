@@ -18,6 +18,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class EnforcerRenderer extends MobRenderer<EnforcerEntity, ModelEnforcer<EnforcerEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("fractured_reality:textures/entities/enforcer.png");
+
 	public EnforcerRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(ModelEnforcer.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<EnforcerEntity, ModelEnforcer<EnforcerEntity>>(this) {
@@ -33,7 +35,7 @@ public class EnforcerRenderer extends MobRenderer<EnforcerEntity, ModelEnforcer<
 
 	@Override
 	public ResourceLocation getTextureLocation(EnforcerEntity entity) {
-		return ResourceLocation.parse("fractured_reality:textures/entities/enforcer.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends ModelEnforcer<EnforcerEntity> {

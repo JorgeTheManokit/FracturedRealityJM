@@ -1,0 +1,9 @@
+{
+  "parent": "block/template_glass_pane_side_alt",
+  "textures": {
+    "particle": "fractured_reality:block/void_steel_pane",
+    "pane": "fractured_reality:block/void_steel_pane",
+    "edge": "fractured_reality:block/void_steel_pane_top"
+  },
+  "render_type": "cutout"
+}

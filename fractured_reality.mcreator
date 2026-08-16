@@ -123,7 +123,7 @@
       "name": "SpawnBlocker",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "spawn_blocker",
       "metadata": {
         "dependencies": [
@@ -149,10 +149,10 @@
       "registry_name": "presenter",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/PresenterRenderer.java",
           "src/main/resources/assets/fractured_reality/models/item/presenter_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/entity/PresenterEntity.java",
           "src/main/resources/data/fractured_reality/neoforge/biome_modifier/presenter_biome_modifier.json",
-          "src/main/java/net/starseer/fracturedreality/entity/PresenterEntity.java"
+          "src/main/java/net/starseer/fracturedreality/client/renderer/PresenterRenderer.java"
         ]
       }
     },
@@ -165,9 +165,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/fractured_reality/models/item/beam_summoner_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/entity/BeamSummonerEntity.java",
           "src/main/java/net/starseer/fracturedreality/client/renderer/BeamSummonerRenderer.java",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/beam_summoner_biome_modifier.json",
-          "src/main/java/net/starseer/fracturedreality/entity/BeamSummonerEntity.java"
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/beam_summoner_biome_modifier.json"
         ]
       }
     },
@@ -307,10 +307,10 @@
       "registry_name": "faceless",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/FacelessRenderer.java",
           "src/main/resources/assets/fractured_reality/models/item/faceless_spawn_egg.json",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/faceless_biome_modifier.json",
-          "src/main/java/net/starseer/fracturedreality/entity/FacelessEntity.java"
+          "src/main/java/net/starseer/fracturedreality/client/renderer/FacelessRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/FacelessEntity.java",
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/faceless_biome_modifier.json"
         ]
       }
     },
@@ -504,8 +504,8 @@
       "registry_name": "void_steel_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/void_steel_ingot.json",
-          "src/main/java/net/starseer/fracturedreality/item/VoidSteelIngotItem.java"
+          "src/main/java/net/starseer/fracturedreality/item/VoidSteelIngotItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_ingot.json"
         ]
       }
     },
@@ -589,8 +589,8 @@
       "registry_name": "void_upgrade_template",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/void_upgrade_template.json",
-          "src/main/java/net/starseer/fracturedreality/item/VoidUpgradeTemplateItem.java"
+          "src/main/java/net/starseer/fracturedreality/item/VoidUpgradeTemplateItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_upgrade_template.json"
         ]
       }
     },
@@ -728,8 +728,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/fractured_reality/neoforge/biome_modifier/moon_breaker_biome_modifier.json",
-          "src/main/java/net/starseer/fracturedreality/entity/MoonBreakerEntity.java",
           "src/main/resources/assets/fractured_reality/models/item/moon_breaker_spawn_egg.json",
+          "src/main/java/net/starseer/fracturedreality/entity/MoonBreakerEntity.java",
           "src/main/java/net/starseer/fracturedreality/client/renderer/MoonBreakerRenderer.java"
         ]
       }
@@ -1060,8 +1060,8 @@
       "registry_name": "adv_icon_2",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/item/AdvIcon2Item.java",
-          "src/main/resources/assets/fractured_reality/models/item/adv_icon_2.json"
+          "src/main/resources/assets/fractured_reality/models/item/adv_icon_2.json",
+          "src/main/java/net/starseer/fracturedreality/item/AdvIcon2Item.java"
         ]
       },
       "path": "~/Advancements/Icons"
@@ -1319,12 +1319,12 @@
       "registry_name": "hook_fabricator",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/block/HookFabricatorRenderer.java",
-          "src/main/resources/data/fractured_reality/loot_table/blocks/hook_fabricator.json",
           "src/main/resources/assets/fractured_reality/blockstates/hook_fabricator.json",
           "src/main/java/net/starseer/fracturedreality/block/entity/HookFabricatorBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/block/hook_fabricator.json",
           "src/main/java/net/starseer/fracturedreality/block/HookFabricatorBlock.java",
-          "src/main/resources/assets/fractured_reality/models/block/hook_fabricator.json"
+          "src/main/resources/data/fractured_reality/loot_table/blocks/hook_fabricator.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/HookFabricatorRenderer.java"
         ]
       },
       "path": "~/GrapplingHook"
@@ -1380,9 +1380,9 @@
       "registry_name": "grappling_hook",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/item/GrapplingHookItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/grappling_hook_0.json",
           "src/main/resources/assets/fractured_reality/models/item/grappling_hook.json",
-          "src/main/resources/assets/fractured_reality/models/item/grappling_hook_0.json"
+          "src/main/java/net/starseer/fracturedreality/item/GrapplingHookItem.java"
         ]
       },
       "path": "~/GrapplingHook"
@@ -1395,13 +1395,13 @@
       "registry_name": "grappling_point",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/block/grappling_point.json",
-          "src/main/resources/assets/fractured_reality/models/item/grappling_point.json",
           "src/main/java/net/starseer/fracturedreality/block/GrapplingPointBlock.java",
-          "src/main/resources/assets/fractured_reality/blockstates/grappling_point.json",
-          "src/main/java/net/starseer/fracturedreality/block/entity/GrapplingPointBlockEntity.java",
           "src/main/java/net/starseer/fracturedreality/client/renderer/block/GrapplingPointRenderer.java",
-          "src/main/resources/data/fractured_reality/loot_table/blocks/grappling_point.json"
+          "src/main/resources/assets/fractured_reality/models/item/grappling_point.json",
+          "src/main/resources/assets/fractured_reality/models/block/grappling_point.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/grappling_point.json",
+          "src/main/resources/assets/fractured_reality/blockstates/grappling_point.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/GrapplingPointBlockEntity.java"
         ]
       },
       "path": "~/GrapplingHook"
@@ -1414,8 +1414,8 @@
       "registry_name": "grapple_point",
       "metadata": {
         "files": [
-          "src/main/resources/data/fractured_reality/recipe/grappling_point.json",
-          "src/main/resources/data/fractured_reality/advancement/recipes/grapple_point.json"
+          "src/main/resources/data/fractured_reality/advancement/recipes/grapple_point.json",
+          "src/main/resources/data/fractured_reality/recipe/grappling_point.json"
         ]
       },
       "path": "~/GrapplingHook"
@@ -1429,9 +1429,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/fractured_reality/blockstates/void_block.json",
-          "src/main/resources/assets/fractured_reality/models/item/void_block.json",
           "src/main/resources/assets/fractured_reality/models/block/void_block.json",
           "src/main/java/net/starseer/fracturedreality/block/VoidBlockBlock.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_block.json",
           "src/main/resources/data/fractured_reality/loot_table/blocks/void_block.json"
         ]
       }
@@ -1444,11 +1444,11 @@
       "registry_name": "cracked_void_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/fractured_reality/loot_table/blocks/cracked_void_block.json",
           "src/main/resources/assets/fractured_reality/models/item/cracked_void_block.json",
-          "src/main/resources/assets/fractured_reality/models/block/cracked_void_block.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/cracked_void_block.json",
+          "src/main/resources/assets/fractured_reality/blockstates/cracked_void_block.json",
           "src/main/java/net/starseer/fracturedreality/block/CrackedVoidBlockBlock.java",
-          "src/main/resources/assets/fractured_reality/blockstates/cracked_void_block.json"
+          "src/main/resources/assets/fractured_reality/models/block/cracked_void_block.json"
         ]
       }
     },
@@ -1500,12 +1500,12 @@
       "registry_name": "void_blocker_totem",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidBlockerTotemRenderer.java",
-          "src/main/java/net/starseer/fracturedreality/block/entity/VoidBlockerTotemBlockEntity.java",
-          "src/main/resources/assets/fractured_reality/models/item/void_blocker_totem.json",
           "src/main/java/net/starseer/fracturedreality/block/VoidBlockerTotemBlock.java",
-          "src/main/resources/data/fractured_reality/loot_table/blocks/void_blocker_totem.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/VoidBlockerTotemBlockEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidBlockerTotemRenderer.java",
           "src/main/resources/assets/fractured_reality/models/block/void_blocker_totem.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_blocker_totem.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_blocker_totem.json",
           "src/main/resources/assets/fractured_reality/blockstates/void_blocker_totem.json"
         ]
       }
@@ -1605,8 +1605,8 @@
       "registry_name": "void_blocker_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/fractured_reality/recipe/void_blocker_totem.json",
-          "src/main/resources/data/fractured_reality/advancement/recipes/void_blocker_craft.json"
+          "src/main/resources/data/fractured_reality/advancement/recipes/void_blocker_craft.json",
+          "src/main/resources/data/fractured_reality/recipe/void_blocker_totem.json"
         ]
       }
     },
@@ -1702,8 +1702,8 @@
       "registry_name": "starseer",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/StarseerRenderer.java",
-          "src/main/java/net/starseer/fracturedreality/entity/StarseerEntity.java"
+          "src/main/java/net/starseer/fracturedreality/entity/StarseerEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/StarseerRenderer.java"
         ]
       },
       "path": "~/StarseerBossfight"
@@ -1904,11 +1904,11 @@
       "registry_name": "starseer_spawner",
       "metadata": {
         "files": [
+          "src/main/resources/assets/fractured_reality/models/block/starseer_spawner.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/StarseerSpawnerRenderer.java",
           "src/main/resources/assets/fractured_reality/blockstates/starseer_spawner.json",
           "src/main/java/net/starseer/fracturedreality/block/StarseerSpawnerBlock.java",
           "src/main/resources/data/fractured_reality/loot_table/blocks/starseer_spawner.json",
-          "src/main/resources/assets/fractured_reality/models/block/starseer_spawner.json",
-          "src/main/java/net/starseer/fracturedreality/client/renderer/block/StarseerSpawnerRenderer.java",
           "src/main/java/net/starseer/fracturedreality/block/entity/StarseerSpawnerBlockEntity.java"
         ]
       },
@@ -2023,13 +2023,13 @@
       "registry_name": "launch_pad",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/launch_pad.json",
-          "src/main/resources/assets/fractured_reality/models/block/launch_pad.json",
           "src/main/java/net/starseer/fracturedreality/client/renderer/block/LaunchPadRenderer.java",
+          "src/main/resources/assets/fractured_reality/blockstates/launch_pad.json",
+          "src/main/resources/assets/fractured_reality/models/block/launch_pad.json",
           "src/main/resources/data/fractured_reality/loot_table/blocks/launch_pad.json",
-          "src/main/java/net/starseer/fracturedreality/block/LaunchPadBlock.java",
           "src/main/java/net/starseer/fracturedreality/block/entity/LaunchPadBlockEntity.java",
-          "src/main/resources/assets/fractured_reality/blockstates/launch_pad.json"
+          "src/main/java/net/starseer/fracturedreality/block/LaunchPadBlock.java",
+          "src/main/resources/assets/fractured_reality/models/item/launch_pad.json"
         ]
       },
       "path": "~/RealitysEdge"
@@ -2294,8 +2294,8 @@
       "registry_name": "adv_icon_3",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/adv_icon_3.json",
-          "src/main/java/net/starseer/fracturedreality/item/AdvIcon3Item.java"
+          "src/main/java/net/starseer/fracturedreality/item/AdvIcon3Item.java",
+          "src/main/resources/assets/fractured_reality/models/item/adv_icon_3.json"
         ]
       },
       "path": "~/Advancements/Icons"
@@ -2531,8 +2531,8 @@
       "registry_name": "blank_disk",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/item/BlankDiskItem.java",
-          "src/main/resources/assets/fractured_reality/models/item/blank_disk.json"
+          "src/main/resources/assets/fractured_reality/models/item/blank_disk.json",
+          "src/main/java/net/starseer/fracturedreality/item/BlankDiskItem.java"
         ]
       },
       "path": "~/Disks"
@@ -2545,12 +2545,12 @@
       "registry_name": "disk_burner",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/block/disk_burner.json",
-          "src/main/resources/data/fractured_reality/loot_table/blocks/disk_burner.json",
-          "src/main/resources/assets/fractured_reality/models/item/disk_burner.json",
           "src/main/java/net/starseer/fracturedreality/block/entity/DiskBurnerBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/block/disk_burner.json",
+          "src/main/java/net/starseer/fracturedreality/block/DiskBurnerBlock.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/disk_burner.json",
           "src/main/resources/assets/fractured_reality/blockstates/disk_burner.json",
-          "src/main/java/net/starseer/fracturedreality/block/DiskBurnerBlock.java"
+          "src/main/resources/assets/fractured_reality/models/item/disk_burner.json"
         ]
       },
       "path": "~/Disks"
@@ -2576,9 +2576,9 @@
       "registry_name": "disk_burner_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/network/DiskBurnerGUIButtonMessage.java",
+          "src/main/java/net/starseer/fracturedreality/world/inventory/DiskBurnerGUIMenu.java",
           "src/main/java/net/starseer/fracturedreality/client/gui/DiskBurnerGUIScreen.java",
-          "src/main/java/net/starseer/fracturedreality/world/inventory/DiskBurnerGUIMenu.java"
+          "src/main/java/net/starseer/fracturedreality/network/DiskBurnerGUIButtonMessage.java"
         ]
       },
       "path": "~/Disks"
@@ -2592,8 +2592,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/fractured_reality/jukebox_song/disk_void.json",
-          "src/main/resources/assets/fractured_reality/models/item/disk_void.json",
-          "src/main/java/net/starseer/fracturedreality/item/DiskVoidItem.java"
+          "src/main/java/net/starseer/fracturedreality/item/DiskVoidItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/disk_void.json"
         ]
       },
       "path": "~/Disks"
@@ -2607,8 +2607,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/starseer/fracturedreality/item/Disk289Item.java",
-          "src/main/resources/data/fractured_reality/jukebox_song/disk_289.json",
-          "src/main/resources/assets/fractured_reality/models/item/disk_289.json"
+          "src/main/resources/assets/fractured_reality/models/item/disk_289.json",
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_289.json"
         ]
       },
       "path": "~/Disks"
@@ -2621,8 +2621,8 @@
       "registry_name": "disk_475",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/item/Disk475Item.java",
           "src/main/resources/data/fractured_reality/jukebox_song/disk_475.json",
+          "src/main/java/net/starseer/fracturedreality/item/Disk475Item.java",
           "src/main/resources/assets/fractured_reality/models/item/disk_475.json"
         ]
       },
@@ -2636,9 +2636,9 @@
       "registry_name": "disk_748",
       "metadata": {
         "files": [
-          "src/main/resources/data/fractured_reality/jukebox_song/disk_748.json",
+          "src/main/java/net/starseer/fracturedreality/item/Disk748Item.java",
           "src/main/resources/assets/fractured_reality/models/item/disk_748.json",
-          "src/main/java/net/starseer/fracturedreality/item/Disk748Item.java"
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_748.json"
         ]
       },
       "path": "~/Disks"
@@ -2651,9 +2651,9 @@
       "registry_name": "disk_1052",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/disk_1052.json",
           "src/main/java/net/starseer/fracturedreality/item/Disk1052Item.java",
-          "src/main/resources/data/fractured_reality/jukebox_song/disk_1052.json"
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_1052.json",
+          "src/main/resources/assets/fractured_reality/models/item/disk_1052.json"
         ]
       },
       "path": "~/Disks"
@@ -2682,8 +2682,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/fractured_reality/models/item/disk_2193.json",
-          "src/main/java/net/starseer/fracturedreality/item/Disk2193Item.java",
-          "src/main/resources/data/fractured_reality/jukebox_song/disk_2193.json"
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_2193.json",
+          "src/main/java/net/starseer/fracturedreality/item/Disk2193Item.java"
         ]
       },
       "path": "~/Disks"
@@ -2844,7 +2844,7 @@
       "name": "VSArmorDamageBlock",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "vs_armor_damage_block",
       "metadata": {
         "dependencies": [
@@ -2897,9 +2897,9 @@
       "registry_name": "disk_2374",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/item/Disk2374Item.java",
           "src/main/resources/assets/fractured_reality/models/item/disk_2374.json",
-          "src/main/resources/data/fractured_reality/jukebox_song/disk_2374.json"
+          "src/main/resources/data/fractured_reality/jukebox_song/disk_2374.json",
+          "src/main/java/net/starseer/fracturedreality/item/Disk2374Item.java"
         ]
       },
       "path": "~/Disks"
@@ -2952,12 +2952,12 @@
       "registry_name": "forgotten",
       "metadata": {
         "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/ForgottenRenderer.java",
+          "src/main/resources/assets/fractured_reality/blockstates/forgotten.json",
+          "src/main/resources/assets/fractured_reality/models/block/forgotten.json",
           "src/main/java/net/starseer/fracturedreality/block/entity/ForgottenBlockEntity.java",
           "src/main/resources/assets/fractured_reality/models/item/forgotten.json",
-          "src/main/resources/assets/fractured_reality/blockstates/forgotten.json",
           "src/main/java/net/starseer/fracturedreality/block/ForgottenBlock.java",
-          "src/main/resources/assets/fractured_reality/models/block/forgotten.json",
-          "src/main/java/net/starseer/fracturedreality/client/renderer/block/ForgottenRenderer.java",
           "src/main/resources/data/fractured_reality/loot_table/blocks/forgotten.json"
         ]
       },
@@ -2981,9 +2981,9 @@
       "registry_name": "house_of_the_forgotten",
       "metadata": {
         "files": [
-          "src/main/resources/data/fractured_reality/worldgen/structure_set/house_of_the_forgotten.json",
           "src/main/resources/data/fractured_reality/worldgen/template_pool/house_of_the_forgotten.json",
-          "src/main/resources/data/fractured_reality/worldgen/structure/house_of_the_forgotten.json"
+          "src/main/resources/data/fractured_reality/worldgen/structure/house_of_the_forgotten.json",
+          "src/main/resources/data/fractured_reality/worldgen/structure_set/house_of_the_forgotten.json"
         ]
       },
       "path": "~/Structures"
@@ -3017,8 +3017,8 @@
       "registry_name": "void_steel_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/void_steel_sword.json",
-          "src/main/java/net/starseer/fracturedreality/item/VoidSteelSwordItem.java"
+          "src/main/java/net/starseer/fracturedreality/item/VoidSteelSwordItem.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_sword.json"
         ]
       }
     },
@@ -3083,8 +3083,8 @@
       "registry_name": "lightning_striker",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/client/renderer/LightningStrikerRenderer.java",
-          "src/main/java/net/starseer/fracturedreality/entity/LightningStrikerEntity.java"
+          "src/main/java/net/starseer/fracturedreality/entity/LightningStrikerEntity.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/LightningStrikerRenderer.java"
         ]
       },
       "path": "~/Phase 2"
@@ -3132,10 +3132,10 @@
       "registry_name": "enforcer",
       "metadata": {
         "files": [
+          "src/main/java/net/starseer/fracturedreality/entity/EnforcerEntity.java",
           "src/main/resources/assets/fractured_reality/models/item/enforcer_spawn_egg.json",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/enforcer_biome_modifier.json",
           "src/main/java/net/starseer/fracturedreality/client/renderer/EnforcerRenderer.java",
-          "src/main/java/net/starseer/fracturedreality/entity/EnforcerEntity.java"
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/enforcer_biome_modifier.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3242,9 +3242,9 @@
       "registry_name": "shattered",
       "metadata": {
         "files": [
+          "src/main/java/net/starseer/fracturedreality/entity/ShatteredEntity.java",
           "src/main/java/net/starseer/fracturedreality/client/renderer/ShatteredRenderer.java",
           "src/main/resources/data/fractured_reality/neoforge/biome_modifier/shattered_biome_modifier.json",
-          "src/main/java/net/starseer/fracturedreality/entity/ShatteredEntity.java",
           "src/main/resources/assets/fractured_reality/models/item/shattered_spawn_egg.json"
         ]
       },
@@ -3258,10 +3258,10 @@
       "registry_name": "truthseeker",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/truthseeker_spawn_egg.json",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/truthseeker_biome_modifier.json",
+          "src/main/java/net/starseer/fracturedreality/entity/TruthseekerEntity.java",
           "src/main/java/net/starseer/fracturedreality/client/renderer/TruthseekerRenderer.java",
-          "src/main/java/net/starseer/fracturedreality/entity/TruthseekerEntity.java"
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/truthseeker_biome_modifier.json",
+          "src/main/resources/assets/fractured_reality/models/item/truthseeker_spawn_egg.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3570,10 +3570,10 @@
       "registry_name": "starcore",
       "metadata": {
         "files": [
-          "src/main/java/net/starseer/fracturedreality/entity/StarcoreEntity.java",
-          "src/main/resources/assets/fractured_reality/models/item/starcore_spawn_egg.json",
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/starcore_biome_modifier.json",
           "src/main/java/net/starseer/fracturedreality/client/renderer/StarcoreRenderer.java",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/starcore_biome_modifier.json"
+          "src/main/java/net/starseer/fracturedreality/entity/StarcoreEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/starcore_spawn_egg.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3586,6 +3586,10 @@
       "registry_name": "get_threat_level",
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -3795,8 +3799,8 @@
       "registry_name": "white_spark",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/particles/white_spark.json",
-          "src/main/java/net/starseer/fracturedreality/client/particle/WhiteSparkParticle.java"
+          "src/main/java/net/starseer/fracturedreality/client/particle/WhiteSparkParticle.java",
+          "src/main/resources/assets/fractured_reality/particles/white_spark.json"
         ]
       },
       "path": "~/StarseerBossfight"
@@ -3841,13 +3845,13 @@
       "registry_name": "void_drill",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/item/void_drill.json",
-          "src/main/resources/assets/fractured_reality/models/block/void_drill.json",
-          "src/main/resources/data/fractured_reality/loot_table/blocks/void_drill.json",
-          "src/main/java/net/starseer/fracturedreality/block/entity/VoidDrillBlockEntity.java",
-          "src/main/java/net/starseer/fracturedreality/block/VoidDrillBlock.java",
           "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidDrillRenderer.java",
-          "src/main/resources/assets/fractured_reality/blockstates/void_drill.json"
+          "src/main/java/net/starseer/fracturedreality/block/VoidDrillBlock.java",
+          "src/main/resources/assets/fractured_reality/models/block/void_drill.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_drill.json",
+          "src/main/resources/assets/fractured_reality/blockstates/void_drill.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/VoidDrillBlockEntity.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_drill.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3861,9 +3865,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/starseer/fracturedreality/entity/FollowerEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/follower_spawn_egg.json",
           "src/main/java/net/starseer/fracturedreality/client/renderer/FollowerRenderer.java",
-          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/follower_biome_modifier.json",
-          "src/main/resources/assets/fractured_reality/models/item/follower_spawn_egg.json"
+          "src/main/resources/data/fractured_reality/neoforge/biome_modifier/follower_biome_modifier.json"
         ]
       },
       "path": "~/Phase 2"
@@ -3971,13 +3975,14 @@
       "registry_name": "soul_magma",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/block/soul_magma.json",
-          "src/main/resources/assets/fractured_reality/models/item/soul_magma.json",
           "src/main/java/net/starseer/fracturedreality/block/SoulMagmaBlock.java",
+          "src/main/resources/assets/fractured_reality/models/item/soul_magma.json",
           "src/main/resources/data/fractured_reality/loot_table/blocks/soul_magma.json",
-          "src/main/resources/assets/fractured_reality/blockstates/soul_magma.json"
+          "src/main/resources/assets/fractured_reality/blockstates/soul_magma.json",
+          "src/main/resources/assets/fractured_reality/models/block/soul_magma.json"
         ]
-      }
+      },
+      "path": "~/Phase 2/TBOTV"
     },
     {
       "name": "SoulLava",
@@ -3987,14 +3992,15 @@
       "registry_name": "soul_lava",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/block/soul_lava.json",
+          "src/main/resources/assets/fractured_reality/models/item/soul_lava_bucket.json",
           "src/main/java/net/starseer/fracturedreality/fluid/SoulLavaFluid.java",
           "src/main/java/net/starseer/fracturedreality/fluid/types/SoulLavaFluidType.java",
-          "src/main/resources/assets/fractured_reality/blockstates/soul_lava.json",
           "src/main/java/net/starseer/fracturedreality/block/SoulLavaBlock.java",
-          "src/main/resources/assets/fractured_reality/models/item/soul_lava_bucket.json"
+          "src/main/resources/assets/fractured_reality/blockstates/soul_lava.json",
+          "src/main/resources/assets/fractured_reality/models/block/soul_lava.json"
         ]
-      }
+      },
+      "path": "~/Phase 2/TBOTV"
     },
     {
       "name": "EnforcerDecorative",
@@ -4073,21 +4079,368 @@
       "path": "~/Phase 2/Decorative Entities"
     },
     {
-      "name": "Hippocrates",
+      "name": "WarpedLadder",
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "hippocrates",
+      "registry_name": "warped_ladder",
       "metadata": {
         "files": [
-          "src/main/resources/assets/fractured_reality/models/block/hippocrates.json",
-          "src/main/resources/data/fractured_reality/loot_table/blocks/hippocrates.json",
-          "src/main/resources/assets/fractured_reality/models/item/hippocrates.json",
-          "src/main/resources/assets/fractured_reality/blockstates/hippocrates.json",
-          "src/main/java/net/starseer/fracturedreality/block/HippocratesBlock.java"
+          "src/main/java/net/starseer/fracturedreality/block/WarpedLadderBlock.java",
+          "src/main/resources/assets/fractured_reality/models/item/warped_ladder.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/warped_ladder.json",
+          "src/main/resources/assets/fractured_reality/blockstates/warped_ladder.json",
+          "src/main/resources/assets/fractured_reality/models/block/warped_ladder.json"
         ]
       },
-      "path": "~/Phase 2/Decorative Entities"
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "DoorBlockerMolten",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "door_blocker_molten",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/entity/DoorBlockerMoltenBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/door_blocker_molten.json",
+          "src/main/resources/assets/fractured_reality/blockstates/door_blocker_molten.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/DoorBlockerMoltenRenderer.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/door_blocker_molten.json",
+          "src/main/resources/assets/fractured_reality/models/block/door_blocker_molten.json",
+          "src/main/java/net/starseer/fracturedreality/block/DoorBlockerMoltenBlock.java"
+        ]
+      },
+      "path": "~/Phase 2/Doors"
+    },
+    {
+      "name": "DoorBlockerRagnarok",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "door_blocker_ragnarok",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/DoorBlockerRagnarokBlock.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/door_blocker_ragnarok.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/DoorBlockerRagnarokRenderer.java",
+          "src/main/resources/assets/fractured_reality/models/block/door_blocker_ragnarok.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/DoorBlockerRagnarokBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/item/door_blocker_ragnarok.json",
+          "src/main/resources/assets/fractured_reality/blockstates/door_blocker_ragnarok.json"
+        ]
+      },
+      "path": "~/Phase 2/Doors"
+    },
+    {
+      "name": "DoorBlockerInvisible",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "door_blocker_invisible",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/item/door_blocker_invisible.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/door_blocker_invisible.json",
+          "src/main/resources/assets/fractured_reality/blockstates/door_blocker_invisible.json",
+          "src/main/java/net/starseer/fracturedreality/block/DoorBlockerInvisibleBlock.java",
+          "src/main/resources/assets/fractured_reality/models/block/door_blocker_invisible.json"
+        ]
+      },
+      "path": "~/Phase 2/Doors"
+    },
+    {
+      "name": "DoorBlockerOpen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "door_blocker_open",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/DoorBlockerOpenProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/Doors"
+    },
+    {
+      "name": "TheFloor",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_floor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/worldgen/biome/the_floor.json"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV"
+    },
+    {
+      "name": "Voidslate",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voidslate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/blocks/voidslate.json",
+          "src/main/resources/assets/fractured_reality/models/item/voidslate.json",
+          "src/main/resources/assets/fractured_reality/blockstates/voidslate.json",
+          "src/main/resources/assets/fractured_reality/models/block/voidslate.json",
+          "src/main/java/net/starseer/fracturedreality/block/VoidslateBlock.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV"
+    },
+    {
+      "name": "GrassyVoidSlate",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grassy_void_slate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/block/grassy_void_slate.json",
+          "src/main/java/net/starseer/fracturedreality/block/GrassyVoidSlateBlock.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/grassy_void_slate.json",
+          "src/main/resources/assets/fractured_reality/models/item/grassy_void_slate.json",
+          "src/main/resources/assets/fractured_reality/blockstates/grassy_void_slate.json"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV"
+    },
+    {
+      "name": "AbyssPlayerEntersDimension",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abyss_player_enters_dimension",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/AbyssPlayerEntersDimensionProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV"
+    },
+    {
+      "name": "Abyss",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abyss",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/dimension/abyss.json",
+          "src/main/java/net/starseer/fracturedreality/world/dimension/AbyssDimension.java",
+          "src/main/resources/data/fractured_reality/dimension_type/abyss.json"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV"
+    },
+    {
+      "name": "LoadAbyssStructures",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_abyss_structures",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/LoadAbyssStructuresProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV"
+    },
+    {
+      "name": "SoulLavaMobplayerCollidesBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_lava_mobplayer_collides_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/SoulLavaMobplayerCollidesBlockProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "AbyssPortalParticleOrientation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abyss_portal_particle_orientation",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "vector",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/AbyssPortalParticleOrientationProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV"
+    },
+    {
+      "name": "AbyssPortal",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abyss_portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/particle/AbyssPortalParticle.java",
+          "src/main/resources/assets/fractured_reality/particles/abyss_portal.json"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV"
+    },
+    {
+      "name": "VoidGenerator",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_generator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/VoidGeneratorRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/block/VoidGeneratorBlock.java",
+          "src/main/resources/assets/fractured_reality/blockstates/void_generator.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_generator.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/VoidGeneratorBlockEntity.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_generator.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_generator.json"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "VoidGenRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_gen_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_generator.json"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "VoidSteelBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/VoidSteelBlockBlock.java",
+          "src/main/resources/assets/fractured_reality/blockstates/void_steel_block.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_steel_block.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_block.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_steel_block.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidSteelBars",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_bars",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/block/void_steel_bars_side.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_steel_bars_noside.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_steel_bars.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_steel_bars_post.json",
+          "src/main/resources/assets/fractured_reality/blockstates/void_steel_bars.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_steel_bars.json",
+          "src/main/java/net/starseer/fracturedreality/block/VoidSteelBarsBlock.java",
+          "src/main/resources/assets/fractured_reality/models/block/void_steel_bars_side_alt.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_steel_bars_noside_alt.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "ShardLantern",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shard_lantern",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/entity/ShardLanternBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/models/block/shard_lantern.json",
+          "src/main/java/net/starseer/fracturedreality/block/ShardLanternBlock.java",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/shard_lantern.json",
+          "src/main/resources/assets/fractured_reality/models/item/shard_lantern.json",
+          "src/main/resources/assets/fractured_reality/blockstates/shard_lantern.json",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/ShardLanternRenderer.java"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "ShardLanternLuminance",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shard_lantern_luminance",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/ShardLanternLuminanceProcedure.java"
+        ]
+      },
+      "path": "~/Decor"
     }
   ],
   "variable_elements": [
@@ -4276,6 +4629,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "GenerateAbyssStruct",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
     }
   ],
   "sound_elements": [
@@ -4814,6 +5173,13 @@
     ],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:SoulLava"
+    ],
+    "BLOCKS:minecraft:climbable": [
+      "~CUSTOM:WarpedLadder"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~CUSTOM:Voidslate",
+      "~CUSTOM:GrassyVoidSlate"
     ]
   },
   "tab_element_order": {},
@@ -4986,17 +5352,27 @@
       "block.fractured_reality.truth_seeker_decorative": "Truthseeker Decorative",
       "block.fractured_reality.follower_decorative": "Follower Decorative",
       "block.fractured_reality.star_core_decorative": "Star Core Decorative",
-      "block.fractured_reality.hippocrates": "Hippocrates"
+      "block.fractured_reality.warped_ladder": "Warped Ladder",
+      "block.fractured_reality.door_blocker_molten": "Door Blocker Molten",
+      "block.fractured_reality.door_blocker_ragnarok": "Door Blocker Ragnarok",
+      "block.fractured_reality.door_blocker_invisible": "Door Blocker Invisible",
+      "biome.fractured_reality.the_floor": "The Floor",
+      "block.fractured_reality.voidslate": "Voidslate",
+      "block.fractured_reality.grassy_void_slate": "Grassy Voidslate",
+      "block.fractured_reality.void_generator": "Void Generator",
+      "block.fractured_reality.void_steel_block": "Void Steel Block",
+      "block.fractured_reality.void_steel_bars": "Void Steel Bars",
+      "block.fractured_reality.shard_lantern": "Void Steel Block"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModConfigs.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModFluidTypes.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModFluids.java",
-      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
-      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModFluidTypes.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModScreens.java",
+      "src/main/java/net/starseer/fracturedreality/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModMenus.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModJeiInformation.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticleTypes.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModParticles.java",
@@ -5008,15 +5384,14 @@
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModItems.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntityRenderers.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModEntities.java",
-      "src/main/java/net/starseer/fracturedreality/client/RenderUtils.java",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModSounds.java",
-      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
-      "src/main/java/net/starseer/fracturedreality/FracturedRealityMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModTabs.java",
+      "src/main/java/net/starseer/fracturedreality/FracturedRealityMod.java",
+      "src/main/java/net/starseer/fracturedreality/client/RenderUtils.java",
+      "src/main/java/net/starseer/fracturedreality/network/FracturedRealityModVariables.java",
       "src/main/resources/pack.mcmeta",
       "src/main/java/net/starseer/fracturedreality/init/FracturedRealityModModels.java",
-      "src/main/resources/fractured_reality.mixins.json",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/resources/assets/fractured_reality/sounds.json"
     ]
   },
@@ -5066,6 +5441,19 @@
           {
             "name": "Decorative Entities",
             "children": []
+          },
+          {
+            "name": "Doors",
+            "children": []
+          },
+          {
+            "name": "TBOTV",
+            "children": [
+              {
+                "name": "Molten",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -5076,13 +5464,17 @@
       {
         "name": "Threat",
         "children": []
+      },
+      {
+        "name": "Decor",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "fractured_reality",
     "modName": "Fractured Reality",
-    "version": "1.2.0-PrivateBeta8",
+    "version": "1.2.0-PrivateBeta11",
     "description": "As reality breaks and the sky cracks apart, mysterious beings are unleashed upon the world. The cycle of day and night breaks, the rain disappears, and the mobs spawn less and less. The players have to shelter from the gravity fluctuations pulling them up into the sky. It is up to the players to solve what happened and fix their world. The players will have to solve puzzles and find a way to go above and beyond. Once the world is repaired, everything will go back to normal, but not for long. ",
     "author": "Jorge M.",
     "websiteURL": "https://modrinth.com/project/vZ2PEXzS",
@@ -5099,5 +5491,5 @@
     "credits": "Presenter, Moonbreaker \u0026 Faceless voicelines by https://www.youtube.com/@MIAparadisetv",
     "modElementsPackage": "net.starseer.fracturedreality"
   },
-  "mcreatorVersion": 202500345720
+  "mcreatorVersion": 202600114619
 }

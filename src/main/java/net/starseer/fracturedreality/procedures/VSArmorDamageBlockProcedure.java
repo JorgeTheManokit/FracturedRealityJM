@@ -6,8 +6,8 @@ import net.starseer.fracturedreality.configuration.FracturedRealityServerConfigC
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
+import net.neoforged.bus.api.ICancellableEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -43,32 +43,32 @@ public class VSArmorDamageBlockProcedure {
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == FracturedRealityModItems.VOID_STEEL_HELMET.get()
 					&& sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("fractured_reality:voidbeings")))) {
 				if (Math.random() < (1) / ((float) 5)) {
-					if (event instanceof ICancellableEvent _cancellable) {
-						_cancellable.setCanceled(true);
+					if (event instanceof ICancellableEvent cancellableEvent) {
+						cancellableEvent.setCanceled(true);
 					}
 				}
 			}
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == FracturedRealityModItems.VOID_STEEL_CHESTPLATE.get()
 					&& sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("fractured_reality:voidbeings")))) {
 				if (Math.random() < (1) / ((float) 5)) {
-					if (event instanceof ICancellableEvent _cancellable) {
-						_cancellable.setCanceled(true);
+					if (event instanceof ICancellableEvent cancellableEvent) {
+						cancellableEvent.setCanceled(true);
 					}
 				}
 			}
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == FracturedRealityModItems.VOID_STEEL_LEGGINGS.get()
 					&& sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("fractured_reality:voidbeings")))) {
 				if (Math.random() < (1) / ((float) 5)) {
-					if (event instanceof ICancellableEvent _cancellable) {
-						_cancellable.setCanceled(true);
+					if (event instanceof ICancellableEvent cancellableEvent) {
+						cancellableEvent.setCanceled(true);
 					}
 				}
 			}
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == FracturedRealityModItems.VOID_STEEL_BOOTS.get()
 					&& sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("fractured_reality:voidbeings")))) {
 				if (Math.random() < (1) / ((float) 5)) {
-					if (event instanceof ICancellableEvent _cancellable) {
-						_cancellable.setCanceled(true);
+					if (event instanceof ICancellableEvent cancellableEvent) {
+						cancellableEvent.setCanceled(true);
 					}
 				}
 			}
@@ -92,8 +92,8 @@ public class VSArmorDamageBlockProcedure {
 			}
 			if (armorPieces > 0) {
 				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), (float) (amount - (amount / 5) * armorPieces));
-				if (event instanceof ICancellableEvent _cancellable) {
-					_cancellable.setCanceled(true);
+				if (event instanceof ICancellableEvent cancellableEvent) {
+					cancellableEvent.setCanceled(true);
 				}
 			}
 		}

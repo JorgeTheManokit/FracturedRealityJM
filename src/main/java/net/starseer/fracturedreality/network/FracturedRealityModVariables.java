@@ -84,8 +84,8 @@ public class FracturedRealityModVariables {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player) {
-			SavedData mapdata = MapVariables.get(event.getEntity().level());
-			SavedData worlddata = WorldVariables.get(event.getEntity().level());
+			SavedData mapdata = MapVariables.get(player.level());
+			SavedData worlddata = WorldVariables.get(player.level());
 			if (mapdata != null)
 				PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(0, mapdata));
 			if (worlddata != null)
@@ -96,7 +96,7 @@ public class FracturedRealityModVariables {
 	@SubscribeEvent
 	public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player) {
-			SavedData worlddata = WorldVariables.get(event.getEntity().level());
+			SavedData worlddata = WorldVariables.get(player.level());
 			if (worlddata != null)
 				PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
 		}
@@ -183,6 +183,7 @@ public class FracturedRealityModVariables {
 		public boolean SpawnTruthseekers = false;
 		public boolean SpawnShattered = false;
 		public boolean SpawnFollowers = false;
+		public boolean GenerateAbyssStruct = true;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -219,6 +220,7 @@ public class FracturedRealityModVariables {
 			SpawnTruthseekers = nbt.getBoolean("SpawnTruthseekers");
 			SpawnShattered = nbt.getBoolean("SpawnShattered");
 			SpawnFollowers = nbt.getBoolean("SpawnFollowers");
+			GenerateAbyssStruct = nbt.getBoolean("GenerateAbyssStruct");
 		}
 
 		@Override
@@ -251,6 +253,7 @@ public class FracturedRealityModVariables {
 			nbt.putBoolean("SpawnTruthseekers", SpawnTruthseekers);
 			nbt.putBoolean("SpawnShattered", SpawnShattered);
 			nbt.putBoolean("SpawnFollowers", SpawnFollowers);
+			nbt.putBoolean("GenerateAbyssStruct", GenerateAbyssStruct);
 			return nbt;
 		}
 

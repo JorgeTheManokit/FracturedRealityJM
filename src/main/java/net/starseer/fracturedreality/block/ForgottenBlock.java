@@ -26,25 +26,48 @@ import net.minecraft.util.Mth;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import com.google.common.collect.ImmutableMap;
+
 public class ForgottenBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final EnumProperty<AttachFace> FACE = FaceAttachedHorizontalDirectionalBlock.FACE;
-	private static final VoxelShape SHAPE_NORTH_FLOOR = box(0, 0, 0, 16, 0.1, 16);
-	private static final VoxelShape SHAPE_NORTH_WALL = box(0, 0, 15.9, 16, 16, 16);
-	private static final VoxelShape SHAPE_NORTH_CEILING = box(0, 15.9, 0, 16, 16, 16);
-	private static final VoxelShape SHAPE_SOUTH_FLOOR = box(0, 0, 0, 16, 0.1, 16);
-	private static final VoxelShape SHAPE_SOUTH_WALL = box(0, 0, 0, 16, 16, 0.1);
-	private static final VoxelShape SHAPE_SOUTH_CEILING = box(0, 15.9, 0, 16, 16, 16);
-	private static final VoxelShape SHAPE_EAST_FLOOR = box(0, 0, 0, 16, 0.1, 16);
-	private static final VoxelShape SHAPE_EAST_WALL = box(0, 0, 0, 0.1, 16, 16);
-	private static final VoxelShape SHAPE_EAST_CEILING = box(0, 15.9, 0, 16, 16, 16);
-	private static final VoxelShape SHAPE_WEST_FLOOR = box(0, 0, 0, 16, 0.1, 16);
-	private static final VoxelShape SHAPE_WEST_WALL = box(15.9, 0, 0, 16, 16, 16);
-	private static final VoxelShape SHAPE_WEST_CEILING = box(0, 15.9, 0, 16, 16, 16);
+	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public ForgottenBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.SLIME_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(FACE, AttachFace.WALL));
+	}
+
+	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
+		return this.getShapeForEachState(state -> {
+			return switch (state.getValue(FACING)) {
+				default -> switch (state.getValue(FACE)) {
+					case FLOOR -> box(0, 0, 0, 16, 0.1, 16);
+					case WALL -> box(0, 0, 0, 16, 16, 0.1);
+					case CEILING -> box(0, 15.9, 0, 16, 16, 16);
+				};
+				case NORTH -> switch (state.getValue(FACE)) {
+					case FLOOR -> box(0, 0, 0, 16, 0.1, 16);
+					case WALL -> box(0, 0, 15.9, 16, 16, 16);
+					case CEILING -> box(0, 15.9, 0, 16, 16, 16);
+				};
+				case EAST -> switch (state.getValue(FACE)) {
+					case FLOOR -> box(0, 0, 0, 16, 0.1, 16);
+					case WALL -> box(0, 0, 0, 0.1, 16, 16);
+					case CEILING -> box(0, 15.9, 0, 16, 16, 16);
+				};
+				case WEST -> switch (state.getValue(FACE)) {
+					case FLOOR -> box(0, 0, 0, 16, 0.1, 16);
+					case WALL -> box(15.9, 0, 0, 16, 16, 16);
+					case CEILING -> box(0, 15.9, 0, 16, 16, 16);
+				};
+			};
+		});
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return shapes.get(state);
 	}
 
 	@Override
@@ -53,49 +76,8 @@ public class ForgottenBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-		return true;
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
-	}
-
-	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return (switch (state.getValue(FACING)) {
-			case NORTH -> switch (state.getValue(FACE)) {
-				case FLOOR -> SHAPE_NORTH_FLOOR;
-				case WALL -> SHAPE_NORTH_WALL;
-				case CEILING -> SHAPE_NORTH_CEILING;
-			};
-			case SOUTH -> switch (state.getValue(FACE)) {
-				case FLOOR -> SHAPE_SOUTH_FLOOR;
-				case WALL -> SHAPE_SOUTH_WALL;
-				case CEILING -> SHAPE_SOUTH_CEILING;
-			};
-			case EAST -> switch (state.getValue(FACE)) {
-				case FLOOR -> SHAPE_EAST_FLOOR;
-				case WALL -> SHAPE_EAST_WALL;
-				case CEILING -> SHAPE_EAST_CEILING;
-			};
-			case WEST -> switch (state.getValue(FACE)) {
-				case FLOOR -> SHAPE_WEST_FLOOR;
-				case WALL -> SHAPE_WEST_WALL;
-				case CEILING -> SHAPE_WEST_CEILING;
-			};
-			default -> switch (state.getValue(FACE)) {
-				case FLOOR -> SHAPE_NORTH_FLOOR;
-				case WALL -> SHAPE_NORTH_WALL;
-				case CEILING -> SHAPE_NORTH_CEILING;
-			};
-		});
 	}
 
 	@Override

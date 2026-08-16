@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fractured_reality:block/door_blocker_ragnarok"
+    },
+    "facing=east": {
+      "model": "fractured_reality:block/door_blocker_ragnarok",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "fractured_reality:block/door_blocker_ragnarok",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fractured_reality:block/door_blocker_ragnarok",
+      "y": 270
+    }
+  }
+}

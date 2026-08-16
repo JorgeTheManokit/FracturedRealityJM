@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "particle",
   "definition": {
     "texture": "white_spark",
@@ -11,6 +11,7 @@
       "fixedValue": 1.0,
       "name": "WhiteSparkParticleVisualScale"
     },
+    "fixedScale": false,
     "speedFactor": 1.0,
     "gravity": 0.0,
     "maxAge": 56,

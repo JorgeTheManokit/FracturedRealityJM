@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "fluid",
   "definition": {
     "name": "Soul Lava",
@@ -20,7 +20,7 @@
     },
     "tintType": "No tint",
     "canMultiply": true,
-    "flowRate": 5,
+    "flowRate": 30,
     "levelDecrease": 2,
     "slopeFindDistance": 4,
     "spawnParticles": false,
@@ -55,6 +55,9 @@
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
-    "colorOnMap": "DEFAULT"
+    "colorOnMap": "DEFAULT",
+    "onEntityCollides": {
+      "name": "SoulLavaMobplayerCollidesBlock"
+    }
   }
 }

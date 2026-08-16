@@ -30,42 +30,36 @@ import net.minecraft.core.BlockPos;
 
 import io.netty.buffer.Unpooled;
 
+import com.google.common.collect.ImmutableMap;
+
 public class DiskBurnerBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
-	private static final VoxelShape SHAPE_NORTH = box(2, 0, 2, 14, 16, 13);
-	private static final VoxelShape SHAPE_SOUTH = box(2, 0, 3, 14, 16, 14);
-	private static final VoxelShape SHAPE_EAST = box(3, 0, 2, 14, 16, 14);
-	private static final VoxelShape SHAPE_WEST = box(2, 0, 2, 13, 16, 14);
+	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public DiskBurnerBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
-	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-		return true;
+	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
+		return this.getShapeForEachState(state -> {
+			return switch (state.getValue(FACING)) {
+				default -> box(2, 0, 3, 14, 16, 14);
+				case NORTH -> box(2, 0, 2, 14, 16, 13);
+				case EAST -> box(3, 0, 2, 14, 16, 14);
+				case WEST -> box(2, 0, 2, 13, 16, 14);
+			};
+		});
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return shapes.get(state);
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return (switch (state.getValue(FACING)) {
-			case NORTH -> SHAPE_NORTH;
-			case SOUTH -> SHAPE_SOUTH;
-			case EAST -> SHAPE_EAST;
-			case WEST -> SHAPE_WEST;
-			default -> SHAPE_NORTH;
-		});
 	}
 
 	@Override

@@ -60,6 +60,7 @@ public class FracturedRealityModTabs {
 			tabData.accept(FracturedRealityModBlocks.VOID_BLOCKER_TOTEM.get().asItem());
 			tabData.accept(FracturedRealityModBlocks.LAUNCH_PAD.get().asItem());
 			tabData.accept(FracturedRealityModBlocks.DISK_BURNER.get().asItem());
+			tabData.accept(FracturedRealityModBlocks.VOID_GENERATOR.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
 			if (tabData.hasPermissions()) {
 				tabData.accept(FracturedRealityModBlocks.FORGOTTEN.get().asItem());
@@ -68,9 +69,14 @@ public class FracturedRealityModTabs {
 				tabData.accept(FracturedRealityModBlocks.TRUTH_SEEKER_DECORATIVE.get().asItem());
 				tabData.accept(FracturedRealityModBlocks.FOLLOWER_DECORATIVE.get().asItem());
 				tabData.accept(FracturedRealityModBlocks.STAR_CORE_DECORATIVE.get().asItem());
+				tabData.accept(FracturedRealityModBlocks.WARPED_LADDER.get().asItem());
 			}
 		} else if (tabData.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
 			tabData.accept(FracturedRealityModBlocks.VOID_DRILL.get().asItem());
+		} else if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+			tabData.accept(FracturedRealityModBlocks.VOID_STEEL_BLOCK.get().asItem());
+			tabData.accept(FracturedRealityModBlocks.VOID_STEEL_BARS.get().asItem());
+			tabData.accept(FracturedRealityModBlocks.SHARD_LANTERN.get().asItem());
 		}
 	}
 }

@@ -34,7 +34,7 @@ public class ThreatClientTickProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world) {
 		double threatLevel = 0;
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
-			threatLevel = GetThreatLevelProcedure.execute(world, entityiterator.getX(), entityiterator.getY(), entityiterator.getZ());
+			threatLevel = GetThreatLevelProcedure.execute(world, entityiterator.getX(), entityiterator.getY(), entityiterator.getZ(), entityiterator);
 			if (entityiterator.getData(FracturedRealityModVariables.PLAYER_VARIABLES).threatRepeatCooldown <= 0) {
 				if (FracturedRealityModVariables.MapVariables.get(world).Phase == 1) {
 					if (threatLevel == 5) {

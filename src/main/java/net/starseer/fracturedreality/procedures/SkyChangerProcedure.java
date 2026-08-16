@@ -62,14 +62,13 @@ public class SkyChangerProcedure {
 					}
 					if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 4) {
 						RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_background_phase_2.png"), 0xffffff, Math.min(1, 1));
-						RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_middleground_phase_2.png"), 0xffffff, Math.min(1, 1));
 					}
 					if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 0) {
 						RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_cracked_foreground_phase_2.png"), 0xffffff,
 								Math.min((float) (FracturedRealityModVariables.MapVariables.get(world).SkyPhase * 0.2), 1));
 					}
 				}
-			} else if (entity instanceof LivingEntity _livEnt13 && _livEnt13.hasEffect(FracturedRealityModMobEffects.FALSE_SIGHT)) {
+			} else if (entity instanceof LivingEntity _livEnt12 && _livEnt12.hasEffect(FracturedRealityModMobEffects.FALSE_SIGHT)) {
 				RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_false_lines.png"), 0xffffff, Math.min((float) 0.25, 1));
 				RenderUtils.renderCustomSun(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_false_sun.png"));
 				RenderUtils.renderCustomMoon(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_false_moon_phases.png"));

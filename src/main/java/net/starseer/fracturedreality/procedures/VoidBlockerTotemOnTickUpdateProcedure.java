@@ -1,6 +1,8 @@
 package net.starseer.fracturedreality.procedures;
 
+import net.starseer.fracturedreality.network.FracturedRealityModVariables;
 import net.starseer.fracturedreality.init.FracturedRealityModParticleTypes;
+import net.starseer.fracturedreality.init.FracturedRealityModBlocks;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -60,6 +62,18 @@ public class VoidBlockerTotemOnTickUpdateProcedure {
 					world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 			}
 			effectSize = 0;
+		}
+		if (FracturedRealityModVariables.MapVariables.get(world).Phase == 2) {
+			if (!((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == FracturedRealityModBlocks.VOID_GENERATOR.get())) {
+				{
+					int _value = 0;
+					BlockPos _pos = BlockPos.containing(x, y, z);
+					BlockState _bs = world.getBlockState(_pos);
+					if (_bs.getBlock().getStateDefinition().getProperty("power_level") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+				}
+				effectSize = 0;
+			}
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);

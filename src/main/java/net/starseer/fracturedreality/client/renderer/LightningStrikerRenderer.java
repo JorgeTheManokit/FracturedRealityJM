@@ -18,6 +18,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class LightningStrikerRenderer extends MobRenderer<LightningStrikerEntity, ModelLIghtningStriker<LightningStrikerEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("fractured_reality:textures/entities/lightning_striker.png");
+
 	public LightningStrikerRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(ModelLIghtningStriker.LAYER_LOCATION)), 0f);
 		this.addLayer(new RenderLayer<LightningStrikerEntity, ModelLIghtningStriker<LightningStrikerEntity>>(this) {
@@ -33,7 +35,7 @@ public class LightningStrikerRenderer extends MobRenderer<LightningStrikerEntity
 
 	@Override
 	public ResourceLocation getTextureLocation(LightningStrikerEntity entity) {
-		return ResourceLocation.parse("fractured_reality:textures/entities/lightning_striker.png");
+		return entityTexture;
 	}
 
 	@Override

@@ -21,6 +21,8 @@ import com.mojang.blaze3d.platform.GlStateManager;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class Hallucination01Overlay {
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("fractured_reality:textures/screens/hallucinating_01.png");
+
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getGuiGraphics().guiWidth();
@@ -43,7 +45,7 @@ public class Hallucination01Overlay {
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (ShowHallu01Procedure.execute(entity)) {
-			event.getGuiGraphics().blit(ResourceLocation.parse("fractured_reality:textures/screens/hallucinating_01.png"), w / 2 + -141, h / 2 + -110, 0, 0, 280, 304, 280, 304);
+			event.getGuiGraphics().blit(IMAGE_0, w / 2 + -141, h / 2 + -110, 0, 0, 280, 304, 280, 304);
 
 		}
 		RenderSystem.depthMask(true);

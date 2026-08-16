@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.LiquidBlock;
 
 public abstract class SoulLavaFluid extends BaseFlowingFluid {
 	public static final BaseFlowingFluid.Properties PROPERTIES = new BaseFlowingFluid.Properties(() -> FracturedRealityModFluidTypes.SOUL_LAVA_TYPE.get(), () -> FracturedRealityModFluids.SOUL_LAVA.get(),
-			() -> FracturedRealityModFluids.FLOWING_SOUL_LAVA.get()).explosionResistance(100f).levelDecreasePerBlock(2).block(() -> (LiquidBlock) FracturedRealityModBlocks.SOUL_LAVA.get());
+			() -> FracturedRealityModFluids.FLOWING_SOUL_LAVA.get()).explosionResistance(100f).tickRate(30).levelDecreasePerBlock(2).block(() -> (LiquidBlock) FracturedRealityModBlocks.SOUL_LAVA.get());
 
 	private SoulLavaFluid() {
 		super(PROPERTIES);

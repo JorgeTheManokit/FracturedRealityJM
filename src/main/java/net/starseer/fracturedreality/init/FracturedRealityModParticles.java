@@ -6,6 +6,7 @@ package net.starseer.fracturedreality.init;
 import net.starseer.fracturedreality.client.particle.WhiteSparkParticle;
 import net.starseer.fracturedreality.client.particle.VoidDripParticle;
 import net.starseer.fracturedreality.client.particle.GreenSparkParticle;
+import net.starseer.fracturedreality.client.particle.AbyssPortalParticle;
 
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -19,5 +20,6 @@ public class FracturedRealityModParticles {
 		event.registerSpriteSet(FracturedRealityModParticleTypes.VOID_DRIP.get(), VoidDripParticle::provider);
 		event.registerSpriteSet(FracturedRealityModParticleTypes.GREEN_SPARK.get(), GreenSparkParticle::provider);
 		event.registerSpriteSet(FracturedRealityModParticleTypes.WHITE_SPARK.get(), WhiteSparkParticle::provider);
+		event.registerSpriteSet(FracturedRealityModParticleTypes.ABYSS_PORTAL.get(), AbyssPortalParticle::provider);
 	}
 }

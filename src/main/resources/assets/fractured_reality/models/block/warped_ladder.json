@@ -1,0 +1,9 @@
+{
+  "parent": "fractured_reality:custom/ladder",
+  "textures": {
+    "all": "fractured_reality:block/warped_ladder",
+    "particle": "fractured_reality:block/warped_ladder",
+    "texture": "fractured_reality:block/warped_ladder"
+  },
+  "render_type": "cutout"
+}

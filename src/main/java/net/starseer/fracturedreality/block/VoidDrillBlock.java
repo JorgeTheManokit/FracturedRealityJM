@@ -1,6 +1,5 @@
 package net.starseer.fracturedreality.block;
 
-import net.starseer.fracturedreality.procedures.VoidDrillRedstoneOnProcedure;
 import net.starseer.fracturedreality.block.entity.VoidDrillBlockEntity;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -60,14 +59,6 @@ public class VoidDrillBlock extends Block implements EntityBlock {
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		return super.getStateForPlacement(context).setValue(DIGGING, false);
-	}
-
-	@Override
-	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
-		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
-		if (world.getBestNeighborSignal(pos) > 0) {
-			VoidDrillRedstoneOnProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
-		}
 	}
 
 	@Override

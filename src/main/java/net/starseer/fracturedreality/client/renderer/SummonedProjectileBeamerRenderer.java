@@ -18,6 +18,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class SummonedProjectileBeamerRenderer extends MobRenderer<SummonedProjectileBeamerEntity, ModelSummonedProjectileBeamer<SummonedProjectileBeamerEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("fractured_reality:textures/entities/summoned_projectile_beamer.png");
+
 	public SummonedProjectileBeamerRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(ModelSummonedProjectileBeamer.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<SummonedProjectileBeamerEntity, ModelSummonedProjectileBeamer<SummonedProjectileBeamerEntity>>(this) {
@@ -33,7 +35,7 @@ public class SummonedProjectileBeamerRenderer extends MobRenderer<SummonedProjec
 
 	@Override
 	public ResourceLocation getTextureLocation(SummonedProjectileBeamerEntity entity) {
-		return ResourceLocation.parse("fractured_reality:textures/entities/summoned_projectile_beamer.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends ModelSummonedProjectileBeamer<SummonedProjectileBeamerEntity> {

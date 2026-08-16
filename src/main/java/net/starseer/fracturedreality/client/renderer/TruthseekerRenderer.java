@@ -18,6 +18,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class TruthseekerRenderer extends MobRenderer<TruthseekerEntity, Modeltruthseeker<TruthseekerEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("fractured_reality:textures/entities/truthseeker.png");
+
 	public TruthseekerRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modeltruthseeker.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<TruthseekerEntity, Modeltruthseeker<TruthseekerEntity>>(this) {
@@ -33,7 +35,7 @@ public class TruthseekerRenderer extends MobRenderer<TruthseekerEntity, Modeltru
 
 	@Override
 	public ResourceLocation getTextureLocation(TruthseekerEntity entity) {
-		return ResourceLocation.parse("fractured_reality:textures/entities/truthseeker.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends Modeltruthseeker<TruthseekerEntity> {

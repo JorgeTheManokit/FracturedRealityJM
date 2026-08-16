@@ -23,6 +23,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelStarseer<ShatteredEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("fractured_reality:textures/entities/empty.png");
+
 	public ShatteredRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(ModelStarseer.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<ShatteredEntity, ModelStarseer<ShatteredEntity>>(this) {
@@ -119,7 +121,7 @@ public class ShatteredRenderer extends MobRenderer<ShatteredEntity, ModelStarsee
 
 	@Override
 	public ResourceLocation getTextureLocation(ShatteredEntity entity) {
-		return ResourceLocation.parse("fractured_reality:textures/entities/empty.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends ModelStarseer<ShatteredEntity> {

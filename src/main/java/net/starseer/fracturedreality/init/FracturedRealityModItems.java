@@ -74,7 +74,16 @@ public class FracturedRealityModItems {
 	public static final DeferredItem<Item> TRUTH_SEEKER_DECORATIVE;
 	public static final DeferredItem<Item> FOLLOWER_DECORATIVE;
 	public static final DeferredItem<Item> STAR_CORE_DECORATIVE;
-	public static final DeferredItem<Item> HIPPOCRATES;
+	public static final DeferredItem<Item> WARPED_LADDER;
+	public static final DeferredItem<Item> DOOR_BLOCKER_MOLTEN;
+	public static final DeferredItem<Item> DOOR_BLOCKER_RAGNAROK;
+	public static final DeferredItem<Item> DOOR_BLOCKER_INVISIBLE;
+	public static final DeferredItem<Item> VOIDSLATE;
+	public static final DeferredItem<Item> GRASSY_VOID_SLATE;
+	public static final DeferredItem<Item> VOID_GENERATOR;
+	public static final DeferredItem<Item> VOID_STEEL_BLOCK;
+	public static final DeferredItem<Item> VOID_STEEL_BARS;
+	public static final DeferredItem<Item> SHARD_LANTERN;
 	static {
 		PRESENTER_SPAWN_EGG = REGISTRY.register("presenter_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.PRESENTER, -1, -1, new Item.Properties()));
 		BEAM_SUMMONER_SPAWN_EGG = REGISTRY.register("beam_summoner_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.BEAM_SUMMONER, -1, -1, new Item.Properties()));
@@ -124,7 +133,16 @@ public class FracturedRealityModItems {
 		TRUTH_SEEKER_DECORATIVE = block(FracturedRealityModBlocks.TRUTH_SEEKER_DECORATIVE);
 		FOLLOWER_DECORATIVE = block(FracturedRealityModBlocks.FOLLOWER_DECORATIVE);
 		STAR_CORE_DECORATIVE = block(FracturedRealityModBlocks.STAR_CORE_DECORATIVE);
-		HIPPOCRATES = block(FracturedRealityModBlocks.HIPPOCRATES);
+		WARPED_LADDER = block(FracturedRealityModBlocks.WARPED_LADDER);
+		DOOR_BLOCKER_MOLTEN = block(FracturedRealityModBlocks.DOOR_BLOCKER_MOLTEN);
+		DOOR_BLOCKER_RAGNAROK = block(FracturedRealityModBlocks.DOOR_BLOCKER_RAGNAROK);
+		DOOR_BLOCKER_INVISIBLE = block(FracturedRealityModBlocks.DOOR_BLOCKER_INVISIBLE);
+		VOIDSLATE = block(FracturedRealityModBlocks.VOIDSLATE);
+		GRASSY_VOID_SLATE = block(FracturedRealityModBlocks.GRASSY_VOID_SLATE);
+		VOID_GENERATOR = block(FracturedRealityModBlocks.VOID_GENERATOR);
+		VOID_STEEL_BLOCK = block(FracturedRealityModBlocks.VOID_STEEL_BLOCK);
+		VOID_STEEL_BARS = block(FracturedRealityModBlocks.VOID_STEEL_BARS);
+		SHARD_LANTERN = block(FracturedRealityModBlocks.SHARD_LANTERN);
 	}
 
 	// Start of user code block custom items

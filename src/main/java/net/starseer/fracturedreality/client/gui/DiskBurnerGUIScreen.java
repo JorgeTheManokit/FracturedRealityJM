@@ -30,6 +30,9 @@ public class DiskBurnerGUIScreen extends AbstractContainerScreen<DiskBurnerGUIMe
 	private Button button_s1644;
 	private Button button_s2193;
 	private Button button_s2374_vml;
+	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("fractured_reality:textures/screens/disk_burner_gui.png");
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("fractured_reality:textures/screens/left_arrow.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("fractured_reality:textures/screens/disc_slot.png");
 
 	public DiskBurnerGUIScreen(DiskBurnerGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,8 +51,6 @@ public class DiskBurnerGUIScreen extends AbstractContainerScreen<DiskBurnerGUIMe
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("fractured_reality:textures/screens/disk_burner_gui.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -61,9 +62,9 @@ public class DiskBurnerGUIScreen extends AbstractContainerScreen<DiskBurnerGUIMe
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(ResourceLocation.parse("fractured_reality:textures/screens/left_arrow.png"), this.leftPos + 41, this.topPos + 99, 0, 0, 36, 18, 36, 18);
-		guiGraphics.blit(ResourceLocation.parse("fractured_reality:textures/screens/disc_slot.png"), this.leftPos + 24, this.topPos + 100, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 41, this.topPos + 99, 0, 0, 36, 18, 36, 18);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 24, this.topPos + 100, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 

@@ -18,6 +18,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class StarArmRenderer extends MobRenderer<StarArmEntity, ModelStarArm<StarArmEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("fractured_reality:textures/entities/star_arm.png");
+
 	public StarArmRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(ModelStarArm.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<StarArmEntity, ModelStarArm<StarArmEntity>>(this) {
@@ -33,7 +35,7 @@ public class StarArmRenderer extends MobRenderer<StarArmEntity, ModelStarArm<Sta
 
 	@Override
 	public ResourceLocation getTextureLocation(StarArmEntity entity) {
-		return ResourceLocation.parse("fractured_reality:textures/entities/star_arm.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends ModelStarArm<StarArmEntity> {

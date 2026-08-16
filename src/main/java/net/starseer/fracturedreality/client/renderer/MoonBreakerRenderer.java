@@ -18,6 +18,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class MoonBreakerRenderer extends MobRenderer<MoonBreakerEntity, Modelmoonbreaker<MoonBreakerEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("fractured_reality:textures/entities/moonbreaker.png");
+
 	public MoonBreakerRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelmoonbreaker.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<MoonBreakerEntity, Modelmoonbreaker<MoonBreakerEntity>>(this) {
@@ -33,7 +35,7 @@ public class MoonBreakerRenderer extends MobRenderer<MoonBreakerEntity, Modelmoo
 
 	@Override
 	public ResourceLocation getTextureLocation(MoonBreakerEntity entity) {
-		return ResourceLocation.parse("fractured_reality:textures/entities/moonbreaker.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends Modelmoonbreaker<MoonBreakerEntity> {
