@@ -3448,20 +3448,6 @@
       "path": "~/Phase 2"
     },
     {
-      "name": "GreenSpark",
-      "type": "particle",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "green_spark",
-      "metadata": {
-        "files": [
-          "src/main/java/net/starseer/fracturedreality/client/particle/GreenSparkParticle.java",
-          "src/main/resources/assets/fractured_reality/particles/green_spark.json"
-        ]
-      },
-      "path": "~/Phase 2"
-    },
-    {
       "name": "TruthseekerOnEntityTickUpdate",
       "type": "procedure",
       "compiles": true,
@@ -3814,20 +3800,8 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "blockstate",
+            "type": "blockstate"
           }
         ],
         "return_type": "logic",
@@ -4441,6 +4415,799 @@
         ]
       },
       "path": "~/Decor"
+    },
+    {
+      "name": "ShardLanternOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shard_lantern_on_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/ShardLanternOnTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBricks",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_bricks",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/VoidBricksBlock.java",
+          "src/main/resources/assets/fractured_reality/blockstates/void_bricks.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_bricks.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_bricks.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_bricks.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBrickStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_brick_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_stairs.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_stairs_inner.json",
+          "src/main/resources/assets/fractured_reality/blockstates/void_brick_stairs.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_stairs_outer.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_brick_stairs.json",
+          "src/main/java/net/starseer/fracturedreality/block/VoidBrickStairsBlock.java",
+          "src/main/resources/assets/fractured_reality/models/item/void_brick_stairs.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBrickSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_brick_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_brick_slab.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_slab.json",
+          "src/main/resources/assets/fractured_reality/blockstates/void_brick_slab.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_slab_full.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_brick_slab.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_slab_top.json",
+          "src/main/java/net/starseer/fracturedreality/block/VoidBrickSlabBlock.java"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBrickWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_brick_wall",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/VoidBrickWallBlock.java",
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_wall_side_tall.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_wall_inventory.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/void_brick_wall.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_wall.json",
+          "src/main/resources/assets/fractured_reality/models/item/void_brick_wall.json",
+          "src/main/resources/assets/fractured_reality/blockstates/void_brick_wall.json",
+          "src/main/resources/assets/fractured_reality/models/block/void_brick_wall_post.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidSteelBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_steel_block.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidSteelBlockToIngot",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_block_to_ingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_steel_block_to_ingot.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBricksRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_bricks_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_bricks_recipe.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBricksToStairs",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_bricks_to_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_bricks_to_stairs.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBricksToSlab",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_bricks_to_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_bricks_to_slab.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBricksToWall",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_bricks_to_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_bricks_to_wall.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidSteelBarsRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_steel_bars_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_steel_bars.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBricksToStairsCutter",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_bricks_to_stairs_cutter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/advancement/recipes/void_bricks_to_stairs_cutter.json",
+          "src/main/resources/data/fractured_reality/recipe/void_bricks_to_stairs_cutter.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBricksToSlabCutter",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_bricks_to_slab_cutter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_bricks_to_slab_cutter.json",
+          "src/main/resources/data/fractured_reality/advancement/recipes/void_bricks_to_slab_cutter.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "VoidBricksToWallCutter",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_bricks_to_wall_cutter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/void_bricks_to_wall_cutter.json",
+          "src/main/resources/data/fractured_reality/advancement/recipes/void_bricks_to_wall_cutter.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "ShardLanternRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shard_lantern_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/fractured_reality/recipe/shard_lantern_recipe.json"
+        ]
+      },
+      "path": "~/Decor"
+    },
+    {
+      "name": "BlueSpark",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_spark",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/particle/BlueSparkParticle.java",
+          "src/main/resources/assets/fractured_reality/particles/blue_spark.json"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "SkyPortal",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_portal",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/fractured_reality/particles/sky_portal.json",
+          "src/main/java/net/starseer/fracturedreality/client/particle/SkyPortalParticle.java"
+        ]
+      },
+      "path": "~/RealitysEdge"
+    },
+    {
+      "name": "Molten",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/MoltenRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/MoltenEntity.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "MoltenOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoltenOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "MoltenSummonCond",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_summon_cond",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoltenSummonCondProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "MoltenOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoltenOnInitialEntitySpawnProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "MoltenEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoltenEntityDiesProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "FollowerMinion",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "follower_minion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/FollowerMinionRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/FollowerMinionEntity.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "FollowerMinionOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "follower_minion_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/FollowerMinionOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "MoltenSpawnOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_spawn_on_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoltenSpawnOnTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "MoltenSpawn",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/MoltenSpawnBlock.java",
+          "src/main/java/net/starseer/fracturedreality/client/renderer/block/MoltenSpawnRenderer.java",
+          "src/main/resources/assets/fractured_reality/models/block/molten_spawn.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/molten_spawn.json",
+          "src/main/java/net/starseer/fracturedreality/block/entity/MoltenSpawnBlockEntity.java",
+          "src/main/resources/assets/fractured_reality/blockstates/molten_spawn.json"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "EnforcerEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enforcer_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/EnforcerEntityIsHurtProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "MoltenEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoltenEntityIsHurtProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "StarcoreSounds",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starcore_sounds",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/StarcoreSoundsProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "MoltenSpawnPlaybackCondition2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_spawn_playback_condition_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoltenSpawnPlaybackCondition2Procedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "MoltenSpawnPlaybackCondition1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_spawn_playback_condition_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/MoltenSpawnPlaybackCondition1Procedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Molten"
+    },
+    {
+      "name": "AbyssTeleport",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abyss_teleport",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/AbyssTeleportProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV"
+    },
+    {
+      "name": "RagnarokSpawn",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnarok_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/block/RagnarokSpawnBlock.java",
+          "src/main/resources/assets/fractured_reality/blockstates/ragnarok_spawn.json",
+          "src/main/resources/assets/fractured_reality/models/block/ragnarok_spawn.json",
+          "src/main/resources/data/fractured_reality/loot_table/blocks/ragnarok_spawn.json"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Ragnarok"
+    },
+    {
+      "name": "VoidDrillRedstoneOn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_drill_redstone_on",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/VoidDrillRedstoneOnProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2"
+    },
+    {
+      "name": "Ragnarok",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnarok",
+      "metadata": {
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/client/renderer/RagnarokRenderer.java",
+          "src/main/java/net/starseer/fracturedreality/entity/RagnarokEntity.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Ragnarok"
+    },
+    {
+      "name": "RagnarokOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnarok_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/RagnarokOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Ragnarok"
+    },
+    {
+      "name": "RagnarokWalkAnimCond",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnarok_walk_anim_cond",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/starseer/fracturedreality/procedures/RagnarokWalkAnimCondProcedure.java"
+        ]
+      },
+      "path": "~/Phase 2/TBOTV/Ragnarok"
     }
   ],
   "variable_elements": [
@@ -4635,6 +5402,18 @@
       "type": "logic",
       "scope": "map",
       "value": "true"
+    },
+    {
+      "name": "AbyssAccessible",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "RealitysEdgeAccessible",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -4947,14 +5726,6 @@
       "subtitle": ""
     },
     {
-      "name": "fr.supernova.outro",
-      "files": [
-        "gravflux_start"
-      ],
-      "category": "hostile",
-      "subtitle": ""
-    },
-    {
       "name": "fr.supernova.middle1",
       "files": [
         "supernova_section_0"
@@ -4985,6 +5756,129 @@
       ],
       "category": "hostile",
       "subtitle": ""
+    },
+    {
+      "name": "fr.supernova.outro",
+      "files": [
+        "supernova_outro"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.all_together.intro",
+      "files": [
+        "all_together_intro"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.all_together.middle",
+      "files": [
+        "all_together_middle"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.all_together.outro",
+      "files": [
+        "all_together_outro"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "fr.enforcer.hurt",
+      "files": [
+        "enforcer_pain_1",
+        "enforcer_pain_2",
+        "enforcer_pain_3",
+        "enforcer_pain_4",
+        "enforcer_pain_5",
+        "enforcer_pain_6"
+      ],
+      "category": "hostile",
+      "subtitle": "Enforcer Hurts"
+    },
+    {
+      "name": "fr.enforcer.speak",
+      "files": [
+        "enforcer_speak_1",
+        "enforcer_speak_2",
+        "enforcer_speak_3",
+        "enforcer_speak_4",
+        "enforcer_speak_5",
+        "enforcer_speak_6",
+        "enforcer_speak_7"
+      ],
+      "category": "hostile",
+      "subtitle": "Enforcer Speaks"
+    },
+    {
+      "name": "fr.molten.hurt",
+      "files": [
+        "molten_pain_1",
+        "molten_pain_2",
+        "molten_pain_3",
+        "molten_pain_4",
+        "molten_pain_5",
+        "molten_pain_6"
+      ],
+      "category": "hostile",
+      "subtitle": "Molten Hurts"
+    },
+    {
+      "name": "fr.molten.speak",
+      "files": [
+        "molten_speak_1",
+        "molten_speak_2",
+        "molten_speak_3",
+        "molten_speak_4",
+        "molten_speak_5",
+        "molten_speak_6",
+        "molten_speak_7"
+      ],
+      "category": "hostile",
+      "subtitle": "Molten Speaks"
+    },
+    {
+      "name": "fr.starcore.noise",
+      "files": [
+        "starcore_1",
+        "starcore_2",
+        "starcore_3",
+        "starcore_4",
+        "starcore_5",
+        "starcore_6",
+        "starcore_7"
+      ],
+      "category": "hostile",
+      "subtitle": "Starcore Exists"
+    },
+    {
+      "name": "fr.truthseeker.rumble",
+      "files": [
+        "truthseeker_1",
+        "truthseeker_2",
+        "truthseeker_3",
+        "truthseeker_4",
+        "truthseeker_5",
+        "truthseeker_6",
+        "truthseeker_7",
+        "truthseeker_8",
+        "truthseeker_9",
+        "truthseeker_10",
+        "truthseeker_11",
+        "truthseeker_12",
+        "truthseeker_13",
+        "truthseeker_14",
+        "truthseeker_15",
+        "truthseeker_16"
+      ],
+      "category": "hostile",
+      "subtitle": "Truthseeker Rumbles"
     }
   ],
   "tag_elements": {
@@ -5180,9 +6074,28 @@
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~CUSTOM:Voidslate",
       "~CUSTOM:GrassyVoidSlate"
+    ],
+    "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:VoidBrickStairs"
+    ],
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:VoidBrickSlab"
+    ],
+    "BLOCKS:minecraft:walls": [
+      "~CUSTOM:VoidBrickWall"
     ]
   },
-  "tab_element_order": {},
+  "tab_element_order": {
+    "BUILDING_BLOCKS": [
+      "VoidSteelBlock",
+      "VoidSteelBars",
+      "VoidBricks",
+      "VoidBrickStairs",
+      "VoidBrickSlab",
+      "VoidBrickWall",
+      "ShardLantern"
+    ]
+  },
   "language_map": {
     "en_us": {
       "fractured_reality.configuration.time_events": "Time Events",
@@ -5362,7 +6275,25 @@
       "block.fractured_reality.void_generator": "Void Generator",
       "block.fractured_reality.void_steel_block": "Void Steel Block",
       "block.fractured_reality.void_steel_bars": "Void Steel Bars",
-      "block.fractured_reality.shard_lantern": "Void Steel Block"
+      "block.fractured_reality.shard_lantern": "Shard Lantern",
+      "block.fractured_reality.void_bricks": "Void Bricks",
+      "block.fractured_reality.void_brick_stairs": "Void Brick Stairs",
+      "block.fractured_reality.void_brick_slab": "Void Brick Slab",
+      "block.fractured_reality.void_brick_wall": "Void Brick Wall",
+      "entity.fractured_reality.molten": "Molten",
+      "subtitles.fr.all_together.intro": "",
+      "subtitles.fr.all_together.middle": "",
+      "subtitles.fr.all_together.outro": "",
+      "entity.fractured_reality.follower_minion": "Follower",
+      "block.fractured_reality.molten_spawn": "Molten",
+      "subtitles.fr.enforcer.hurt": "Enforcer Hurts",
+      "subtitles.fr.enforcer.speak": "Enforcer Speaks",
+      "subtitles.fr.molten.hurt": "Molten Hurts",
+      "subtitles.fr.molten.speak": "Molten Speaks",
+      "subtitles.fr.starcore.noise": "Starcore Exists",
+      "subtitles.fr.truthseeker.rumble": "Truthseeker Rumbles",
+      "block.fractured_reality.ragnarok_spawn": "Ragnarok Spawn",
+      "entity.fractured_reality.ragnarok": "Ragnarok"
     }
   },
   "metadata": {
@@ -5452,6 +6383,10 @@
               {
                 "name": "Molten",
                 "children": []
+              },
+              {
+                "name": "Ragnarok",
+                "children": []
               }
             ]
           }
@@ -5474,7 +6409,7 @@
   "workspaceSettings": {
     "modid": "fractured_reality",
     "modName": "Fractured Reality",
-    "version": "1.2.0-PrivateBeta11",
+    "version": "1.2.0-PrivateBeta15",
     "description": "As reality breaks and the sky cracks apart, mysterious beings are unleashed upon the world. The cycle of day and night breaks, the rain disappears, and the mobs spawn less and less. The players have to shelter from the gravity fluctuations pulling them up into the sky. It is up to the players to solve what happened and fix their world. The players will have to solve puzzles and find a way to go above and beyond. Once the world is repaired, everything will go back to normal, but not for long. ",
     "author": "Jorge M.",
     "websiteURL": "https://modrinth.com/project/vZ2PEXzS",

@@ -70,7 +70,6 @@ public class FracturedRealityModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> FR_THREAT_PHASE2_SEVERE = REGISTRY.register("fr.threat.phase2.severe",
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.threat.phase2.severe")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_INTRO = REGISTRY.register("fr.supernova.intro", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.intro")));
-	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_OUTRO = REGISTRY.register("fr.supernova.outro", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.outro")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_MIDDLE1 = REGISTRY.register("fr.supernova.middle1",
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.middle1")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_MIDDLE2 = REGISTRY.register("fr.supernova.middle2",
@@ -79,4 +78,18 @@ public class FracturedRealityModSounds {
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.middle3")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_MIDDLE4 = REGISTRY.register("fr.supernova.middle4",
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.middle4")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_SUPERNOVA_OUTRO = REGISTRY.register("fr.supernova.outro", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.supernova.outro")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_ALL_TOGETHER_INTRO = REGISTRY.register("fr.all_together.intro",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.all_together.intro")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_ALL_TOGETHER_MIDDLE = REGISTRY.register("fr.all_together.middle",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.all_together.middle")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_ALL_TOGETHER_OUTRO = REGISTRY.register("fr.all_together.outro",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.all_together.outro")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_ENFORCER_HURT = REGISTRY.register("fr.enforcer.hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.enforcer.hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_ENFORCER_SPEAK = REGISTRY.register("fr.enforcer.speak", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.enforcer.speak")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_MOLTEN_HURT = REGISTRY.register("fr.molten.hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.molten.hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_MOLTEN_SPEAK = REGISTRY.register("fr.molten.speak", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.molten.speak")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_STARCORE_NOISE = REGISTRY.register("fr.starcore.noise", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.starcore.noise")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FR_TRUTHSEEKER_RUMBLE = REGISTRY.register("fr.truthseeker.rumble",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("fractured_reality", "fr.truthseeker.rumble")));
 }

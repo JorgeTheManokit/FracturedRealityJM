@@ -1,5 +1,7 @@
 package net.starseer.fracturedreality.block;
 
+import net.starseer.fracturedreality.procedures.ShardLanternOnTickUpdateProcedure;
+import net.starseer.fracturedreality.procedures.ShardLanternLuminanceProcedure;
 import net.starseer.fracturedreality.block.entity.ShardLanternBlockEntity;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -27,6 +29,8 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -35,8 +39,8 @@ public class ShardLanternBlock extends Block implements SimpleWaterloggedBlock, 
 	public static final IntegerProperty BRIGHTNESS = IntegerProperty.create("brightness", 0, 15);
 
 	public ShardLanternBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5f, 6f).noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false)
-				.instrument(NoteBlockInstrument.IRON_XYLOPHONE));
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5f, 6f).lightLevel(blockstate -> (int) ShardLanternLuminanceProcedure.execute(blockstate)).noOcclusion().hasPostProcess((bs, br, bp) -> true)
+				.emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.IRON_XYLOPHONE));
 		this.registerDefaultState(this.stateDefinition.any().setValue(BRIGHTNESS, 0).setValue(WATERLOGGED, false));
 	}
 
@@ -73,6 +77,19 @@ public class ShardLanternBlock extends Block implements SimpleWaterloggedBlock, 
 			world.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
 		}
 		return super.updateShape(state, facing, facingState, world, currentPos, facingPos);
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		world.scheduleTick(pos, this, 2);
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.tick(blockstate, world, pos, random);
+		ShardLanternOnTickUpdateProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		world.scheduleTick(pos, this, 2);
 	}
 
 	@Override

@@ -36,6 +36,11 @@ public class FRDevProcedureProcedure {
 				_player.displayClientMessage(Component.literal("Set the current phase to 2."), false);
 			FracturedRealityModVariables.MapVariables.get(world).Phase = 2;
 			FracturedRealityModVariables.MapVariables.get(world).markSyncDirty();
+		} else if ((StringArgumentType.getString(arguments, "Command")).equals("set_phase_3")) {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("Set the current phase to 3."), false);
+			FracturedRealityModVariables.MapVariables.get(world).Phase = 3;
+			FracturedRealityModVariables.MapVariables.get(world).markSyncDirty();
 		} else if ((StringArgumentType.getString(arguments, "Command")).equals("play_visual_hallucination")) {
 			DoRandomHalluVoiceProcedure.execute(entity);
 		} else if ((StringArgumentType.getString(arguments, "Command")).equals("play_audio_hallucination")) {

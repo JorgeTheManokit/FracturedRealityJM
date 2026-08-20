@@ -40,6 +40,7 @@ public class FracturedRealityModBlockEntities {
 			DoorBlockerRagnarokBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VoidGeneratorBlockEntity>> VOID_GENERATOR = register("void_generator", FracturedRealityModBlocks.VOID_GENERATOR, VoidGeneratorBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ShardLanternBlockEntity>> SHARD_LANTERN = register("shard_lantern", FracturedRealityModBlocks.SHARD_LANTERN, ShardLanternBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MoltenSpawnBlockEntity>> MOLTEN_SPAWN = register("molten_spawn", FracturedRealityModBlocks.MOLTEN_SPAWN, MoltenSpawnBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -65,5 +66,6 @@ public class FracturedRealityModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DOOR_BLOCKER_RAGNAROK.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, VOID_GENERATOR.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, SHARD_LANTERN.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, MOLTEN_SPAWN.get(), SidedInvWrapper::new);
 	}
 }

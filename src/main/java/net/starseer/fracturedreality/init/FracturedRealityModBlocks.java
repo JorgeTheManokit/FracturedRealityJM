@@ -43,6 +43,12 @@ public class FracturedRealityModBlocks {
 	public static final DeferredBlock<Block> VOID_STEEL_BLOCK;
 	public static final DeferredBlock<Block> VOID_STEEL_BARS;
 	public static final DeferredBlock<Block> SHARD_LANTERN;
+	public static final DeferredBlock<Block> VOID_BRICKS;
+	public static final DeferredBlock<Block> VOID_BRICK_STAIRS;
+	public static final DeferredBlock<Block> VOID_BRICK_SLAB;
+	public static final DeferredBlock<Block> VOID_BRICK_WALL;
+	public static final DeferredBlock<Block> MOLTEN_SPAWN;
+	public static final DeferredBlock<Block> RAGNAROK_SPAWN;
 	static {
 		HOOK_FABRICATOR = REGISTRY.register("hook_fabricator", HookFabricatorBlock::new);
 		GRAPPLING_POINT = REGISTRY.register("grappling_point", GrapplingPointBlock::new);
@@ -70,6 +76,12 @@ public class FracturedRealityModBlocks {
 		VOID_STEEL_BLOCK = REGISTRY.register("void_steel_block", VoidSteelBlockBlock::new);
 		VOID_STEEL_BARS = REGISTRY.register("void_steel_bars", VoidSteelBarsBlock::new);
 		SHARD_LANTERN = REGISTRY.register("shard_lantern", ShardLanternBlock::new);
+		VOID_BRICKS = REGISTRY.register("void_bricks", VoidBricksBlock::new);
+		VOID_BRICK_STAIRS = REGISTRY.register("void_brick_stairs", VoidBrickStairsBlock::new);
+		VOID_BRICK_SLAB = REGISTRY.register("void_brick_slab", VoidBrickSlabBlock::new);
+		VOID_BRICK_WALL = REGISTRY.register("void_brick_wall", VoidBrickWallBlock::new);
+		MOLTEN_SPAWN = REGISTRY.register("molten_spawn", MoltenSpawnBlock::new);
+		RAGNAROK_SPAWN = REGISTRY.register("ragnarok_spawn", RagnarokSpawnBlock::new);
 	}
 
 	// Start of user code block custom blocks

@@ -82,7 +82,6 @@ public class StarCoreDecorativeRenderer implements BlockEntityRenderer<StarCoreD
 		poseStack.pushPose();
 		poseStack.scale(-1, -1, 1);
 		poseStack.translate(-0.5, -0.5, 0.5);
-		// Rotate first, before the downward translate, so the pivot is at the block center
 		poseStack.mulPose(Axis.YP.rotationDegrees(-yawDeg));
 		poseStack.mulPose(Axis.XN.rotationDegrees(pitchDeg));
 		poseStack.translate(0, -1, 0);

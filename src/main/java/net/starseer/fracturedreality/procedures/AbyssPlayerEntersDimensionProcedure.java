@@ -15,5 +15,6 @@ public class AbyssPlayerEntersDimensionProcedure {
 				_serverPlayer.connection.teleport(0.5, 64, 0.5, _ent.getYRot(), _ent.getXRot());
 		}
 		LoadAbyssStructuresProcedure.execute(world);
+		entity.fallDistance = 0;
 	}
 }

@@ -74,7 +74,13 @@ public class SkyChangerProcedure {
 				RenderUtils.renderCustomMoon(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/sky_false_moon_phases.png"));
 			}
 		} else if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("fractured_reality:reality_edge"))) {
-			RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/edge_sky.png"), 0xffffff, Math.min(1, 1));
+			if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 1 && FracturedRealityModVariables.MapVariables.get(world).Phase == 2) {
+				RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/edge_sky_phase2.png"), 0xffffff, Math.min(1, 1));
+			} else if (FracturedRealityModVariables.MapVariables.get(world).SkyPhase > 1 && FracturedRealityModVariables.MapVariables.get(world).Phase == 1) {
+				RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/edge_sky.png"), 0xffffff, Math.min(1, 1));
+			} else {
+				RenderUtils.renderCustomSkybox(skyRenderEvent, ResourceLocation.parse("fractured_reality:textures/edge_sky_standard.png"), 0xffffff, Math.min(1, 1));
+			}
 		}
 	}
 }

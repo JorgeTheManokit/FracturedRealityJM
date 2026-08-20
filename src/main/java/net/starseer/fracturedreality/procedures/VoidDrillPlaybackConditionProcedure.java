@@ -1,11 +1,20 @@
 package net.starseer.fracturedreality.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class VoidDrillPlaybackConditionProcedure {
-	public static boolean execute(LevelAccessor world, double x, double y, double z) {
-		return world instanceof Level _level0 && _level0.hasNeighborSignal(BlockPos.containing(x, y, z));
+	public static boolean execute(BlockState blockstate) {
+		return getPropertyByName(blockstate, "active") instanceof BooleanProperty _getbp1 && blockstate.getValue(_getbp1);
+	}
+
+	private static Property<?> getPropertyByName(BlockState state, String name) {
+		for (Property<?> property : state.getProperties()) {
+			if (property.getName().equals(name)) {
+				return property;
+			}
+		}
+		return null;
 	}
 }

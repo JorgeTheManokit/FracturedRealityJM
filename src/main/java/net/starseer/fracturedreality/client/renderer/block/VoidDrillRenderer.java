@@ -35,7 +35,7 @@ public class VoidDrillRenderer implements BlockEntityRenderer<VoidDrillBlockEnti
 
 	private void updateRenderState(VoidDrillBlockEntity blockEntity) {
 		int tickCount = (int) blockEntity.getLevel().getGameTime();
-		blockEntity.animationState0.animateWhen(VoidDrillPlaybackConditionProcedure.execute(blockEntity.getLevel(), blockEntity.getBlockPos().getX(), blockEntity.getBlockPos().getY(), blockEntity.getBlockPos().getZ()), tickCount);
+		blockEntity.animationState0.animateWhen(VoidDrillPlaybackConditionProcedure.execute(blockEntity.getBlockState()), tickCount);
 	}
 
 	@Override

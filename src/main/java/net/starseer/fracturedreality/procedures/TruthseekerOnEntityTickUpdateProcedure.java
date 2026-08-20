@@ -5,9 +5,13 @@ import net.starseer.fracturedreality.configuration.FracturedRealityServerConfigC
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
@@ -19,6 +23,15 @@ public class TruthseekerOnEntityTickUpdateProcedure {
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
+		if (Math.random() < (1) / ((float) 1000)) {
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.truthseeker.rumble")), SoundSource.HOSTILE, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.truthseeker.rumble")), SoundSource.HOSTILE, 1, 1, false);
+				}
+			}
+		}
 		target = entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null;
 		if (!(target == null)) {
 			if (FracturedRealityServerConfigConfiguration.VOID_GRIEFING.get()) {
@@ -68,6 +81,6 @@ public class TruthseekerOnEntityTickUpdateProcedure {
 			}
 		}
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (FracturedRealityModParticleTypes.GREEN_SPARK.get()), x, (y + 5.875), z, 1, 0, 0, 0, 0.125);
+			_level.sendParticles((SimpleParticleType) (FracturedRealityModParticleTypes.BLUE_SPARK.get()), x, (y + 5.875), z, 1, 0, 0, 0, 0.125);
 	}
 }

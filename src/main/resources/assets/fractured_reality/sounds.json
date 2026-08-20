@@ -476,14 +476,6 @@
       }
     ]
   },
-  "fr.supernova.outro": {
-    "sounds": [
-      {
-        "name": "fractured_reality:gravflux_start",
-        "stream": false
-      }
-    ]
-  },
   "fr.supernova.middle1": {
     "sounds": [
       {
@@ -512,6 +504,264 @@
     "sounds": [
       {
         "name": "fractured_reality:supernova_section_3",
+        "stream": false
+      }
+    ]
+  },
+  "fr.supernova.outro": {
+    "sounds": [
+      {
+        "name": "fractured_reality:supernova_outro",
+        "stream": false
+      }
+    ]
+  },
+  "fr.all_together.intro": {
+    "sounds": [
+      {
+        "name": "fractured_reality:all_together_intro",
+        "stream": false
+      }
+    ]
+  },
+  "fr.all_together.middle": {
+    "sounds": [
+      {
+        "name": "fractured_reality:all_together_middle",
+        "stream": false
+      }
+    ]
+  },
+  "fr.all_together.outro": {
+    "sounds": [
+      {
+        "name": "fractured_reality:all_together_outro",
+        "stream": false
+      }
+    ]
+  },
+  "fr.enforcer.hurt": {
+    "subtitle": "subtitles.fr.enforcer.hurt",
+    "sounds": [
+      {
+        "name": "fractured_reality:enforcer_pain_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_pain_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_pain_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_pain_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_pain_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_pain_6",
+        "stream": false
+      }
+    ]
+  },
+  "fr.enforcer.speak": {
+    "subtitle": "subtitles.fr.enforcer.speak",
+    "sounds": [
+      {
+        "name": "fractured_reality:enforcer_speak_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_speak_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_speak_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_speak_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_speak_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_speak_6",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:enforcer_speak_7",
+        "stream": false
+      }
+    ]
+  },
+  "fr.molten.hurt": {
+    "subtitle": "subtitles.fr.molten.hurt",
+    "sounds": [
+      {
+        "name": "fractured_reality:molten_pain_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_pain_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_pain_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_pain_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_pain_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_pain_6",
+        "stream": false
+      }
+    ]
+  },
+  "fr.molten.speak": {
+    "subtitle": "subtitles.fr.molten.speak",
+    "sounds": [
+      {
+        "name": "fractured_reality:molten_speak_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_speak_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_speak_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_speak_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_speak_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_speak_6",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:molten_speak_7",
+        "stream": false
+      }
+    ]
+  },
+  "fr.starcore.noise": {
+    "subtitle": "subtitles.fr.starcore.noise",
+    "sounds": [
+      {
+        "name": "fractured_reality:starcore_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:starcore_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:starcore_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:starcore_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:starcore_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:starcore_6",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:starcore_7",
+        "stream": false
+      }
+    ]
+  },
+  "fr.truthseeker.rumble": {
+    "subtitle": "subtitles.fr.truthseeker.rumble",
+    "sounds": [
+      {
+        "name": "fractured_reality:truthseeker_1",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_2",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_3",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_4",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_5",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_6",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_7",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_8",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_9",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_10",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_11",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_12",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_13",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_14",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_15",
+        "stream": false
+      },
+      {
+        "name": "fractured_reality:truthseeker_16",
         "stream": false
       }
     ]

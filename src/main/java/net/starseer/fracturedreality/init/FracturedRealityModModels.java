@@ -25,8 +25,10 @@ public class FracturedRealityModModels {
 		event.registerLayerDefinition(ModelStarCore.LAYER_LOCATION, ModelStarCore::createBodyLayer);
 		event.registerLayerDefinition(ModelLIghtningStriker.LAYER_LOCATION, ModelLIghtningStriker::createBodyLayer);
 		event.registerLayerDefinition(ModelDoorHologram.LAYER_LOCATION, ModelDoorHologram::createBodyLayer);
+		event.registerLayerDefinition(ModelMolten.LAYER_LOCATION, ModelMolten::createBodyLayer);
 		event.registerLayerDefinition(ModelvoidBlockerTotem.LAYER_LOCATION, ModelvoidBlockerTotem::createBodyLayer);
 		event.registerLayerDefinition(ModelhookFabricator.LAYER_LOCATION, ModelhookFabricator::createBodyLayer);
+		event.registerLayerDefinition(Modelragnarok.LAYER_LOCATION, Modelragnarok::createBodyLayer);
 		event.registerLayerDefinition(ModelStarseerSpawner.LAYER_LOCATION, ModelStarseerSpawner::createBodyLayer);
 		event.registerLayerDefinition(ModelVoidMissile.LAYER_LOCATION, ModelVoidMissile::createBodyLayer);
 		event.registerLayerDefinition(ModelEnforcer.LAYER_LOCATION, ModelEnforcer::createBodyLayer);

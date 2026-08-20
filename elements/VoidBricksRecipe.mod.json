@@ -1,0 +1,49 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": "CUSTOM:VoidSteelIngot"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:VoidBricks"
+    },
+    "name": "void_bricks_recipe",
+    "namespace": "mod"
+  }
+}

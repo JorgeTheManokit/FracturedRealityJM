@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "fractured_reality:void_steel_ingot"
+    },
+    "b": {
+      "item": "fractured_reality:star_shard"
+    }
+  },
+  "result": {
+    "id": "fractured_reality:shard_lantern",
+    "count": 8
+  }
+}

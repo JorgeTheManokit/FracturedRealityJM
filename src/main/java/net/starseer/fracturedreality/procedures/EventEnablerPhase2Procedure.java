@@ -78,6 +78,8 @@ public class EventEnablerPhase2Procedure {
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).DoRandomLightning = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 6 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
+			FracturedRealityModVariables.MapVariables.get(world).AbyssAccessible = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 30 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
+					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).markSyncDirty();
 		}
 	}

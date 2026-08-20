@@ -28,7 +28,7 @@ public class LightningStrikerOnEntityTickUpdateProcedure {
 				entity.discard();
 		}
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (FracturedRealityModParticleTypes.GREEN_SPARK.get()), x, (y + 0.125), z,
+			_level.sendParticles((SimpleParticleType) (FracturedRealityModParticleTypes.BLUE_SPARK.get()), x, (y + 0.125), z,
 					(int) ((entity instanceof LightningStrikerEntity _datEntI ? _datEntI.getEntityData().get(LightningStrikerEntity.DATA_Age) : 0) * 5), 0, 0, 0,
 					(2 / (entity instanceof LightningStrikerEntity _datEntI ? _datEntI.getEntityData().get(LightningStrikerEntity.DATA_Age) : 0)));
 	}

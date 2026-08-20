@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "fractured_reality:void_bricks"
+  },
+  "result": {
+    "id": "fractured_reality:void_brick_wall",
+    "count": 1
+  }
+}

@@ -1,5 +1,6 @@
 package net.starseer.fracturedreality.block;
 
+import net.starseer.fracturedreality.procedures.VoidDrillRedstoneOnProcedure;
 import net.starseer.fracturedreality.block.entity.VoidDrillBlockEntity;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -23,11 +24,11 @@ import net.minecraft.world.Containers;
 import net.minecraft.core.BlockPos;
 
 public class VoidDrillBlock extends Block implements EntityBlock {
-	public static final BooleanProperty DIGGING = BooleanProperty.create("digging");
+	public static final BooleanProperty ACTIVE = BooleanProperty.create("active");
 
 	public VoidDrillBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
-		this.registerDefaultState(this.stateDefinition.any().setValue(DIGGING, false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.SLIME_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		this.registerDefaultState(this.stateDefinition.any().setValue(ACTIVE, false));
 	}
 
 	@Override
@@ -53,12 +54,20 @@ public class VoidDrillBlock extends Block implements EntityBlock {
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
-		builder.add(DIGGING);
+		builder.add(ACTIVE);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return super.getStateForPlacement(context).setValue(DIGGING, false);
+		return super.getStateForPlacement(context).setValue(ACTIVE, false);
+	}
+
+	@Override
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+		if (world.getBestNeighborSignal(pos) > 0) {
+			VoidDrillRedstoneOnProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
+		}
 	}
 
 	@Override

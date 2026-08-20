@@ -80,6 +80,8 @@ public class EventEnablerProcedure {
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).ShowAllseer = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 25 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
+			FracturedRealityModVariables.MapVariables.get(world).RealitysEdgeAccessible = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 25 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
+					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).IntenseGravityFlux = FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 25 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()
 					+ (double) FracturedRealityServerConfigConfiguration.PREP_TIME.get();
 			FracturedRealityModVariables.MapVariables.get(world).AllowWeather = !(FracturedRealityModVariables.MapVariables.get(world).DaysSurvived >= 25 * (double) FracturedRealityServerConfigConfiguration.TIME_SCALE.get()

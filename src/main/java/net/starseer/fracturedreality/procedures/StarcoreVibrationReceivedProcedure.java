@@ -9,7 +9,7 @@ public class StarcoreVibrationReceivedProcedure {
 			return;
 		if (!(entity instanceof Mob _mob ? _mob.isAggressive() : false)) {
 			if (entity instanceof Mob _entity)
-				_entity.getNavigation().moveTo(vibrationX, vibrationY, vibrationZ, 1.5);
+				_entity.getNavigation().moveTo(vibrationX, vibrationY, vibrationZ, 0.5);
 		}
 	}
 }

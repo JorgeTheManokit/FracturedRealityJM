@@ -26,12 +26,9 @@
         }
       }
     ],
-    "itemTexture": "launchpad_item",
+    "itemTexture": "bedrock_shatterer",
     "particleTexture": "void_block",
     "blockSetType": "OAK",
-    "pottedPlant": {
-      "value": ""
-    },
     "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
@@ -52,7 +49,7 @@
     ],
     "customProperties": [
       {
-        "name": "CUSTOM:digging",
+        "name": "CUSTOM:active",
         "type": "logic",
         "value": false
       }
@@ -116,7 +113,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "SLIME"
     },
     "breakSound": {
       "value": ""

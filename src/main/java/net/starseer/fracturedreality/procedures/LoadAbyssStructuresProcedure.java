@@ -1,6 +1,7 @@
 package net.starseer.fracturedreality.procedures;
 
 import net.starseer.fracturedreality.network.FracturedRealityModVariables;
+import net.starseer.fracturedreality.init.FracturedRealityModBlocks;
 
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
@@ -22,6 +23,8 @@ public class LoadAbyssStructuresProcedure {
 					template.placeInWorld(_serverworld, new BlockPos(-36, 61, -13), new BlockPos(-36, 61, -13), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 				}
 			}
+			world.setBlock(new BlockPos(0, 67, 37), FracturedRealityModBlocks.MOLTEN_SPAWN.get().defaultBlockState(), 3);
+			world.setBlock(new BlockPos(0, 74, 90), FracturedRealityModBlocks.RAGNAROK_SPAWN.get().defaultBlockState(), 3);
 		}
 	}
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "fractured_reality:block/void_brick_slab"
+    },
+    "type=top": {
+      "model": "fractured_reality:block/void_brick_slab_top"
+    },
+    "type=double": {
+      "model": "fractured_reality:block/void_brick_slab_full"
+    }
+  }
+}

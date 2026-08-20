@@ -167,7 +167,7 @@
       "name": "PresenterEntityDies"
     },
     "whenMobIsHurt": {
-      "name": "PresenterEntityIsHurt"
+      "name": "EnforcerEntityIsHurt"
     },
     "onMobTickUpdate": {
       "name": "EnforcerOnEntityTickUpdate"

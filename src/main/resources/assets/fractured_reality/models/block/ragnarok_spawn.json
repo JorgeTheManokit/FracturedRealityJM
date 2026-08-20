@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "fractured_reality:block/wip",
+    "particle": "fractured_reality:block/wip"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,49 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 4,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:VoidBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:VoidBricks"
+      },
+      {
+        "value": "CUSTOM:VoidBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:VoidBricks"
+      },
+      {
+        "value": "CUSTOM:VoidBricks"
+      },
+      {
+        "value": "CUSTOM:VoidBricks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:VoidBrickStairs"
+    },
+    "name": "void_bricks_to_stairs",
+    "namespace": "mod"
+  }
+}

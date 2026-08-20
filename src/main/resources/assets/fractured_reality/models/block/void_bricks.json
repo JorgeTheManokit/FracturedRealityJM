@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "fractured_reality:block/void_bricks_bottom",
+    "up": "fractured_reality:block/void_bricks_top",
+    "north": "fractured_reality:block/void_bricks_side",
+    "east": "fractured_reality:block/void_bricks_side",
+    "south": "fractured_reality:block/void_bricks_side",
+    "west": "fractured_reality:block/void_bricks_side",
+    "particle": "fractured_reality:block/void_bricks_bottom"
+  },
+  "render_type": "solid"
+}

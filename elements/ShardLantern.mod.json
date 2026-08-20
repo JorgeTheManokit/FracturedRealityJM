@@ -53,7 +53,7 @@
         "value": 0
       }
     ],
-    "name": "Void Steel Block",
+    "name": "Shard Lantern",
     "specialInformation": {
       "fixedValue": []
     },
@@ -68,6 +68,9 @@
     "creativeTabs": [
       {
         "value": "BUILDING_BLOCKS"
+      },
+      {
+        "value": "REDSTONE"
       }
     ],
     "destroyTool": "Not specified",
@@ -84,7 +87,7 @@
     "canRedstoneConnect": false,
     "hasCustomOpacity": false,
     "lightOpacity": 15,
-    "tickRate": 0,
+    "tickRate": 2,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -130,7 +133,8 @@
       "value": ""
     },
     "luminance": {
-      "fixedValue": 0.0
+      "fixedValue": 15.0,
+      "name": "ShardLanternLuminance"
     },
     "unbreakable": false,
     "vanillaToolTier": "NONE",
@@ -156,6 +160,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "ShardLanternOnTickUpdate"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

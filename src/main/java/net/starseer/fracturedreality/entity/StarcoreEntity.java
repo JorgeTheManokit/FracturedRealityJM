@@ -2,6 +2,7 @@ package net.starseer.fracturedreality.entity;
 
 import net.starseer.fracturedreality.procedures.StarcoreVibrationReceivedProcedure;
 import net.starseer.fracturedreality.procedures.StarcoreSpawnEnablerProcedure;
+import net.starseer.fracturedreality.procedures.StarcoreSoundsProcedure;
 import net.starseer.fracturedreality.init.FracturedRealityModEntities;
 import net.starseer.fracturedreality.FracturedRealityMod;
 
@@ -95,7 +96,7 @@ public class StarcoreEntity extends Monster implements VibrationSystem {
 			public void start() {
 				LivingEntity livingentity = StarcoreEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				StarcoreEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.2);
+				StarcoreEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 0.5);
 			}
 
 			@Override
@@ -107,12 +108,12 @@ public class StarcoreEntity extends Monster implements VibrationSystem {
 					double d0 = StarcoreEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						StarcoreEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.2);
+						StarcoreEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 0.5);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.3));
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
@@ -193,6 +194,12 @@ public class StarcoreEntity extends Monster implements VibrationSystem {
 			this.animationState0.animateWhen(true, this.tickCount);
 			this.animationState1.animateWhen(true, this.tickCount);
 		}
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		StarcoreSoundsProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

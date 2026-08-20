@@ -1,9 +1,9 @@
 package net.starseer.fracturedreality.entity;
 
 import net.starseer.fracturedreality.procedures.SpawnEnablerEnforcerProcedure;
-import net.starseer.fracturedreality.procedures.PresenterEntityIsHurtProcedure;
 import net.starseer.fracturedreality.procedures.PresenterEntityDiesProcedure;
 import net.starseer.fracturedreality.procedures.EnforcerOnEntityTickUpdateProcedure;
+import net.starseer.fracturedreality.procedures.EnforcerEntityIsHurtProcedure;
 import net.starseer.fracturedreality.procedures.EnforcerCallPlaybackConditionProcedure;
 import net.starseer.fracturedreality.init.FracturedRealityModEntities;
 
@@ -83,7 +83,7 @@ public class EnforcerEntity extends Monster {
 		Entity sourceentity = damagesource.getEntity();
 		Entity immediatesourceentity = damagesource.getDirectEntity();
 
-		PresenterEntityIsHurtProcedure.execute(world, x, y, z);
+		EnforcerEntityIsHurtProcedure.execute(world, x, y, z);
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))

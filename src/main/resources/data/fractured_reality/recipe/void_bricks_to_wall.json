@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "fractured_reality:void_bricks"
+    }
+  },
+  "result": {
+    "id": "fractured_reality:void_brick_wall",
+    "count": 6
+  }
+}

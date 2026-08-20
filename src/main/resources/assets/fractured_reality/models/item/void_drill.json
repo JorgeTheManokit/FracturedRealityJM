@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "fractured_reality:item/launchpad_item"
+    "layer0": "fractured_reality:item/bedrock_shatterer"
   },
   "render_type": "translucent"
 }

@@ -26,9 +26,9 @@ public class EnforcerOnEntityTickUpdateProcedure {
 		if (Math.random() < (1) / ((float) 1000)) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.presenter.speak")), SoundSource.NEUTRAL, (float) 0.5, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.enforcer.speak")), SoundSource.NEUTRAL, (float) 0.5, 1);
 				} else {
-					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.presenter.speak")), SoundSource.NEUTRAL, (float) 0.5, 1, false);
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("fractured_reality:fr.enforcer.speak")), SoundSource.NEUTRAL, (float) 0.5, 1, false);
 				}
 			}
 		}

@@ -73,9 +73,14 @@ public class FracturedRealityModTabs {
 			}
 		} else if (tabData.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
 			tabData.accept(FracturedRealityModBlocks.VOID_DRILL.get().asItem());
+			tabData.accept(FracturedRealityModBlocks.SHARD_LANTERN.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 			tabData.accept(FracturedRealityModBlocks.VOID_STEEL_BLOCK.get().asItem());
 			tabData.accept(FracturedRealityModBlocks.VOID_STEEL_BARS.get().asItem());
+			tabData.accept(FracturedRealityModBlocks.VOID_BRICKS.get().asItem());
+			tabData.accept(FracturedRealityModBlocks.VOID_BRICK_STAIRS.get().asItem());
+			tabData.accept(FracturedRealityModBlocks.VOID_BRICK_SLAB.get().asItem());
+			tabData.accept(FracturedRealityModBlocks.VOID_BRICK_WALL.get().asItem());
 			tabData.accept(FracturedRealityModBlocks.SHARD_LANTERN.get().asItem());
 		}
 	}

@@ -82,7 +82,7 @@ public class ShardLanternBlockEntity extends RandomizableContainerBlockEntity im
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Void Steel Block");
+		return Component.literal("Shard Lantern");
 	}
 
 	@Override

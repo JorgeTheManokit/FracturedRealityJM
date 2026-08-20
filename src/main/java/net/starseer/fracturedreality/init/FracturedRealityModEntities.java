@@ -77,6 +77,18 @@ public class FracturedRealityModEntities {
 			EntityType.Builder.<FollowerEntity>of(FollowerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<MoltenEntity>> MOLTEN = register("molten",
+			EntityType.Builder.<MoltenEntity>of(MoltenEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(1.6f, 3.2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<FollowerMinionEntity>> FOLLOWER_MINION = register("follower_minion",
+			EntityType.Builder.<FollowerMinionEntity>of(FollowerMinionEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<RagnarokEntity>> RAGNAROK = register("ragnarok",
+			EntityType.Builder.<RagnarokEntity>of(RagnarokEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -99,6 +111,9 @@ public class FracturedRealityModEntities {
 		TruthseekerEntity.init(event);
 		StarcoreEntity.init(event);
 		FollowerEntity.init(event);
+		MoltenEntity.init(event);
+		FollowerMinionEntity.init(event);
+		RagnarokEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -116,5 +131,8 @@ public class FracturedRealityModEntities {
 		event.put(TRUTHSEEKER.get(), TruthseekerEntity.createAttributes().build());
 		event.put(STARCORE.get(), StarcoreEntity.createAttributes().build());
 		event.put(FOLLOWER.get(), FollowerEntity.createAttributes().build());
+		event.put(MOLTEN.get(), MoltenEntity.createAttributes().build());
+		event.put(FOLLOWER_MINION.get(), FollowerMinionEntity.createAttributes().build());
+		event.put(RAGNAROK.get(), RagnarokEntity.createAttributes().build());
 	}
 }

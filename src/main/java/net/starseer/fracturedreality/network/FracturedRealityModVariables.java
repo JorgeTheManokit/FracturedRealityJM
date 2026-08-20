@@ -184,6 +184,8 @@ public class FracturedRealityModVariables {
 		public boolean SpawnShattered = false;
 		public boolean SpawnFollowers = false;
 		public boolean GenerateAbyssStruct = true;
+		public boolean AbyssAccessible = false;
+		public boolean RealitysEdgeAccessible = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -221,6 +223,8 @@ public class FracturedRealityModVariables {
 			SpawnShattered = nbt.getBoolean("SpawnShattered");
 			SpawnFollowers = nbt.getBoolean("SpawnFollowers");
 			GenerateAbyssStruct = nbt.getBoolean("GenerateAbyssStruct");
+			AbyssAccessible = nbt.getBoolean("AbyssAccessible");
+			RealitysEdgeAccessible = nbt.getBoolean("RealitysEdgeAccessible");
 		}
 
 		@Override
@@ -254,6 +258,8 @@ public class FracturedRealityModVariables {
 			nbt.putBoolean("SpawnShattered", SpawnShattered);
 			nbt.putBoolean("SpawnFollowers", SpawnFollowers);
 			nbt.putBoolean("GenerateAbyssStruct", GenerateAbyssStruct);
+			nbt.putBoolean("AbyssAccessible", AbyssAccessible);
+			nbt.putBoolean("RealitysEdgeAccessible", RealitysEdgeAccessible);
 			return nbt;
 		}
 

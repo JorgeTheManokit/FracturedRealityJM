@@ -84,6 +84,10 @@ public class FracturedRealityModItems {
 	public static final DeferredItem<Item> VOID_STEEL_BLOCK;
 	public static final DeferredItem<Item> VOID_STEEL_BARS;
 	public static final DeferredItem<Item> SHARD_LANTERN;
+	public static final DeferredItem<Item> VOID_BRICKS;
+	public static final DeferredItem<Item> VOID_BRICK_STAIRS;
+	public static final DeferredItem<Item> VOID_BRICK_SLAB;
+	public static final DeferredItem<Item> VOID_BRICK_WALL;
 	static {
 		PRESENTER_SPAWN_EGG = REGISTRY.register("presenter_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.PRESENTER, -1, -1, new Item.Properties()));
 		BEAM_SUMMONER_SPAWN_EGG = REGISTRY.register("beam_summoner_spawn_egg", () -> new DeferredSpawnEggItem(FracturedRealityModEntities.BEAM_SUMMONER, -1, -1, new Item.Properties()));
@@ -143,6 +147,10 @@ public class FracturedRealityModItems {
 		VOID_STEEL_BLOCK = block(FracturedRealityModBlocks.VOID_STEEL_BLOCK);
 		VOID_STEEL_BARS = block(FracturedRealityModBlocks.VOID_STEEL_BARS);
 		SHARD_LANTERN = block(FracturedRealityModBlocks.SHARD_LANTERN);
+		VOID_BRICKS = block(FracturedRealityModBlocks.VOID_BRICKS);
+		VOID_BRICK_STAIRS = block(FracturedRealityModBlocks.VOID_BRICK_STAIRS);
+		VOID_BRICK_SLAB = block(FracturedRealityModBlocks.VOID_BRICK_SLAB);
+		VOID_BRICK_WALL = block(FracturedRealityModBlocks.VOID_BRICK_WALL);
 	}
 
 	// Start of user code block custom items

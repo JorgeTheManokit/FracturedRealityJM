@@ -29,5 +29,8 @@ public class FracturedRealityModEntityRenderers {
 		event.registerEntityRenderer(FracturedRealityModEntities.TRUTHSEEKER.get(), TruthseekerRenderer::new);
 		event.registerEntityRenderer(FracturedRealityModEntities.STARCORE.get(), StarcoreRenderer::new);
 		event.registerEntityRenderer(FracturedRealityModEntities.FOLLOWER.get(), FollowerRenderer::new);
+		event.registerEntityRenderer(FracturedRealityModEntities.MOLTEN.get(), MoltenRenderer::new);
+		event.registerEntityRenderer(FracturedRealityModEntities.FOLLOWER_MINION.get(), FollowerMinionRenderer::new);
+		event.registerEntityRenderer(FracturedRealityModEntities.RAGNAROK.get(), RagnarokRenderer::new);
 	}
 }
