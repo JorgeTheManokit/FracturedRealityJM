@@ -1,1 +1,1 @@
-
+File used to create the wiki folder, where wiki images will be stored.
